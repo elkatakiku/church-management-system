@@ -1,6 +1,9 @@
 # ChurchManagement_Admin
 Admin side of the church management system.
 
+## Live Testing ##
+https://elkatakiku.github.io/ChurchManagement_Admin/
+
 
 ## To Download the Whole Project ##
 * Click the 'Code' button
