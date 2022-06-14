@@ -11,4 +11,8 @@ Admin side of the church management system.
 * Use the base.html as the base structure for the pages.
 
 ## Be Organize ##
-* Save pages made respectively.
+* Save pages made to their respective folder.
+
+## Coding Reminder ##
+* Don't repeat yourself - DRY
+* Document or comment your codes for readability.
