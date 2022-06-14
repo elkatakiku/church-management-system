@@ -409,23 +409,37 @@ p {
   display: block;
   font-size: 1rem;
   padding: 7% 12%;
-  text-align: left;
 }
 
 .nav-link:hover {
   font-weight: 400;
 }
 
-.logout-container {
+.bottom-navbar-container {
   box-sizing: border-box;
   font-weight: 300;
   margin-bottom: 15px;
   padding: 0 5%;
+  text-align: left;
   width: 100%;
 }
 
 .nav-divider {
   margin: 1rem 12%;
+}
+
+.address {
+  box-sizing: border-box;
+  padding: 15px;
+}
+
+.address p {
+  font-size: 0.81rem;
+  margin-bottom: 5px;
+}
+
+.contact {
+  font-size: 0.93rem;
 }
 
 /* Login */
