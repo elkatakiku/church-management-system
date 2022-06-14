@@ -19,3 +19,5 @@ https://elkatakiku.github.io/ChurchManagement_Admin/
 ## Coding Reminder ##
 * Don't repeat yourself - DRY
 * Document or comment your codes for readability.
+* Never use IDs as selector as much as possible.
+* If it can be solved with classes, use classes as much as possible.
