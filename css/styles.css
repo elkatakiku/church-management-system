@@ -1,0 +1,500 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+/* End of Reset Stylesheet */
+@font-face {
+  font-family: 'iShot';
+  src: url('font/I_shot_the_Serif_v1.ttf');
+}
+
+html, body {
+  height: 100%;
+  color: #412717;
+}
+
+a {
+  color: #825B3E;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+hr {
+  background-color: #D0B49F;
+  border: none;
+}
+
+i {
+  color: #D0B49F;
+  cursor: pointer;
+}
+
+input {
+  border: none;
+}
+
+label {
+  display: inline-block;
+}
+
+p {
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+/* Overlay */
+.overlay {
+  background-color: rgba(164, 117, 81, 0.7);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Inputs */
+.input {
+  background-color: #EBEBE9;
+  border-radius: 8px;
+  box-sizing: border-box;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  height: 2.5rem;
+  margin: 10px 0 15px;
+  padding: 0 5%;
+  width: 100%;
+}
+
+.input:focus {
+  border: none;
+  outline: 1px solid #D0B49F;
+}
+
+::placeholder {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+}
+
+/* Buttons */
+.btn-submit {
+  background-color: #A47551;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.93rem;
+  font-weight: 700;
+  height: 2.5rem;
+  margin-top: 5%;
+  width: 100%;
+}
+
+.btn-secondary {
+  display: block;
+  cursor: pointer;
+  font-size: 0.81rem;
+  margin-top: 5%;
+  padding: 5% 0;
+}
+
+.btn-secondary:hover {
+  color: #A47551;
+}
+
+.btn-neutral {
+  background-color: #A47551;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.93rem;
+  font-weight: 700;
+  padding: 13px;
+  height: 2.5rem;
+  margin: 5% auto 0;
+  text-align: center;
+  width: 10.62rem;
+}
+
+/* Texts */
+.secondary-texts {
+  font-weight: 300;
+}
+
+.clickable-text {
+  cursor: pointer;
+}
+
+.clickable-text:hover {
+  color: #A47551;
+}
+
+/* Headings */
+.section-heading {
+  font-size: 1.56rem;
+  font-weight: 500;
+}
+
+/* Containers */
+.container-center {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+}
+
+.side-to-side {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Popup */
+.popup {
+  background-color: #F9F9FB;
+  border-radius: 10px;
+  margin: auto;
+  min-width: 28%;
+  padding: 30px;
+  position: relative;
+  z-index: 2;
+  width: 28%;
+}
+
+.popup-header {
+  justify-content: space-between;
+  position: relative;
+  text-align: center;
+}
+
+.popup-icon {
+  left: 10%;
+  font-size: 1.5rem;
+  position: absolute;
+  top: -10%;
+}
+
+.popup-heading {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.popup-btn-close {
+  position: absolute;
+  right: 3%;
+  top: 0;
+}
+
+.popup-btn-close:hover {
+  color: #A47551;
+}
+
+.popup-body {
+  text-align: justify;
+}
+
+.popup-description {
+  font-size: 0.93rem;
+  margin: 5% 0;
+}
+
+.popup-action-btns {
+  margin: 3rem auto 0;
+  width: 10.62rem;
+  text-align: center;
+}
+
+/* Background Image */
+.background-image-container {
+  position: fixed;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  z-index: -1;
+}
+
+.background-image {
+  filter: opacity(0.3);
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Utilities */
+.hidden {
+  display: none;
+}
+
+.col-6 {
+  flex-basis: 50%;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #A47551;
+  box-sizing: border-box;
+  color: white;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  width: 204.891px;
+}
+
+.navbar-brand {
+  align-items: center;
+  box-sizing: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 30%;
+  justify-content: center;
+  width: 100%;
+}
+
+.navbar-brand-logo {
+  width: 20%;
+}
+
+.navbar-brand-text {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.navbar-nav {
+  box-sizing: inherit;
+  padding: 0 5%;
+  flex-basis: 80%;
+  text-align: left;
+}
+
+/* .navbar-nav:after {
+    content:' ';
+    display:block;
+    margin-top: 100%;
+    border:1px solid #D0B49F;
+} */
+
+.nav-item {
+  font-weight: 300;
+  margin: 5px 0;
+}
+
+.active {
+  border-radius: 100px;
+  background-color: #D0B49F;
+  font-weight: 500;
+}
+
+.nav-link {
+  color: white;
+  display: block;
+  font-size: 1rem;
+  padding: 7% 12%;
+  text-align: left;
+}
+
+.nav-link:hover {
+  font-weight: 400;
+}
+
+.nav-divider {
+  margin: 250px 12% 1rem;
+}
+
+
+
+
+/* Login */
+.login-container {
+  box-shadow: 10px 10px 10px rgba(130, 91, 62, 0.3);
+  display: flex;
+  height: 70%;
+  width: 70%;
+}
+
+.login-1sthalf {
+  background-image: linear-gradient(to right, #BB865F, #A47551, #825B3E);
+  color: white;
+  height: 100%;
+  text-align: center;
+}
+
+.login-logo-container {
+  margin: 25% 0 20%;
+}
+
+.login-logo {
+  width: 30%;
+}
+
+.login-heading {
+  font-size: 2.87rem;
+  margin-top: 5%;
+}
+
+/* Login 2nd Half */
+.login-2ndhalf {
+  background-color: #F9F9FB;
+  height: 100%;
+}
+
+.login-form-container {
+  padding: 8% 10% 0;
+}
+
+.captcha-input {
+  position: relative;
+  display: block;
+}
+
+.btn-refresh-captcha {
+  color: #D0B49F;
+  cursor: pointer;
+  position: absolute;
+  right: 3.5%;
+  top: 35%;
+}
+
+.refresh-captcha:hover {
+  color: #BB865F;
+}
+
+.login-options {
+  align-items: center;
+  display: flex;
+  font-size: 0.75rem;
+  justify-content: space-between;
+}
+
+.sign-up-now {
+  font-size: 0.75rem;
+  margin-top: 5%;
+  text-align: center;
+}
+
+/* Signup */
+#signup .popup {
+  width: 50%;
+}
+
+#signup .side-to-side {
+  margin-top: 1.5rem;
+}
+
+.signup-form {
+  width: 49%;
+}
+
+/* Email Verified */
+#verified .popup-description {
+  margin: 10% 0;
+  text-align: center;
+}
+
+/* Dashboard */

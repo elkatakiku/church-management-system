@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>CHURCH</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Background Image -->
+  <div class="background-image-container">
+    <img class="background-image" src="images/background.png" alt="Church background image">
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay hidden" id="overlay"></div>
+
+
+  <!-- Login -->
+  <section class="container-center">
+    <div class="login-container">
+
+      <div class="login-1sthalf col-6">
+        <div class="login-logo-container">
+          <img class="login-logo" src="https://cdn-icons-png.flaticon.com/512/739/739249.png" alt="Web application logo">
+          <h1 class="login-heading">CHURCH</h1>
+        </div>
+      </div>
+
+      <div class="login-2ndhalf col-6">
+        <div class="login-form-container">
+          <form class="" action="dashboard.html" method="post">
+            <label for="usernameInput">Username</label>
+            <input class="input" type="text" id="usernameInput" name="username" placeholder="Insert your Username here">
+            <label for="passwordInput">Password</label>
+            <input class="input" type="password" id="passwordInput" name="password" placeholder="Insert your Password here">
+            <label for="captchaInput">Enter CAPTCHA</label>
+            <img src="" alt="captcha text" style="display: block; height: 3rem;">
+            <span class="captcha-input">
+              <i class="fa-solid fa-arrow-rotate-right btn-refresh-captcha"></i>
+              <input class="input" type="text" id="captchaInput" name="captcha" placeholder="Insert Captcha text">
+            </span>
+            <input class="input btn-submit" type="submit" name="login" value="Log In">
+            <div class="login-options">
+              <div class="">
+                <input type="checkbox" id="rememberInput" name="rememberMe" value="">
+                <label class="secondary-texts" for="rememberInput">Remember me</label>
+              </div>
+              <p class="clickable-text" onclick="togglePopup('forgotPassword')">Forgot Password?</p>
+            </div>
+          </form>
+
+          <p class="sign-up-now">Don't have an account yet? <strong class="clickable-text" onclick="togglePopup('signup')">Sign Up</strong> now!</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Sign Up -->
+  <section class="container-center hidden" id="signup">
+    <div class="popup">
+      <div class="popup-header">
+        <h2 class="popup-heading">Sign Up</h2>
+        <i class="fa-solid fa-xmark popup-btn-close" onclick="togglePopup('signup')"></i>
+      </div>
+
+      <hr>
+
+      <form class="" action="verify-email.html" method="post">
+        <div class="side-to-side">
+          <div class="signup-form">
+            <label for="">Last Name</label>
+            <input class="input" type="text" name="" value="" placeholder="Insert your Last Name here">
+            <label for="">First Name</label>
+            <input class="input" type="text" name="" value="" placeholder="Insert your First Name here">
+            <label for="">Middle Name</label>
+            <input class="input" type="text" name="" value="" placeholder="Insert your Middle Name here">
+            <label for="">Contact Number</label>
+            <input class="input" type="text" name="" value="" placeholder="Insert your Contact Number here">
+          </div>
+
+          <div class="signup-form">
+            <label for="">Birthdate</label>
+            <input class="input" type="date" name="" value="">
+            <label for="">Email</label>
+            <input class="input" type="email" name="" value="" placeholder="Insert your Email here">
+            <label for="">Username</label>
+            <input class="input" type="text" name="" value="" placeholder="Insert your Username here">
+            <label for="">Password</label>
+            <input class="input" type="password" name="" value="" placeholder="Insert your Password here">
+          </div>
+        </div>
+
+        <div class="popup-action-btns">
+          <input class="btn-submit" type="submit" name="" value="Sign Up">
+          <p class="btn-secondary" onclick="togglePopup('signup')">Back to Log In</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- Forgot Password -->
+
+  <section class="container-center hidden" id="forgotPassword">
+    <div class="popup">
+      <div class="popup-header">
+        <h2 class="popup-heading">Forgot Password?</h2>
+        <i class="fa-solid fa-xmark popup-btn-close" onclick="togglePopup('forgotPassword')"></i>
+      </div>
+
+      <hr>
+
+      <div class="popup-body">
+        <p class="popup-description">Enter your email address below and we'll send you further instructions on how to reset your password.</p>
+
+        <form class="" action="index.html" method="post">
+          <input class="input" type="email" name="resetPassEmail" value="" placeholder="Insert your email address">
+
+          <div class="popup-action-btns">
+            <input class="btn-submit" type="submit" name="" value="Submit">
+            <p class="btn-secondary" onclick="togglePopup('forgotPassword')">Back to Log In</p>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/4de3040dc0.js" crossorigin="anonymous"></script>
+
+  <!-- Functionality -->
+  <script>
+    function togglePopup(elementId) {
+      document.getElementById('overlay').classList.toggle("hidden");
+      document.getElementById(elementId).classList.toggle("hidden");
+    }
+  </script>
+</body>
+
+</html>
