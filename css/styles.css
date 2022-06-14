@@ -344,7 +344,7 @@ p {
   height: 100%;
   position: absolute;
   text-align: center;
-  width: 204.891px;
+  width: 200px;
 }
 
 .navbar-brand {
@@ -352,7 +352,7 @@ p {
   box-sizing: inherit;
   display: flex;
   flex-direction: column;
-  height: 30%;
+  height: 200px;
   justify-content: center;
   width: 100%;
 }
@@ -413,8 +413,11 @@ p {
 /* Login */
 .login-container {
   box-shadow: 10px 10px 10px rgba(130, 91, 62, 0.3);
-  display: flex;
-  height: 70%;
+  display: grid;
+  grid-auto-flow: column;
+   grid-template-columns: 1fr 1fr;
+/* gap: 5%; */
+  /* min-height: 70%; */
   width: 70%;
 }
 
@@ -441,11 +444,13 @@ p {
 /* Login 2nd Half */
 .login-2ndhalf {
   background-color: #F9F9FB;
+  box-sizing: border-box;
+  overflow: hidden;
   height: 100%;
 }
 
 .login-form-container {
-  padding: 8% 10% 0;
+  padding: 8% 10%;
 }
 
 .captcha-input {

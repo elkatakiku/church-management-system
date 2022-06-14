@@ -80,36 +80,40 @@
 
       <hr>
 
-      <form class="" action="verify-email.html" method="post">
-        <div class="side-to-side">
-          <div class="signup-form">
-            <label for="">Last Name</label>
-            <input class="input" type="text" name="" value="" placeholder="Insert your Last Name here">
-            <label for="">First Name</label>
-            <input class="input" type="text" name="" value="" placeholder="Insert your First Name here">
-            <label for="">Middle Name</label>
-            <input class="input" type="text" name="" value="" placeholder="Insert your Middle Name here">
-            <label for="">Contact Number</label>
-            <input class="input" type="text" name="" value="" placeholder="Insert your Contact Number here">
+      <div class="popup-body">
+        <!-- Uncomment form when passing the project -->
+        <!-- <form class="" action="verify-email.html" method="post"> -->
+          <div class="side-to-side">
+            <div class="signup-form">
+              <label for="">Last Name</label>
+              <input class="input" type="text" name="" value="" placeholder="Insert your Last Name here">
+              <label for="">First Name</label>
+              <input class="input" type="text" name="" value="" placeholder="Insert your First Name here">
+              <label for="">Middle Name</label>
+              <input class="input" type="text" name="" value="" placeholder="Insert your Middle Name here">
+              <label for="">Contact Number</label>
+              <input class="input" type="text" name="" value="" placeholder="Insert your Contact Number here">
+            </div>
+
+            <div class="signup-form">
+              <label for="">Birthdate</label>
+              <input class="input" type="date" name="" value="">
+              <label for="">Email</label>
+              <input class="input" type="email" name="" value="" placeholder="Insert your Email here">
+              <label for="">Username</label>
+              <input class="input" type="text" name="" value="" placeholder="Insert your Username here">
+              <label for="">Password</label>
+              <input class="input" type="password" name="" value="" placeholder="Insert your Password here">
+            </div>
           </div>
 
-          <div class="signup-form">
-            <label for="">Birthdate</label>
-            <input class="input" type="date" name="" value="">
-            <label for="">Email</label>
-            <input class="input" type="email" name="" value="" placeholder="Insert your Email here">
-            <label for="">Username</label>
-            <input class="input" type="text" name="" value="" placeholder="Insert your Username here">
-            <label for="">Password</label>
-            <input class="input" type="password" name="" value="" placeholder="Insert your Password here">
+          <div class="popup-action-btns">
+            <!-- Remove onclick if to be passed -->
+            <input class="btn-submit" type="submit" name="" value="Sign Up" onclick="window.location.href = 'verify-email.html';">
+            <p class="btn-secondary" onclick="togglePopup('signup')">Back to Log In</p>
           </div>
-        </div>
-
-        <div class="popup-action-btns">
-          <input class="btn-submit" type="submit" name="" value="Sign Up">
-          <p class="btn-secondary" onclick="togglePopup('signup')">Back to Log In</p>
-        </div>
-      </form>
+        <!-- </form> -->
+      </div>
     </div>
   </section>
 
