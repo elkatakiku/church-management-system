@@ -36,15 +36,16 @@
 
       <div class="popup-body">
         <p class="popup-description">We've sent an email to xxxxxxxxx@gmail.com to verify your email address and activate your account. Enter the confirmation code we sent to your email. Resend Code</p>
-
-        <form class="" action="verified.html" method="post">
+        <!-- Uncomment form when passing the project -->
+        <!-- <form class="" action="verified.html" method="post"> -->
           <input class="input" type="email" name="resetPassEmail" value="" placeholder="Insert confirmation code">
 
           <div class="popup-action-btns">
-            <input class="btn-submit" type="submit" name="" value="Submit">
+            <!-- Remove onclick if to be passed -->
+            <input class="btn-submit" type="submit" name="" value="Submit" onclick="window.location.href = 'verified.html';">
             <a href="index.html" class="btn-secondary">Back to Log In</a>
           </div>
-        </form>
+        <!-- </form> -->
 
       </div>
     </div>

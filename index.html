@@ -40,7 +40,8 @@
 
       <div class="login-2ndhalf col-6">
         <div class="login-form-container">
-          <form class="" action="dashboard.html" method="post">
+          <!-- Uncomment form when passing the project -->
+          <!-- <form class="" action="dashboard.html" method="post"> -->
             <label for="usernameInput">Username</label>
             <input class="input" type="text" id="usernameInput" name="username" placeholder="Insert your Username here">
             <label for="passwordInput">Password</label>
@@ -51,7 +52,8 @@
               <i class="fa-solid fa-arrow-rotate-right btn-refresh-captcha"></i>
               <input class="input" type="text" id="captchaInput" name="captcha" placeholder="Insert Captcha text">
             </span>
-            <input class="input btn-submit" type="submit" name="login" value="Log In">
+            <!-- Remove onclick if to be passed -->
+            <input class="input btn-submit" type="submit" name="login" value="Log In" onclick="window.location.href = 'dashboard.html';">
             <div class="login-options">
               <div class="">
                 <input type="checkbox" id="rememberInput" name="rememberMe" value="">
@@ -59,7 +61,7 @@
               </div>
               <p class="clickable-text" onclick="togglePopup('forgotPassword')">Forgot Password?</p>
             </div>
-          </form>
+          <!-- </form> -->
 
           <p class="sign-up-now">Don't have an account yet? <strong class="clickable-text" onclick="togglePopup('signup')">Sign Up</strong> now!</p>
         </div>
