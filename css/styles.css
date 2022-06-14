@@ -415,21 +415,19 @@ p {
   box-shadow: 10px 10px 10px rgba(130, 91, 62, 0.3);
   display: grid;
   grid-auto-flow: column;
-   grid-template-columns: 1fr 1fr;
-/* gap: 5%; */
-  /* min-height: 70%; */
+  grid-template-columns: 1fr 1fr;
   width: 70%;
 }
 
 .login-1sthalf {
+  align-items: center;
   background-image: linear-gradient(to right, #BB865F, #A47551, #825B3E);
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 100%;
   text-align: center;
-}
-
-.login-logo-container {
-  margin: 25% 0 20%;
 }
 
 .login-logo {
