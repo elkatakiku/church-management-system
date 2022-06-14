@@ -101,6 +101,13 @@ input, select {
 }
 
 /* End of Reset Stylesheet */
+:root {
+  --sandDollar: #E4D4C8;
+  --tan: #D0B49F;
+  --brown: #A47551;
+  --carafe: #523A28;
+}
+
 @font-face {
   font-family: 'iShot';
   src: url('font/I_shot_the_Serif_v1.ttf');
@@ -121,12 +128,12 @@ body {
 }
 
 hr {
-  background-color: #D0B49F;
+  background-color: var(--tan);
   border: none;
 }
 
 i {
-  color: #D0B49F;
+  color: var(--tan);
   cursor: pointer;
 }
 
@@ -168,7 +175,7 @@ p {
 
 .input:focus {
   border: none;
-  outline: 1px solid #D0B49F;
+  outline: 1px solid var(--tan);
 }
 
 ::placeholder {
@@ -177,8 +184,9 @@ p {
 }
 
 /* Buttons */
-.btn-submit {
-  background-color: #A47551;
+.btn {
+  background-color: var(--brown);
+  border: none;
   border-radius: 8px;
   box-sizing: border-box;
   color: white;
@@ -188,8 +196,19 @@ p {
   font-size: 0.93rem;
   font-weight: 700;
   height: 2.5rem;
+  padding: 0 20px;
+}
+
+.btn-submit {
   margin-top: 5%;
   width: 100%;
+}
+
+.btn-neutral {
+  padding: 13px;
+  margin: 5% auto 0;
+  text-align: center;
+  width: 10.62rem;
 }
 
 .btn-secondary {
@@ -201,24 +220,7 @@ p {
 }
 
 .btn-secondary:hover {
-  color: #A47551;
-}
-
-.btn-neutral {
-  background-color: #A47551;
-  border-radius: 8px;
-  box-sizing: border-box;
-  color: white;
-  cursor: pointer;
-  display: block;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.93rem;
-  font-weight: 700;
-  padding: 13px;
-  height: 2.5rem;
-  margin: 5% auto 0;
-  text-align: center;
-  width: 10.62rem;
+  color: var(--brown);
 }
 
 /* Texts */
@@ -231,13 +233,14 @@ p {
 }
 
 .clickable-text:hover {
-  color: #A47551;
+  color: var(--brown);
 }
 
 /* Headings */
 .section-heading {
-  font-size: 1.56rem;
-  font-weight: 500;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
 }
 
 /* Containers */
@@ -252,7 +255,21 @@ p {
 
 .side-to-side {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.half-of-whole {
+  width: 49%;
+}
+
+.content {
+  margin-left: 200px;
+  padding: 3%;
+}
+
+.section-header {
+  margin-bottom: 3%;
 }
 
 /* Popup */
@@ -293,7 +310,7 @@ p {
 }
 
 .popup-btn-close:hover {
-  color: #A47551;
+  color: var(--brown);
 }
 
 .popup-body {
@@ -338,11 +355,14 @@ p {
 
 /* Navbar */
 .navbar {
-  background-color: #A47551;
+  background-color: var(--brown);
   box-sizing: border-box;
   color: white;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: 1fr 5fr 1fr;
   height: 100%;
-  position: absolute;
+  position: fixed;
   text-align: center;
   width: 200px;
 }
@@ -373,13 +393,6 @@ p {
   text-align: left;
 }
 
-/* .navbar-nav:after {
-    content:' ';
-    display:block;
-    margin-top: 100%;
-    border:1px solid #D0B49F;
-} */
-
 .nav-item {
   font-weight: 300;
   margin: 5px 0;
@@ -387,7 +400,7 @@ p {
 
 .active {
   border-radius: 100px;
-  background-color: #D0B49F;
+  background-color: var(--tan);
   font-weight: 500;
 }
 
@@ -403,12 +416,17 @@ p {
   font-weight: 400;
 }
 
-.nav-divider {
-  margin: 250px 12% 1rem;
+.logout-container {
+  box-sizing: border-box;
+  font-weight: 300;
+  margin-bottom: 15px;
+  padding: 0 5%;
+  width: 100%;
 }
 
-
-
+.nav-divider {
+  margin: 1rem 12%;
+}
 
 /* Login */
 .login-container {
@@ -421,7 +439,7 @@ p {
 
 .login-1sthalf {
   align-items: center;
-  background-image: linear-gradient(to right, #BB865F, #A47551, #825B3E);
+  background-image: linear-gradient(to right, #BB865F, var(--brown), #825B3E);
   color: white;
   display: flex;
   flex-direction: column;
@@ -443,12 +461,9 @@ p {
 .login-2ndhalf {
   background-color: #F9F9FB;
   box-sizing: border-box;
+  padding: 8% 10%;
   overflow: hidden;
   height: 100%;
-}
-
-.login-form-container {
-  padding: 8% 10%;
 }
 
 .captcha-input {
@@ -457,7 +472,7 @@ p {
 }
 
 .btn-refresh-captcha {
-  color: #D0B49F;
+  color: var(--tan);
   cursor: pointer;
   position: absolute;
   right: 3.5%;
@@ -490,10 +505,6 @@ p {
   margin-top: 1.5rem;
 }
 
-.signup-form {
-  width: 49%;
-}
-
 /* Email Verified */
 #verified .popup-description {
   margin: 10% 0;
@@ -501,3 +512,42 @@ p {
 }
 
 /* Dashboard */
+.event-overview {
+  display: flex;
+  margin: 3% 0;
+}
+
+.event-counter {
+  font-size: 1.12rem;
+  margin-top: 10px;
+}
+
+.event-divider {
+  margin: 1rem;
+  transform: rotate(90deg);
+  width: 40px;
+}
+
+.dashboard-box {
+  background: var(--brown);
+  box-shadow: 5px 5px 10px rgba(130, 91, 62, 0.3);
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  padding: 2%;
+  transition: transform .2s ease, box-shadow .2s ease;
+  width: 49%;
+}
+
+.dashboard-box:hover {
+  box-shadow: 10px 10px 10px rgba(130, 91, 62, 0.3);
+  transform: scale(1.01);
+}
+
+.dashboard-box-header {
+  height: 100px;
+}
+
+.dashboard-box-heading {
+  font-size: 1.25rem;
+}

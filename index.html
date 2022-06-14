@@ -37,7 +37,7 @@
       </div>
 
       <div class="login-2ndhalf col-6">
-        <div class="login-form-container">
+        <!-- <div class="login-form-container"> -->
           <!-- Uncomment form when passing the project -->
           <!-- <form class="" action="dashboard.html" method="post"> -->
             <label for="usernameInput">Username</label>
@@ -51,7 +51,7 @@
               <input class="input" type="text" id="captchaInput" name="captcha" placeholder="Insert Captcha text">
             </span>
             <!-- Remove onclick if to be passed -->
-            <input class="input btn-submit" type="submit" name="login" value="Log In" onclick="window.location.href = 'dashboard.html';">
+            <input class="input btn btn-submit" type="submit" name="login" value="Log In" onclick="window.location.href = 'dashboard.html';">
             <div class="login-options">
               <div class="">
                 <input type="checkbox" id="rememberInput" name="rememberMe" value="">
@@ -62,7 +62,7 @@
           <!-- </form> -->
 
           <p class="sign-up-now">Don't have an account yet? <strong class="clickable-text" onclick="togglePopup('signup')">Sign Up</strong> now!</p>
-        </div>
+        <!-- </div> -->
       </div>
     </div>
 
@@ -82,7 +82,7 @@
         <!-- Uncomment form when passing the project -->
         <!-- <form class="" action="verify-email.html" method="post"> -->
           <div class="side-to-side">
-            <div class="signup-form">
+            <div class="half-of-whole">
               <label for="">Last Name</label>
               <input class="input" type="text" name="" value="" placeholder="Insert your Last Name here">
               <label for="">First Name</label>
@@ -93,7 +93,7 @@
               <input class="input" type="text" name="" value="" placeholder="Insert your Contact Number here">
             </div>
 
-            <div class="signup-form">
+            <div class="half-of-whole">
               <label for="">Birthdate</label>
               <input class="input" type="date" name="" value="">
               <label for="">Email</label>
@@ -107,7 +107,7 @@
 
           <div class="popup-action-btns">
             <!-- Remove onclick if to be passed -->
-            <input class="btn-submit" type="submit" name="" value="Sign Up" onclick="window.location.href = 'verify-email.html';">
+            <input class="btn btn-submit" type="submit" name="" value="Sign Up" onclick="window.location.href = 'verify-email.html';">
             <p class="btn-secondary" onclick="togglePopup('signup')">Back to Log In</p>
           </div>
         <!-- </form> -->
@@ -129,15 +129,16 @@
 
       <div class="popup-body">
         <p class="popup-description">Enter your email address below and we'll send you further instructions on how to reset your password.</p>
-
-        <form class="" action="index.html" method="post">
+        <!-- Uncomment form when passing the project -->
+        <!-- <form class="" action="index.html" method="post"> -->
           <input class="input" type="email" name="resetPassEmail" value="" placeholder="Insert your email address">
 
           <div class="popup-action-btns">
-            <input class="btn-submit" type="submit" name="" value="Submit">
+            <!-- Remove onclick if to be passed -->
+            <input class="btn btn-submit" type="submit" name="" value="Submit" onclick="window.location.href = 'index.html';">
             <p class="btn-secondary" onclick="togglePopup('forgotPassword')">Back to Log In</p>
           </div>
-        </form>
+        <!-- </form> -->
 
       </div>
     </div>
