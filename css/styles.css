@@ -107,6 +107,7 @@ input, select {
   --brown: #A47551;
   --lighter-brown: #BB865F;
   --carafe: #523A28;
+  --orange: #FF914D;
 
   --extra-small-text: 0.75rem;
   --smaller-text: 0.81rem;
@@ -368,7 +369,6 @@ p {
 
 .content {
   box-sizing: border-box;
-  height: 100%;
   margin-left: 200px;
   padding: 3%;
 }
@@ -377,6 +377,7 @@ p {
   display: grid;
   grid-auto-flow: column;
   grid-template-rows: auto 1fr;
+  height: 100%;
 }
 
 .content-fill {
@@ -598,9 +599,10 @@ p {
   transition: background-color .1s ease, color .2s ease;
 }
 
-.table-body tr:hover {
+.table-body tr:hover, .row-selected {
   background-color: var(--lighter-brown);
   color: white;
+  border-bottom-color: white !important;
 }
 
 .table-body tr:hover .btn-certificate {
@@ -611,6 +613,17 @@ p {
   background-color: white;
   color: var(--brown);
 }
+
+.table-body tr:hover .today, .row-selected-today {
+  color: white !important;
+  font-weight: 700;
+}
+
+.table-body tr th {
+  width: 5%;
+}
+
+
 
 .no-action {
   display: block;
@@ -830,4 +843,9 @@ p {
   border-radius: 100px;
   background-color: var(--tan);
   font-weight: 500;
+}
+
+.today {
+  color: var(--orange);
+  font-weight: 700;
 }

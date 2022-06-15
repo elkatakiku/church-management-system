@@ -35,24 +35,14 @@
           <a class="nav-link" href="index.html">Events</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Activities</a>
+          <a class="nav-link" href="../activities/index.html">Activities</a>
         </li>
       </ul>
 
-      <!-- Uncomment For Admin -->
       <div class="bottom-navbar-container">
         <hr class="nav-divider">
         <a class="nav-link" href="../../index.html">Logout</a>
       </div>
-
-      <!-- Uncomment For User -->
-      <!-- <address class="bottom-navbar-container">
-        <div class="address">
-          <p>For inquiries chuchu:</p>
-          <strong class="contact">0909090909</strong>
-          <strong class="contact">email@gmail.com</strong>
-        </div>
-      </address> -->
     </nav>
   </section>
 
@@ -76,7 +66,8 @@
       <table class="table">
       <thead class="table-header">
         <tr>
-          <th>Type of Event</th>
+          <th></th>
+          <th>Event</th>
           <th>Client</th>
           <th>Date</th>
           <th>Action</th>
@@ -86,20 +77,23 @@
       <tbody class="table-body">
         <!-- Sample Data -->
         <tr>
+          <th scope="row"><input type="checkbox" name="activityName#" value=""></th>
           <td>Marriage</td>
           <td>Mr. and Mrs. Wed</td>
-          <td>MMMM dd, YYYY</td>
+          <td class="date">MMMM dd, YYYY</td>
           <td><button class="btn btn-certificate" type="button" name="button">Certificate</button></td>
         </tr>
 
         <tr>
+          <th scope="row"><input type="checkbox" name="activityName#" value=""></th>
           <td>Baptismal</td>
           <td>Baby Baptism</td>
-          <td>MMMM dd, YYYY</td>
+          <td class="date">MMMM dd, YYYY</td>
           <td><button class="btn btn-certificate" type="button" name="button">Certificate</button></td>
         </tr>
 
         <tr>
+          <th scope="row"><input type="checkbox" name="activityName#" value=""></th>
           <td>Anniversary</td>
           <td>1st Anniversary Anniversary</td>
           <td>MMMM dd, YYYY</td>
@@ -107,6 +101,7 @@
         </tr>
 
         <tr>
+          <th scope="row"><input type="checkbox" name="activityName#" value=""></th>
           <td>Marriage</td>
           <td>Mr. and Mrs. Wed</td>
           <td>MMMM dd, YYYY</td>
@@ -115,6 +110,7 @@
 
 
         <tr>
+          <th scope="row"><input type="checkbox" name="activityName#" value=""></th>
           <td>Marriage</td>
           <td>Mr. and Mrs. Wed</td>
           <td>MMMM dd, YYYY</td>
@@ -122,6 +118,7 @@
         </tr>
 
         <tr>
+          <th scope="row"><input type="checkbox" name="activityName#" value=""></th>
           <td>Baptismal</td>
           <td>Baby Baptism</td>
           <td>MMMM dd, YYYY</td>
@@ -129,6 +126,7 @@
         </tr>
 
         <tr>
+          <th scope="row"><input type="checkbox" name="activityName#" value=""></th>
           <td>Anniversary</td>
           <td>1st Anniversary Anniversary</td>
           <td>MMMM dd, YYYY</td>
@@ -136,6 +134,7 @@
         </tr>
 
         <tr>
+          <th scope="row"><input type="checkbox" name="activityName#" value=""></th>
           <td>Marriage</td>
           <td>Mr. and Mrs. Wed</td>
           <td>MMMM dd, YYYY</td>
@@ -194,7 +193,7 @@
 
           <div class="popup-action-btns">
             <!-- Remove onclick if to be passed -->
-            <input class="btn btn-submit" type="submit" name="" value="Next" onclick="window.location.href = 'index.html';">
+            <input class="btn btn-submit" type="submit" name="" value="Next" onclick="index.html">
             <p class="btn-secondary" onclick="togglePopup('scheduleEvent')">Cancel</p>
           </div>
         <!-- </form> -->
@@ -203,7 +202,7 @@
   </section>
 
   <!-- Schedule Other Event -->
-  <section class="container-center" id="otherEvent">
+  <!-- <section class="container-center hidden" id="otherEvent">
     <div class="popup">
       <div class="popup-header">
         <h2 class="popup-heading">Schedule an Event</h2>
@@ -212,14 +211,14 @@
 
       <hr>
 
-      <div class="popup-body">
+      <div class="popup-body"> -->
         <!-- Uncomment form when passing the project -->
         <!-- <form class="" action="index.html" method="post"> -->
-          <label for="eventName">Event Name</label>
+          <!-- <label for="eventName">Event Name</label>
           <input class="input" id="eventName" type="text" name="" value="">
 
           <label for="">Description</label>
-          <input class="input" type="text" name="" value="">
+          <textarea class="input" name="eventDescription" rows="8" cols="80"></textarea>
 
           <label for="">Location</label>
           <input class="input" type="text" name="" value="">
@@ -230,15 +229,15 @@
           <label for="">Contact No.</label>
           <input class="input" type="text" name="" value="">
 
-          <div class="popup-action-btns">
+          <div class="popup-action-btns"> -->
             <!-- Remove onclick if to be passed -->
-            <input class="btn btn-submit" type="submit" name="" value="Next" onclick="window.location.href = 'index.html';">
+            <!-- <input class="btn btn-submit" type="submit" name="" value="Next" onclick="window.location.href = 'index.html';">
             <p class="btn-secondary" onclick="togglePopup('otherEvent')">Cancel</p>
-          </div>
+          </div> -->
         <!-- </form> -->
-      </div>
+      <!-- </div>
     </div>
-  </section>
+  </section> -->
 
 
 
@@ -252,6 +251,17 @@
       document.getElementById('overlay').classList.toggle("hidden");
       document.getElementById(elementId).classList.toggle("hidden");
     }
+
+    // function submitEvent() {
+    //   console.log('event submitted');
+    //   console.log(document.getElementById('events'));
+    //   var value = document.getElementById('events').value;
+    //   console.log(value);
+    //   if (value.toLowerCase() === 'others') {
+    //     document.getElementById('scheduleEvent').classList.toggle("hidden");
+    //     document.getElementById('otherEvent').classList.toggle("hidden");
+    //   }
+    // }
   </script>
 </body>
 
