@@ -6,7 +6,7 @@ https://elkatakiku.github.io/ChurchManagement_Admin/
 
 
 ## To Download the Whole Project ##
-* Click the 'Code' button
+* Click the green 'Code' button beside 'Add File'
 * Click 'Download Zip'
 * After download, unzip the file and codewell.
 
