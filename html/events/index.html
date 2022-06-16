@@ -81,7 +81,7 @@
           <td>Marriage</td>
           <td>Mr. and Mrs. Wed</td>
           <td class="date">MMMM dd, YYYY</td>
-          <td><button class="btn btn-certificate" type="button" name="button">Certificate</button></td>
+          <td><button class="btn btn-certificate" type="button" name="button" onclick="togglePopup('marcert')">Certificate</button></td>
         </tr>
 
         <tr>
@@ -105,7 +105,7 @@
           <td>Marriage</td>
           <td>Mr. and Mrs. Wed</td>
           <td>MMMM dd, YYYY</td>
-          <td><button class="btn btn-certificate" type="button" name="button">Certificate</button></td>
+          <td><button class="btn btn-certificate" type="button" name="button" onclick="togglePopup('marcert')">Certificate</button></td>
         </tr>
 
 
@@ -114,7 +114,7 @@
           <td>Marriage</td>
           <td>Mr. and Mrs. Wed</td>
           <td>MMMM dd, YYYY</td>
-          <td><button class="btn btn-certificate" type="button" name="button">Certificate</button></td>
+          <td><button class="btn btn-certificate" type="button" name="button" onclick="togglePopup('marcert')">Certificate</button></td>
         </tr>
 
         <tr>
@@ -138,7 +138,7 @@
           <td>Marriage</td>
           <td>Mr. and Mrs. Wed</td>
           <td>MMMM dd, YYYY</td>
-          <td><button class="btn btn-certificate" type="button" name="button">Certificate</button></td>
+          <td><button class="btn btn-certificate" type="button" name="button" onclick="togglePopup('marcert')">Certificate</button></td>
         </tr>
       </tbody>
     </table>
@@ -196,6 +196,190 @@
             <input class="btn btn-submit" type="submit" name="" value="Next" onclick="index.html">
             <p class="btn-secondary" onclick="togglePopup('scheduleEvent')">Cancel</p>
           </div>
+        <!-- </form> -->
+      </div>
+    </div>
+  </section>
+
+<!-- Certificate -->
+  <section class="container-center hidden" id="marcert">
+    <div class="popup">
+      <div class="popup-body">
+        <!-- Uncomment form when passing the project -->
+        <!-- <form class="" action="index.html" method="post"> -->
+          
+<div class="container-marriage">
+        <br>
+        <h1>Marriage</h1>
+        <hr></hr>
+        <br>
+        <div class="location">
+            <label for="m-location">Location</label>
+            <input type="text" name="m-location">
+        </div>
+        <div class="license">
+            <label for="m-license">License</label>
+            <select name="m-license" id="m-license">
+                <option value="yes">##</option>
+                <option value="no">##</option>
+            </select>
+        </div>
+        <div class="date">
+            <label for="m-date">Date</label>
+            <input type="text" name="m-date">
+        </div>
+        <div class="organist">
+            <label for="m-organist">Organist</label>
+            <select name="m-organist" id="m-organist">
+                <option value="yes">##</option>
+                <option value="no">##</option>
+            </select>
+        </div>
+        <div class="time">
+            <label for="m-time">Time</label>
+            <input type="text" name="m-time">
+        </div>
+        <div class="flowers">
+            <label for="m-flowers">Flowers</label>
+            <select name="m-flowers" id="m-flowers">
+                <option value="yes">##</option>
+                <option value="no">##</option>
+            </select>
+        </div>
+        <br>
+        <br>
+        <div class="marriage-groom">
+            <h2>Groom</h2>
+            <br>
+            <div class="name">
+                <label for="g-name">Name</label>
+                <input type="text" name="g-name">
+            </div>
+            <div class="dob">
+                <label for="g-dob">Date of Birth</label>
+                <input type="text" name="g-dob">
+            </div>
+            <div class="prevmar">
+                <label for="g-prevm">Previously Married</label>
+                <select name="g-prevm" id="g-prevm">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="pob">
+                <label for="g-pob">Place of Birth</label>
+                <input type="text" name="g-pob">
+            </div>
+            <div class="citi">
+                <label for="g-ct">Citizenship</label>
+                <input type="text" name="g-ct">
+            </div>
+            <div class="address">
+                <label for="g-address">Address(House No. Street, City/Municipality, Province, Country</label>
+                <input type="text" name="g-address">    
+            </div>
+            <div class="telno">
+                <label for="g-cpno">Telephone No.</label>
+                <input type="text" name="g-cpno">
+            </div>
+            <div class="occu">
+                <label for="g-occu">Occupation</label>
+                <input type="text" name="g-occu">
+            </div>
+            <div class="religion">
+                <label for="g-reli">Religion</label>
+                <input type="text" name="g-reli">
+            </div>
+            <div class="fathername">
+                <label for="g-father">Father's Name</label>
+                <input type="text" name="g-father">
+            </div>
+            <div class="fatherbp">
+                <label for="g-fatherbp">Birthplace</label>
+                <input type="text" name="g-fatherbp">
+            </div>
+            <div class="mothername">
+                <label for="g-mother">Mother's Maiden Name</label>
+                <input type="text" name="g-mother">
+            </div>
+            <div class="motherbp">
+                <label for="g-motherbp">Birthplace</label>
+                <input type="text" name="g-motherbp">
+            </div>            
+        </div>
+        <br>
+        <br>
+        <div class="marriage-bride">
+            <h2>Bride</h2>
+            <br>
+            <div class="name">
+                <label for="b-name">Name</label>
+                <input type="text" name="b-name">
+            </div>
+            <div class="dob">
+                <label for="b-dob">Date of Birth</label>
+                <input type="text" name="b-dob">
+            </div>
+            <div class="prevmar">
+                <label for="b-prevm">Previously Married</label>
+                <select name="g-prevm" id="b-prevm">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="pob">
+                <label for="b-pob">Place of Birth</label>
+                <input type="text" name="b-pob">
+            </div>
+            <div class="citi">
+                <label for="b-ct">Citizenship</label>
+                <input type="text" name="b-ct">
+            </div>
+            <div class="address">
+                <label for="b-address">Address(House No. Street, City/Municipality, Province, Country</label>
+                <input type="text" name="b-address">    
+            </div>
+            <div class="telno">
+                <label for="b-cpno">Telephone No.</label>
+                <input type="text" name="b-cpno">
+            </div>
+            <div class="occu">
+                <label for="b-occu">Occupation</label>
+                <input type="text" name="b-occu">
+            </div>
+            <div class="religion">
+                <label for="b-reli">Religion</label>
+                <input type="text" name="b-reli">
+            </div>
+            <div class="fathername">
+                <label for="b-father">Father's Name</label>
+                <input type="text" name="b-father">
+            </div>
+            <div class="fatherbp">
+                <label for="b-fatherbp">Birthplace</label>
+                <input type="text" name="b-fatherbp">
+            </div>
+            <div class="mothername">
+                <label for="b-mother">Mother's Maiden Name</label>
+                <input type="text" name="b-mother">
+            </div>
+            <div class="motherbp">
+                <label for="b-motherbp">Birthplace</label>
+                <input type="text" name="b-motherbp">
+            </div>            
+        </div>
+        <br>
+        <br>
+        <div class="submit-cert">
+            <button type="submit" name="cert-submmit">SAVE</button><br><br>
+            <a href="index.html">Cancel</a>
+        </div>
+        <br>
+        <br>
+    </div>
+
+
+
         <!-- </form> -->
       </div>
     </div>
