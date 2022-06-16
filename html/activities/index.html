@@ -49,107 +49,128 @@
   <main class="content content-grid">
     <header class="section-header">
       <h2 class="section-heading">Activities</h2>
-      <span class="side-to-side">
-        <button class="btn btn-schedule" type="button" name="button">
-          <i class="fa-solid fa-plus icon"></i>
-          Schedule Activity
-        </button>
-        <form class="search-field" action="index.html" method="post">
+      <!-- <span class="side-to-side"> -->
+      <button class="btn btn-schedule" type="button" name="button">
+        <i class="fa-solid fa-plus icon"></i>
+        Schedule Activity
+      </button>
+      <!-- <form class="search-field" action="index.html" method="post">
           <input class="input search" type="search" name="" value="" placeholder="Search here...">
           <button class="btn btn-search" type="submit" name="search-btn"><i class="fa-solid fa-magnifying-glass icon"></i></button>
-        </form>
-      </span>
+        </form> -->
+      <!-- </span> -->
     </header>
 
-    <!-- Insert Codes Here -->
-    <div class="table-container">
-      <table class="table">
-      <thead class="table-header">
-        <tr>
-          <th><input type="checkbox" name="activityName#" value="" id="selectAll" onclick="toggleSelectAll('selectAll')"></th>
-          <th>Activity</th>
-          <th>Status</th>
-          <th>Date</th>
-          <th>Time</th>
-        </tr>
-      </thead>
+    <div class="side-to-side table-action-buttons">
+      <div class="table-select-action-buttons">
+        <div class="table-select-action-buttons hidden" id="tableSelectOptions">
+          <button class="btn btn-submit" type="submit" form="table-form">
+            <i class="fa-solid fa-trash-can icon"></i>
+            Delete
+          </button>
+          <button class="btn btn-neutral" onclick="selectAllCheckbox('selectAll', true);">
+            <i class="fa-solid fa-xmark icon"></i>
+            Cancel
+          </button>
+        </div>
+      </div>
 
-      <tbody class="table-body">
-        <!-- Sample Data -->
-        <tr onclick="togglePopup('activityDetails')" id="activity1">
-          <th scope="row"><input type="checkbox" name="activityName#" value="" onclick="checkedRow('activity1', event)"></th>
-          <td>Marriage</td>
-          <td class="today">Today</td>
-          <td>MMMM dd, YYYY</td>
-          <td>01:00 AM</td>
-        </tr>
-
-        <tr onclick="togglePopup('activityDetails')" id="activity2">
-          <th scope="row"><input type="checkbox" name="activityName#" value="" onclick="checkedRow('activity2', event)"></th>
-          <td>Baptismal</td>
-          <td class="today">Today</td>
-          <td>MMMM dd, YYYY</td>
-          <td>01:00 AM</td>
-        </tr>
-
-        <tr onclick="togglePopup('activityDetails')" id="activity3">
-          <th scope="row"><input type="checkbox" name="activityName#" value="" onclick="checkedRow('activity3', event)"></th>
-          <td>Anniversary</td>
-          <td class="today">Today</td>
-          <td>MMMM dd, YYYY</td>
-          <td>01:00 AM</td>
-        </tr>
-
-        <tr onclick="togglePopup('activityDetails')" id="activity4">
-          <th scope="row"><input type="checkbox" name="activityName#" value="" onclick="checkedRow('activity4', event)"></th>
-          <td>Marriage</td>
-          <td>Upcoming</td>
-          <td>MMMM dd, YYYY</td>
-          <td>01:00 AM</td>
-        </tr>
-
-
-        <tr onclick="togglePopup('activityDetails')" id="activity5">
-          <th scope="row"><input type="checkbox" name="activityName#" value="" onclick="checkedRow('activity5', event)"></th>
-          <td>Marriage</td>
-          <td>Upcoming</td>
-          <td>MMMM dd, YYYY</td>
-          <td>01:00 AM</td>
-        </tr>
-
-        <tr onclick="togglePopup('activityDetails')" id="activity6">
-          <th scope="row"><input type="checkbox" name="activityName#" value="" onclick="checkedRow('activity6', event);"></th>
-          <td>Baptismal</td>
-          <td>Upcoming</td>
-          <td>MMMM dd, YYYY</td>
-          <td>02:00 AM</td>
-        </tr>
-
-        <tr onclick="togglePopup('activityDetails')" id="activity7">
-          <th scope="row"><input type="checkbox" name="activityName#" value="" onclick="checkedRow('activity7, event')"></th>
-          <td>Anniversary</td>
-          <td>Upcoming</td>
-          <td>MMMM dd, YYYY</td>
-          <td>01:00 AM</td>
-        </tr>
-
-        <tr onclick="togglePopup('activityDetails')" id="activity8">
-          <th scope="row"><input type="checkbox" name="activityName#" value="" onclick="checkedRow('activity8', event)"></th>
-          <td>Marriage</td>
-          <td>Upcoming</td>
-          <td>MMMM dd, YYYY</td>
-          <td>01:00 AM</td>
-        </tr>
-      </tbody>
-    </table>
+      <form class="search-field" action="index.html" method="post">
+        <input class="input search" type="search" name="" value="" placeholder="Search here...">
+        <button class="btn btn-search" type="submit" name="search-btn"><i class="fa-solid fa-magnifying-glass icon"></i></button>
+      </form>
     </div>
+
+    <!-- Insert Codes Here -->
+    <!-- Uncomment form when its time to pass the project -->
+    <form class="table-container" action="index.html" method="post" id="table-form">
+      <table class="table">
+        <thead class="table-header">
+          <tr>
+            <th><input type="checkbox" name="activityName#" value="" id="selectAll" onclick="selectAllCheckbox('selectAll');"></th>
+            <th>Activity</th>
+            <th>Status</th>
+            <th>Date</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+
+        <tbody class="table-body" id="tableData">
+          <!-- Sample Data -->
+          <tr onclick="togglePopup('activityDetails')" id="activity1">
+            <th scope="row"><input type="checkbox" name="activityName#" value="" onclick="checkedRow('activity1', event)"></th>
+            <td>Marriage</td>
+            <td class="today">Today</td>
+            <td>MMMM dd, YYYY</td>
+            <td>01:00 AM</td>
+          </tr>
+
+          <tr onclick="togglePopup('activityDetails')" id="activity2">
+            <th scope="row"><input type="checkbox" name="activityName#" value="" onclick="checkedRow('activity2', event)"></th>
+            <td>Baptismal</td>
+            <td class="today">Today</td>
+            <td>MMMM dd, YYYY</td>
+            <td>01:00 AM</td>
+          </tr>
+
+          <tr onclick="togglePopup('activityDetails')" id="activity3">
+            <th scope="row"><input type="checkbox" name="activityName#" value="" onclick="checkedRow('activity3', event)"></th>
+            <td>Anniversary</td>
+            <td class="today">Today</td>
+            <td>MMMM dd, YYYY</td>
+            <td>01:00 AM</td>
+          </tr>
+
+          <tr onclick="togglePopup('activityDetails')" id="activity4">
+            <th scope="row"><input type="checkbox" name="activityName#" value="" onclick="checkedRow('activity4', event)"></th>
+            <td>Marriage</td>
+            <td>Upcoming</td>
+            <td>MMMM dd, YYYY</td>
+            <td>01:00 AM</td>
+          </tr>
+
+
+          <tr onclick="togglePopup('activityDetails')" id="activity5">
+            <th scope="row"><input type="checkbox" name="activityName#" value="" onclick="checkedRow('activity5', event)"></th>
+            <td>Marriage</td>
+            <td>Upcoming</td>
+            <td>MMMM dd, YYYY</td>
+            <td>01:00 AM</td>
+          </tr>
+
+          <tr onclick="togglePopup('activityDetails')" id="activity6">
+            <th scope="row"><input type="checkbox" name="activityName#" value="" onclick="checkedRow('activity6', event);"></th>
+            <td>Baptismal</td>
+            <td>Upcoming</td>
+            <td>MMMM dd, YYYY</td>
+            <td>02:00 AM</td>
+          </tr>
+
+          <tr onclick="togglePopup('activityDetails')" id="activity7">
+            <th scope="row"><input type="checkbox" name="activityName#" value="" onclick="checkedRow('activity7', event)"></th>
+            <td>Anniversary</td>
+            <td>Done</td>
+            <td>MMMM dd, YYYY</td>
+            <td>01:00 AM</td>
+          </tr>
+
+          <tr onclick="togglePopup('activityDetails')" id="activity8">
+            <th scope="row"><input type="checkbox" name="activityName#" value="" onclick="checkedRow('activity8', event)"></th>
+            <td>Marriage</td>
+            <td>Done</td>
+            <td>MMMM dd, YYYY</td>
+            <td>01:00 AM</td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
     <!-- ************************ -->
   </main>
 
   <!-- Overlay -->
   <div class="overlay hidden" id="overlay"></div>
 
-  <!-- Schedule Event -->
+  <!-- Activity Details -->
   <section class="container-center hidden" id="activityDetails">
     <div class="popup">
       <div class="popup-header">
@@ -162,29 +183,30 @@
       <div class="popup-body">
         <!-- Uncomment form when passing the project -->
         <!-- <form class="" action="index.html" method="post"> -->
-          <p class="popup-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Felis donec et odio pellentesque. Ut tortor pretium viverra suspendisse potenti nullam. In ante metus dictum at </p>
+        <p class="popup-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Felis donec et odio pellentesque. Ut tortor pretium viverra suspendisse potenti nullam.
+          In ante metus dictum at </p>
 
-          <h3>Activity Details</h3>
+        <h3>Activity Details</h3>
 
-          <div class="side-to-side">
-            <div class="half-of-whole">
-              <p>Organizer:</p>
-              <p>Contact Number:</p>
-              <p>Date:</p>
-              <p>Time:</p>
-              <p>Location:</p>
-            </div>
-
-            <div class="half-of-whole">
-              <p>Organizer:</p>
-              <p>Contact Number:</p>
-              <p>Date:</p>
-              <p>Time:</p>
-              <p>Location:</p>
-            </div>
+        <div class="side-to-side">
+          <div class="half-of-whole">
+            <p>Organizer:</p>
+            <p>Contact Number:</p>
+            <p>Date:</p>
+            <p>Time:</p>
+            <p>Location:</p>
           </div>
-            <!-- Remove onclick if to be passed -->
-            <span class="btn btn-neutral" onclick="togglePopup('activityDetails')">OK</span>
+
+          <div class="half-of-whole">
+            <p>Organizer:</p>
+            <p>Contact Number:</p>
+            <p>Date:</p>
+            <p>Time:</p>
+            <p>Location:</p>
+          </div>
+        </div>
+        <!-- Remove onclick if to be passed -->
+        <span class="btn btn-neutral" onclick="togglePopup('activityDetails')">OK</span>
         <!-- </form> -->
       </div>
     </div>
@@ -196,52 +218,81 @@
 
   <!-- Functionality -->
   <script>
+    const numberOfRows = document.getElementById('tableData').childElementCount;
+
     function togglePopup(elementId) {
       document.getElementById('overlay').classList.toggle("hidden");
       document.getElementById(elementId).classList.toggle("hidden");
     }
 
-    function toggleSelectAll(elementId) {
+    function selectAllCheckbox(elementId, cancel = false) {
       var selectAll = document.getElementById(elementId);
       var inputs = document.getElementsByTagName('input');
 
-      for (var i=0;i<inputs.length;i++) {
-        var row = inputs[i].parentElement.closest('tr');
-
-        if (inputs[i] != selectAll && row !== null) {
-          selectRow(inputs[i], selectAll);
+      for (var i = 0; i < inputs.length; i++) {
+        if ((inputs[i] != selectAll) && (inputs[i].parentElement.closest('tr') !== null)) {
+          if (inputs[i].checked != selectAll.checked) {
+            inputs[i].checked = selectAll.checked;
+            selectRow(inputs[i], cancel);
+          } else if (inputs[i].checked && cancel) {
+            inputs[i].checked = selectAll.checked = false;
+            selectRow(inputs[i], cancel);
+          }
         }
       }
     }
 
-    function checkedRow(elementId, event) {
-      var input = document.getElementById(elementId);
-      console.log("Checking input");
-      console.log(input);
-      selectRow(input, input);
+    var checkedBoxCounter = 0;
+
+    function checkedRow(rowId, event) {
+      var input = document.getElementById(rowId);
+      selectRow(input);
+
+      document.getElementById("selectAll").checked = (numberOfRows === checkedBoxCounter ? true : false);
       event.stopPropagation();
     }
 
-    function selectRow(element, selectAll) {
-      console.log("Checking element");
-      console.log(element);
-      element.checked = selectAll.checked;
-      console.log(element.parentElement.closest('tr'));
-      if (element.parentElement.closest('tr') === null) {
-        getToday(element.firstElementChild);
-        element.classList.toggle("row-selected");
+    function selectRow(element, cancel) {
+      var row = element.parentElement.closest('tr');
+      getToday((row === null ? element : element.parentElement.parentElement), cancel);
+      showTableOptions();
+    }
+
+    function getToday(tableRow, cancel) {
+      var tableCell = tableRow.firstElementChild;
+
+      if (tableCell.firstElementChild.checked && cancel != true) {
+        checkedBoxCounter++;
+        tableRow.classList.add("row-selected");
       } else {
-        element.parentElement.closest('tr').classList.toggle("row-selected");
-        getToday(element.parentElement);
+        checkedBoxCounter--;
+        tableRow.classList.remove("row-selected");
+      }
+      changeToday(tableCell, tableCell.firstElementChild.checked)
+    }
+
+    function changeToday(tableCell, isChecked) {
+      while (tableCell) {
+        if (tableCell.classList.contains('today')) {
+          if (isChecked) {
+            tableCell.classList.add("row-selected-today");
+          } else {
+            tableCell.classList.remove("row-selected-today");
+          }
+        }
+        tableCell = tableCell.nextElementSibling;
       }
     }
 
-    function getToday(tableCell) {
-      while(tableCell) {
-        if (tableCell.classList.contains('today')) {
-          tableCell.classList.toggle("row-selected-today");
-        }
-        tableCell = tableCell.nextElementSibling;
+    function showTableOptions() {
+      var options = document.getElementById('tableSelectOptions');
+      console.log("Rows: " + numberOfRows);
+      console.log("Counter: " + checkedBoxCounter);
+
+      if (checkedBoxCounter > 0 && options.classList.contains('hidden')) {
+        options.classList.remove("hidden");
+      } else if (checkedBoxCounter === 0) {
+        options.classList.add("hidden");
       }
     }
   </script>
