@@ -16,7 +16,7 @@ function scheduleEvent(eventChoice) {
       changePage("forms/baptismal.html");
       break;
     case "marriage":
-      changePage();
+      changePage("forms/marriage.html");
       break;
     case "youthActivities":
       changePage();

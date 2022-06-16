@@ -27,67 +27,202 @@
         <h1 class="navbar-brand-text">CHURCH</h1>
       </div>
 
-
-
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="#">Dashboard</a>
+          <a class="nav-link" href="../../dashboard.html">Dashboard</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="#">Events</a>
+          <a class="nav-link" href="../index.html">Events</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Activities</a>
+          <a class="nav-link" href="../../activities/index.html">Activities</a>
         </li>
       </ul>
 
-      <div class="bottom-navbar-container">
+      <div class="grid-bottom-container">
         <hr class="nav-divider">
-        <a class="nav-link" href="../index.html">Logout</a>
+        <a class="nav-link" href="../../../index.html">Logout</a>
       </div>
     </nav>
   </section>
 
-  <main class="content content-grid">
-    <header class="section-header">
-      <h2 class="section-heading">Schedule a Baptismal</h2>
-      <hr>
-    </header>
+  <main class="content form-page">
+    <div>
+      <header class="section-header">
+        <h2 class="section-heading">Schedule a Baptismal</h2>
+        <hr>
+      </header>
 
-    <h3 class="form-heading">Child</h3>
+      <form class="form-container" action="" method="post" id="baptismalForm">
 
-    <form class="" action="index.html" method="post">
-      <div class="side-to-side">
-        <div class="half-of-whole">
-          <label for="name">Name</label>
-          <input class="input" type="text" id="name" name="name" placeholder="Surname, Name, M.I.">
-          <label for="bplace">Birthplace</label>
-          <input class="input" type="text" id="bplace" name="bplace" placeholder="">
-          <label for="religion">Religion</label>
-          <input class="input" type="text" id="religion" name="religion" placeholder="">
-          <label for="cit">Citizenship</label>
-          <input class="input" type="text" id="cit" name="cit" placeholder="">
+        <!-- 1st Slide -->
+        <div class="">
+
+          <h3 class="heading2">Child</h3>
+          <div class="row">
+            <div>
+              <label for="name">Name</label>
+              <input class="input" type="text" id="name" name="name" placeholder="Surname, Name, M.I.">
+              <label for="bplace">Birthplace</label>
+              <input class="input" type="text" id="bplace" name="bplace" placeholder="">
+              <label for="religion">Religion</label>
+              <input class="input" type="text" id="religion" name="religion" placeholder="">
+              <label for="cit">Citizenship</label>
+              <input class="input" type="text" id="cit" name="cit" placeholder="">
+            </div>
+
+            <div>
+              <label for="">Age</label>
+              <input class="input" type="number" name="" value="">
+              <label for="">Birthdate</label>
+              <input class="input" type="date" name="" value="">
+            </div>
+          </div>
         </div>
 
-        <div class="half-of-whole">
-          <label for="">Age</label>
-          <input class="input" type="text" name="" value="">
-          <label for="">Birthdate</label>
-          <input class="input" type="date" name="" value="">
-        </div
-        <div>
+        <!-- 2nd Slide -->
+        <div class="">
+          <h4 class="heading2">Mother</h4>
 
-        </div>
-        <div>
+          <div class="row">
+            <div class="">
+              <label for="">Name</label>
+              <input class="input" type="text" name="" value="" placeholder="Surname, Name, M.I.">
+              <label for="">Birthplace</label>
+              <input class="input" type="text" name="" value="" placeholder="">
+              <label for="">Address</label>
+              <input class="input" type="text" name="" value="" placeholder="House no. Street, City/Municipality, Province, Country">
+            </div>
 
+            <div class="">
+              <label for="">Birthdate</label>
+              <input class="input" type="date" name="" value="">
+              <label for="">Telephone No.</label>
+              <input class="input" type="tel" name="" value="" placeholder="">
+              <label for="">Occupation</label>
+              <input class="input" type="text" name="">
+            </div>
+
+            <div class="">
+              <label for="">Religion</label>
+              <input class="input" type="text" name="" value="">
+              <label for="">Age</label>
+              <input class="input" type="number" name="" value="" placeholder="">
+              <label for="">Date of Marriage</label>
+              <input class="input" type="date" name="">
+            </div>
+          </div>
+
+          <hr>
+
+          <h2 class="heading2">Father</h2>
+          <div class="row">
+            <div class="">
+              <label for="">Name</label>
+              <input class="input" type="text" name="" value="" placeholder="Surname, Name, M.I.">
+              <label for="">Birthplace</label>
+              <input class="input" type="text" name="" value="" placeholder="">
+              <label for="">Address</label>
+              <input class="input" type="text" name="" value="" placeholder="House no. Street, City/Municipality, Province, Country">
+            </div>
+
+            <div class="">
+              <label for="">Birthdate</label>
+              <input class="input" type="date" name="" value="">
+              <label for="">Telephone No.</label>
+              <input class="input" type="tel" name="" value="" placeholder="">
+              <label for="">Occupation</label>
+              <input class="input" type="text" name="">
+            </div>
+
+            <div class="">
+              <label for="">Religion</label>
+              <input class="input" type="text" name="" value="">
+              <label for="">Age</label>
+              <input class="input" type="email" name="" value="" placeholder="">
+              <label for="">Date of Marriage</label>
+              <input class="input" type="date" name="">
+            </div>
+          </div>
         </div>
-      </div>
-    </form>
+
+        <!-- 3rd Slide -->
+        <div class="sponsor">
+          <h4 class="heading2">Sponsors</h4>
+          <h4 class="heading3">Main Sponsor*</h4>
+          <div class="row">
+
+            <div class="">
+              <h5 class="heading4">Male Sponsor</h5>
+              <label for="name">Name</label>
+              <input class="input" type="text" id="name" name="name" placeholder="Surname, Name, M.I.">
+            </div>
+
+            <div class="">
+              <h5 class="heading4">Female Sponsor</h5>
+              <label for="name">Name</label>
+              <input class="input" type="text" id="name" name="name" placeholder="Surname, Name, M.I.">
+            </div>
+          </div>
+
+          <hr>
+
+          <div>
+
+            <h4 class="heading3">Other Sponsors</h4>
+            <div class="row">
+              <div class="">
+                <label for="">Name</label>
+                <input class="input" type="text" name="" value="" placeholder="Surname, Name, M.I.">
+                <label for="">Name</label>
+                <input class="input" type="text" name="" value="" placeholder="Surname, Name, M.I.">
+                <label for="">Name</label>
+                <input class="input" type="text" name="" value="" placeholder="Surname, Name, M.I.">
+                <label for="">Name</label>
+                <input class="input" type="text" name="" value="" placeholder="Surname, Name, M.I.">
+              </div>
+
+              <div class="">
+                <label for="">Name</label>
+                <input class="input" type="text" name="" value="" placeholder="Surname, Name, M.I.">
+                <label for="">Name</label>
+                <input class="input" type="text" name="" value="" placeholder="Surname, Name, M.I.">
+                <label for="">Name</label>
+                <input class="input" type="text" name="" value="" placeholder="Surname, Name, M.I.">
+                <label for="">Name</label>
+                <input class="input" type="text" name="" value="" placeholder="Surname, Name, M.I.">
+              </div>
+
+            </div>
+
+            <hr>
+
+            <div>
+              <h2 class="heading2">Event Settings</h2>
+              <div class="row">
+                <div class="">
+                  <label for="">Church Name</label>
+                  <input class="input" type="text" name="" value="" placeholder="Surname, Name, M.I.">
+                  <label for="">Organizer</label>
+                  <input class="input" type="text" name="" value="" placeholder="Surname, Name, M.I.">
+                </div>
+
+                <div class="">
+                  <label for="">Location</label>
+                  <input class="input" type="text" name="" value="" placeholder="Surname, Name, M.I.">
+                  <label for="">Contact No.</label>
+                  <input class="input" type="text" name="" value="" placeholder="Surname, Name, M.I.">
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </form>
+    </div>
 
     <div class="side-to-side">
-      <p class="btn-secondary" onclick="changePage('../index.html')">Back</p>
-      <!-- <input class="btn" type="submit" value="Back" onclick="window.location.href = 'bap2.html';"> -->
-      <input class="btn" type="submit" value="Next" onclick="window.location.href = '#';">
+      <button class="btn btn-outline btn-secondary " onclick="changePage('../index.html')">Back</button>
+      <button class="btn" type="submit" onclick="" form="baptismalForm">Submit</button>
     </div>
 
 

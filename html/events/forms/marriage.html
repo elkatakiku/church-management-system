@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>CHURCH</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../../../css/styles.css">
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- Overlay -->
+  <div class="overlay hidden" id="overlay"></div>
+
+  <section>
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <img class="navbar-brand-logo" src="https://cdn-icons-png.flaticon.com/512/739/739249.png" alt="Web application logo">
+        <h1 class="navbar-brand-text">CHURCH</h1>
+      </div>
+
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../dashboard.html">Dashboard</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="../index.html">Events</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../activities/index.html">Activities</a>
+        </li>
+      </ul>
+
+      <div class="grid-bottom-container">
+        <hr class="nav-divider">
+        <a class="nav-link" href="../../../index.html">Logout</a>
+      </div>
+    </nav>
+  </section>
+
+  <main class="content form-page">
+    <div>
+      <header class="section-header">
+        <h2 class="section-heading">Schedule a Wedding</h2>
+        <hr>
+      </header>
+
+      <form class="form-container" action="" method="post" id="marriageForm">
+
+        <h3 class="heading2">Groom</h3>
+
+        <div class="row">
+          <div class="">
+            <label>Name</label>
+            <input class="input" type="text" placeholder="Surname, Name M.I" required>
+
+            <label>Telephone No.</label>
+            <input class="input" type="number" placeholder="Enter mobile number" required>
+
+            <label>Address</label>
+            <input class="input" type="text" placeholder="House no. Street, City/Municipality, Province, Country" required>
+          </div>
+
+          <div class="">
+            <label>Date of Birth</label>
+            <input class="input" type="date" placeholder="Enter birth date" required>
+
+            <label>Place of Birth</label>
+            <input class="input" type="text" placeholder="Enter Place of Birth" required>
+
+            <label>Religion</label>
+            <input class="input" type="text" placeholder="Enter Religion" required>
+          </div>
+
+          <div class="">
+            <label>Citizenship</label>
+            <input class="input" type="text" placeholder="Enter citizenship" required>
+
+            <label>Occupation</label>
+            <input class="input" type="text" placeholder="Enter Occupation" required>
+
+            <div class="">
+              <label>Civil Status</label>
+              <div class="select-wrapper">
+                <select class="input select" required>
+                  <option disabled selected>Select Status</option>
+                  <option>Single</option>
+                  <option>Married</option>
+                  <option>Divorced</option>
+                  <option>Widowed</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h4 class="heading3">Parents</h4>
+        <div class="row">
+          <div class="">
+            <label>Father's Maiden Name</label>
+            <input class="input" type="text" placeholder="Enter Father's Maiden Name" required>
+
+            <label>Mother's Maiden Name</label>
+            <input class="input" type="text" placeholder="Enter Mother's Maiden Name" required>
+          </div>
+
+          <div class="">
+            <label>Telephone No.</label>
+            <input class="input" type="number" placeholder="Enter Father's Mobile Number" required>
+
+            <label>Telephone No.</label>
+            <input class="input" type="number" placeholder="Enter Mother's Mobile Number" required>
+          </div>
+        </div>
+
+        <hr>
+
+        <h3 class="heading2">Bride</h3>
+
+        <div class="row">
+          <div class="">
+            <label>Name</label>
+            <input class="input" type="text" placeholder="Surname, Name M.I" required>
+
+            <label>Telephone No.</label>
+            <input class="input" type="number" placeholder="Enter mobile number" required>
+
+            <label>Address</label>
+            <input class="input" type="text" placeholder="House no. Street, City/Municipality, Province, Country" required>
+          </div>
+
+          <div class="">
+            <label>Date of Birth</label>
+            <input class="input" type="date" placeholder="Enter birth date" required>
+
+            <label>Place of Birth</label>
+            <input class="input" type="text" placeholder="Enter Place of Birth" required>
+
+            <label>Religion</label>
+            <input class="input" type="text" placeholder="Enter Religion" required>
+          </div>
+
+          <div class="">
+            <label>Citizenship</label>
+            <input class="input" type="text" placeholder="Enter citizenship" required>
+
+            <label>Occupation</label>
+            <input class="input" type="text" placeholder="Enter Occupation" required>
+
+            <div class="">
+              <label>Civil Status</label>
+              <div class="select-wrapper">
+                <select class="input select" required>
+                  <option disabled selected>Select Status</option>
+                  <option>Single</option>
+                  <option>Married</option>
+                  <option>Divorced</option>
+                  <option>Widowed</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h4 class="heading3">Parents</h4>
+
+        <div class="row">
+
+          <div class="">
+            <label>Father's Maiden Name</label>
+            <input class="input" type="text" placeholder="Enter Father's Maiden Name" required>
+
+            <label>Mother's Maiden Name</label>
+            <input class="input" type="text" placeholder="Enter Mother's Maiden Name" required>
+          </div>
+
+          <div class="">
+            <label>Telephone No.</label>
+            <input class="input" type="number" placeholder="Enter Father's Mobile Number" required>
+
+            <label>Telephone No.</label>
+            <input class="input" type="number" placeholder="Enter Mother's Mobile Number" required>
+          </div>
+        </div>
+
+        <hr>
+        <div>
+          <h2 class="heading2">Event Settings</h2>
+          <div class="row">
+            <div class="">
+              <label for="">Church Name</label>
+              <input class="input" type="text" name="" value="" placeholder="Surname, Name, M.I.">
+              <label for="">Organizer</label>
+              <input class="input" type="text" name="" value="" placeholder="Surname, Name, M.I.">
+            </div>
+
+            <div class="">
+              <label for="">Location</label>
+              <input class="input" type="text" name="" value="" placeholder="Surname, Name, M.I.">
+              <label for="">Contact No.</label>
+              <input class="input" type="text" name="" value="" placeholder="Surname, Name, M.I.">
+            </div>
+          </div>
+        </div>
+
+
+      </form>
+    </div>
+
+    <div class="side-to-side">
+      <button class="btn btn-outline btn-secondary" onclick="changePage('../index.html')">Back</button>
+      <button class="btn" type="submit" onclick="" form="marriageForm">Submit</button>
+    </div>
+
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/4de3040dc0.js" crossorigin="anonymous"></script>
+
+    <!-- Functionality -->
+    <script type="text/javascript" src="../../../js/index.js"></script>
+</body>
+
+</html>

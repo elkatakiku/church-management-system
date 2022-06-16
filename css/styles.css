@@ -116,9 +116,9 @@ input, select {
   --slightly-big-text: 1.12rem;
   --big-text: 1.25rem;
 
-  --icon-size: 1.5rem;
+  --bigger-text: 1.5rem;
 
-  --section-heading: 2rem;
+  --heading: 2rem;
   --login-website-name: 2.87rem;
 }
 
@@ -329,6 +329,19 @@ span.btn-neutral, a.btn-neutral {
   top: -1.5px;
 }
 
+.btn-outline {
+  border: 1px solid var(--brown);
+  background-color: transparent;
+  color: var(--carafe);
+  font-weight: 400;
+  padding: 0 20px;
+}
+
+.btn-outline:hover {
+  background-color: white;
+}
+
+
 /* Texts */
 .secondary-texts {
   font-weight: 300;
@@ -347,11 +360,27 @@ span.btn-neutral, a.btn-neutral {
 }
 
 /* Headings */
+.heading2, .heading3, .heading4 {
+  font-size: var(--bigger-text);
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+.heading3, .heading4 {
+  font-size: var(--big-text);
+  font-weight: 500;
+}
+
+.heading4 {
+  font-size: var(--normal-text);
+}
+
 .section-heading {
-  font-size: var(--section-heading);
+  font-size: var(--heading);
   font-weight: bold;
   margin-bottom: 8px;
 }
+
 
 /* Containers */
 .container-center {
@@ -362,6 +391,12 @@ span.btn-neutral, a.btn-neutral {
   position: absolute;
   top: 0;
   width: 100%;
+}
+
+.row {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 15px;
 }
 
 .side-to-side {
@@ -416,7 +451,7 @@ span.btn-neutral, a.btn-neutral {
 
 .popup .icon {
   left: 10%;
-  font-size: var(--icon-size);
+  font-size: var(--bigger-text);
   position: absolute;
   top: -10%;
 }
@@ -667,6 +702,22 @@ span.btn-neutral, a.btn-neutral {
   width: 100%;
 }
 
+/* User Form */
+.form-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+}
+
+.form-page .side-to-side:last-of-type {
+  margin-top: 20px;
+}
+
+.form-page .side-to-side:last-of-type .btn {
+  width: 150px;
+}
+
 /* Login */
 .login-container {
   box-shadow: 10px 10px 10px rgba(130, 91, 62, 0.3);
@@ -794,6 +845,21 @@ span.btn-neutral, a.btn-neutral {
   margin: 1.5rem auto 0;
 }
 
+/* Activity Detail */
+.activity-details {
+  padding: 0 25px;
+}
+
+/* Baptismal */
+.form-page .side-to-side .btn-secondary {
+  font-weight: 400;
+  margin: 0;
+}
+
+.sponsor .heading4 {
+  text-align: center;
+}
+
 
 
 
@@ -878,165 +944,6 @@ span.btn-neutral, a.btn-neutral {
 
 
 
-/* BAPTISMAL */
-/* .details-bap {
-  box-sizing: border-box;
-  padding: 5% 8%;
-  overflow: hidden;
-  height: 100%;
-} */
-
-/* .nav2-divider {
-  width: 100%;
-} */
-
-/* .btn-submit2 {
-  position: relative;
-  top: -30px;
-  left: 900px;
-  width: 100%;
-}
-
-.btn-submit22 {
-  position: relative;
-  top: -30px;
-  left: -900px;
-  width: 100%;
-} */
-
-.form-heading {
-  font-size: 1.8rem;
-  font-weight: 100%;
-  margin-bottom: 8px;
-}
-
-.details-bap2 {
-  font-size: 0.81rem;
-  box-sizing: border-box;
-  padding: 2% 5%;
-  overflow: hidden;
-  height: 100%;
-}
-
-.side-to-side2 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.side-to-side3 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.details-bap0 {
-  font-size: 0.81rem;
-  box-sizing: border-box;
-  padding: 0% 1%;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-}
-
-.content-new {
-  font-size: var(--extra-small-text);
-  display: flex;
-  justify-content: space-between;
-  margin-left: 200px;
-  padding: 3%;
-}
-
-.ahkdog {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.chisdog {
-  display: flex;
-  width: calc(2000% / 5 - 15px);
-  flex-direction: column;
-  padding: 2%;
-}
-
-.ahkdog2 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.chisdog2 {
-  display: flex;
-  width: calc(2000% / 5 - 20px);
-  flex-direction: column;
-  padding: 2%;
-}
-
-.bap3-spon {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.bap3-nga {
-  display: flex;
-  width: calc(2000% / 5 - 20px);
-  flex-direction: column;
-  padding: 2%;
-}
-
-.btn-submit3 {
-  position: relative;
-  top: 180px;
-  left: -180px;
-  width: 100%;
-}
-
-.btn-submit4 {
-  position: relative;
-  top: 180px;
-  left: -1050px;
-  width: 100%;
-}
-
-.btn-submit5 {
-  position: relative;
-  top: 50px;
-  left: 950px;
-  width: 10%;
-}
-
-.btn-submit6 {
-  position: relative;
-  top: -15px;
-  left: 20px;
-  width: 10%;
-}
-
-.bottom-navbar-container2 {
-  box-sizing: border-box;
-  font-weight: 300;
-  margin-bottom: 15px;
-  padding: 0 5%;
-  text-align: left;
-  width: 100%;
-  color: white;
-}
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* Functionality */
@@ -1053,4 +960,63 @@ span.btn-neutral, a.btn-neutral {
 .today {
   color: var(--orange);
   font-weight: 700;
+}
+
+
+
+
+
+
+
+/* Test */
+.sliding-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  /* overflow: hidden; */
+  border: 5px solid blue;
+}
+
+.sliding {
+  position: absolute;
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  transition: transform 2s ease;
+}
+
+/* .sliding:hover {
+  transform: translate(100%);
+} */
+
+.slideactive {
+  transform: translate(100%);
+}
+
+
+
+
+
+
+
+
+/* XTINA */
+
+/***************WEDDING FORM AND ANNIVERSARY*****************/
+@media (max-width: 750px) {
+    .content form{
+        overflow-y: scroll;
+    }
+    .content form::-webkit-scrollbar{
+       display: none;
+    }
+    form .fields .input-field{
+        width: calc(100% / 2 - 15px);
+    }
+}
+
+@media (max-width: 550px) {
+    form .fields .input-field{
+        width: 100%;
+    }
 }
