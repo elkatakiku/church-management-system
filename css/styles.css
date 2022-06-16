@@ -849,3 +849,395 @@ p {
   color: var(--orange);
   font-weight: 700;
 }
+
+
+/********MARRIAGEEEEEEEEEEEE CERTIFICATEEEEEEEEEEE************/
+
+/*container*/
+.container-marriage{
+  box-shadow: 10px 10px 10px rgba(130, 91, 62, 0.3);
+  display: block;
+  width: 70%;
+  margin-left: 100px;
+}
+
+/*Marriage text*/
+.container-marriage h1{
+  text-align: center;
+  font-size: 35px;
+  color: #825B3E;
+}
+
+/*groom/bride text*/
+.container-marriage h2{
+  text-align: center;
+  font-size: 25px;
+  color: #825B3E;
+}
+
+/*general label and input*/
+.container-marriage .location, .license, .date, .organist, .time, .flowers, .name, .dob, .prevmar, .pob, .citi, .religion, .address, .telno, .occu, .fathername, .fatherbp, .mothername, .motherbp{
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+
+/* **************INPUUUUUUUUUUUUUUUUTS*********************** */
+
+/*location input*/
+.location input{
+  padding: 5px 80px;
+  border: none;
+  background-color: #D3D3D3;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+/*label*/
+.location label{
+  color: #000;
+  margin-left: 20px;
+}
+
+/*********************************************************/
+
+/*date input*/
+.date input{
+  padding: 5px 80px;
+  border: none;
+  background-color: #D3D3D3;
+  display: inline-block;
+  border-radius: 5px;
+  margin-left: 25px;
+}
+
+/*label*/
+.date label{
+  color: #000;
+  margin-left: 20px;
+}
+
+/****************************************************/
+
+/*time input*/
+.time input{
+  padding: 5px 80px;
+  border: none;
+  background-color: #D3D3D3;
+  display: inline-block;
+  border-radius: 5px;
+  margin-left: 25px;
+}
+
+/*label*/
+.time label{
+  color: #000;
+  margin-left: 20px;
+}
+
+/****************************************************/
+
+/*license input*/
+.license select{
+  background-color: #D3D3D3;
+  padding: 5px 80px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 25px;
+  display: inline-block;
+}
+
+/*label*/
+.license label{
+  color: #000;
+  margin-left: 20px;
+}
+
+/*****************************************************
+
+/*organist input*/
+.organist select{
+  background-color: #D3D3D3;
+  padding: 5px 80px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 21px;
+  display: inline-block;
+}
+
+/*label*/
+.organist label{
+  color: #000;
+  margin-left: 20px;
+}
+
+/***************************************************/
+
+/*flowers input*/
+.flowers select{
+  background-color: #D3D3D3;
+  padding: 5px 80px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 25px;
+  display: inline-block;
+}
+
+/*label*/
+.flowers label{
+  color: #000;
+  margin-left: 20px;
+}
+
+/* ******************GROOOOOOOOOOOOOOM/BRIDEEEEEEEE*************************/
+/*name input*/
+.name input{
+  padding: 5px 150px;
+  border: none;
+  background-color: #D3D3D3;
+  display: block;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+/*label*/
+.name label{
+  color: #000;
+  margin-left: 20px;
+}
+
+/************************************************************/
+
+/*date of birth input*/
+.dob input{
+  padding: 5px 20px;
+  border: none;
+  background-color: #D3D3D3;
+  display: block;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+/*label*/
+.dob label{
+  color: #000;
+  margin-left: 20px;
+}
+
+/**********************************************************/
+
+/*previous married input*/
+.prevmar select{
+  background-color: #D3D3D3;
+  padding: 5px 30px;
+  border: none;
+  border-radius: 5px;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+/*label*/
+.prevmar label{
+  color: #000;
+  margin-left: 20px;
+}
+
+/*************************************************************/
+
+/*place of birth input*/
+.pob input{
+  padding: 5px 20px;
+  border: none;
+  background-color: #D3D3D3;
+  display: block;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+/*label*/
+.pob label{
+  color: #000;
+  margin-left: 10px;
+}
+
+/*********************************************************/
+
+/*citizen input*/
+.citi input{
+  padding: 5px 20px;
+  border: none;
+  background-color: #D3D3D3;
+  display: block;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+/*label*/
+.citi label{
+  color: #000;
+  margin-left: 20px;
+}
+
+/****************************************************/
+
+/*address input*/
+.address input{
+  padding: 5px 267px;
+  border: none;
+  background-color: #D3D3D3;
+  display: block;
+  border-radius: 5px;
+  margin-left: 0px;
+}
+
+/*label*/
+.address label{
+  color: #000;
+  margin-left: 0px;
+}
+
+/*************************************************************/
+
+/*telephone input*/
+.telno input{
+  padding: 5px 20px;
+  border: none;
+  background-color: #D3D3D3;
+  display: block;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+/*label*/
+.telno label{
+  color: #000;
+  margin-left: 20px;
+}
+
+/************************************************************/
+
+/*occupation input*/
+.occu input{
+  padding: 5px 20px;
+  border: none;
+  background-color: #D3D3D3;
+  display: block;
+  border-radius: 5px;
+  margin-left: 33px;
+}
+
+/*label*/
+.occu label{
+  color: #000;
+  margin-left: 33px;
+}
+
+/***********************************************************/
+
+/*religion input*/
+.religion input{
+  padding: 5px 20px;
+  border: none;
+  background-color: #D3D3D3;
+  display: block;
+  border-radius: 5px;
+  margin-left: 33px;
+}
+
+/*label*/
+.religion label{
+  color: #000;
+  margin-left: 33px;
+}
+
+/********************************************************/
+
+/*fathers name input*/
+.fathername input{
+  padding: 5px 150px;
+  border: none;
+  background-color: #D3D3D3;
+  display: block;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+/*label*/
+.fathername label{
+  color: #000;
+  margin-left: 20px;
+}
+
+/*fathers birth place input*/
+.fatherbp input{
+  padding: 5px 20px;
+  border: none;
+  background-color: #D3D3D3;
+  display: block;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+/*label*/
+.fatherbp label{
+  color: #000;
+  margin-left: 20px;
+}
+
+
+/****************************************************/
+/*mothers name input*/
+.mothername input{
+  padding: 5px 150px;
+  border: none;
+  background-color: #D3D3D3;
+  display: block;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+/*label*/
+.mothername label{
+  color: #000;
+  margin-left: 20px;
+}
+
+/*mothers birthplace input*/
+.motherbp input{
+  padding: 5px 20px;
+  border: none;
+  background-color: #D3D3D3;
+  display: block;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+/*label*/
+.motherbp label{
+  color: #000;
+  margin-left: 20px;
+}
+/******************************************/
+
+
+
+
+/***********SUBMIT*************/
+.container-marriage .submit-cert{
+  text-align: center;
+}
+
+.submit-cert button{
+  background-color: #825B3E;
+  border: none;
+  padding: 10px 35px;
+  border-radius: 5px;
+  color: white;
+  font-style: italic;
+  cursor: pointer;
+}
+
+.submit-cert a{
+  font-style: italic;
+}
+
