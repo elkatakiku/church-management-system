@@ -243,6 +243,10 @@ p {
   top: 35%;
 }
 
+.select-wrapper option {
+  margin: 5px;
+}
+
 /* Buttons */
 .btn {
   background-color: var(--brown);
@@ -865,6 +869,171 @@ span.btn-neutral, a.btn-neutral {
   text-align: justify;
   text-indent: 50px;
 }
+
+
+
+
+
+
+
+
+
+/* BAPTISMAL */
+/* .details-bap {
+  box-sizing: border-box;
+  padding: 5% 8%;
+  overflow: hidden;
+  height: 100%;
+} */
+
+/* .nav2-divider {
+  width: 100%;
+} */
+
+/* .btn-submit2 {
+  position: relative;
+  top: -30px;
+  left: 900px;
+  width: 100%;
+}
+
+.btn-submit22 {
+  position: relative;
+  top: -30px;
+  left: -900px;
+  width: 100%;
+} */
+
+.form-heading {
+  font-size: 1.8rem;
+  font-weight: 100%;
+  margin-bottom: 8px;
+}
+
+.details-bap2 {
+  font-size: 0.81rem;
+  box-sizing: border-box;
+  padding: 2% 5%;
+  overflow: hidden;
+  height: 100%;
+}
+
+.side-to-side2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.side-to-side3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.details-bap0 {
+  font-size: 0.81rem;
+  box-sizing: border-box;
+  padding: 0% 1%;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.content-new {
+  font-size: var(--extra-small-text);
+  display: flex;
+  justify-content: space-between;
+  margin-left: 200px;
+  padding: 3%;
+}
+
+.ahkdog {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chisdog {
+  display: flex;
+  width: calc(2000% / 5 - 15px);
+  flex-direction: column;
+  padding: 2%;
+}
+
+.ahkdog2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chisdog2 {
+  display: flex;
+  width: calc(2000% / 5 - 20px);
+  flex-direction: column;
+  padding: 2%;
+}
+
+.bap3-spon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bap3-nga {
+  display: flex;
+  width: calc(2000% / 5 - 20px);
+  flex-direction: column;
+  padding: 2%;
+}
+
+.btn-submit3 {
+  position: relative;
+  top: 180px;
+  left: -180px;
+  width: 100%;
+}
+
+.btn-submit4 {
+  position: relative;
+  top: 180px;
+  left: -1050px;
+  width: 100%;
+}
+
+.btn-submit5 {
+  position: relative;
+  top: 50px;
+  left: 950px;
+  width: 10%;
+}
+
+.btn-submit6 {
+  position: relative;
+  top: -15px;
+  left: 20px;
+  width: 10%;
+}
+
+.bottom-navbar-container2 {
+  box-sizing: border-box;
+  font-weight: 300;
+  margin-bottom: 15px;
+  padding: 0 5%;
+  text-align: left;
+  width: 100%;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
 
 
 

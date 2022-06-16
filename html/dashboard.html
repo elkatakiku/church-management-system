@@ -80,7 +80,7 @@
     </div>
 
     <div class="side-to-side">
-      <div class="dashboard-box">
+      <div class="dashboard-box" onclick="changePage('events/index.html');">
         <div class="dashboard-box-header">
           <h3 class="dashboard-box-heading">Events</h3>
         </div>
@@ -101,7 +101,7 @@
         </div>
       </div>
 
-      <div class="dashboard-box">
+      <div class="dashboard-box" onclick="changePage('activities/index.html');">
         <div class="dashboard-box-header">
           <h3 class="dashboard-box-heading">Activities</h3>
         </div>
@@ -129,12 +129,7 @@
   <script src="https://kit.fontawesome.com/4de3040dc0.js" crossorigin="anonymous"></script>
 
   <!-- Functionality -->
-  <script>
-    function togglePopup(elementId) {
-      document.getElementById('overlay').classList.toggle("hidden");
-      document.getElementById(elementId).classList.toggle("hidden");
-    }
-  </script>
+  <script type="text/javascript" src="../js/index.js"></script>
 </body>
 
 </html>
