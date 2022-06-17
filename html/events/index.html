@@ -91,23 +91,23 @@
 
         <tbody class="table-body" id="tableData">
           <!-- Sample Data -->
-          <tr id="event1">
+          <tr id="event1" onclick="getData('marriage', 123123)">
             <th scope="row"><input type="checkbox" name="eventName#" value="" onclick="checkedRow('event1', event)"></th>
             <td>Marriage</td>
             <td>Mr. and Mrs. Wed</td>
             <td class="date">MMMM dd, YYYY</td>
-            <td><button class="btn btn-certificate" type="button" name="button">Certificate</button></td>
+            <td><button class="btn btn-certificate" type="button" name="button" onclick="getCertificate('marriage', 123123, event)">Certificate</button></td>
           </tr>
 
-          <tr id="event2">
+          <tr id="event2" onclick="getData('baptismal', 123123)">
             <th scope="row"><input type="checkbox" name="eventName#" value="" onclick="checkedRow('event2', event)"></th>
             <td>Baptismal</td>
             <td>Baby Baptism</td>
             <td class="date">MMMM dd, YYYY</td>
-            <td><button class="btn btn-certificate" type="button" name="button">Certificate</button></td>
+            <td><button class="btn btn-certificate" type="button" name="button" onclick="getCertificate('baptismal', 123123, event)">Certificate</button></td>
           </tr>
 
-          <tr id="event3">
+          <tr id="event3" onclick="getData('anniversary', 123123)">
             <th scope="row"><input type="checkbox" name="eventName#" value="" onclick="checkedRow('event3', event)"></th>
             <td>Anniversary</td>
             <td>1st Anniversary Anniversary</td>
@@ -115,32 +115,32 @@
             <td><span class="no-action"></span></td>
           </tr>
 
-          <tr id="event4">
+          <tr id="event4" onclick="getData('youthActivity', 123123)">
             <th scope="row"><input type="checkbox" name="eventName#" value="" onclick="checkedRow('event4', event)"></th>
-            <td>Marriage</td>
+            <td>Youth Activity</td>
             <td>Mr. and Mrs. Wed</td>
             <td>MMMM dd, YYYY</td>
-            <td><button class="btn btn-certificate" type="button" name="button">Certificate</button></td>
+            <td><span class="no-action"></span></td>
           </tr>
 
 
-          <tr id="event5">
+          <tr id="event5" onclick="getData('prayerMeeting', 123123)">
             <th scope="row"><input type="checkbox" name="eventName#" value="" onclick="checkedRow('event5', event)"></th>
-            <td>Marriage</td>
+            <td>Prayer Meeting</td>
             <td>Mr. and Mrs. Wed</td>
             <td>MMMM dd, YYYY</td>
-            <td><button class="btn btn-certificate" type="button" name="button">Certificate</button></td>
+            <td><span class="no-action"></span></td>
           </tr>
 
-          <tr id="event6">
+          <tr id="event6" onclick="getData('practice', 123123)">
             <th scope="row"><input type="checkbox" name="eventName#" value="" onclick="checkedRow('event6', event);"></th>
-            <td>Baptismal</td>
+            <td>Practice</td>
             <td>Baby Baptism</td>
             <td>MMMM dd, YYYY</td>
-            <td><button class="btn btn-certificate" type="button" name="button">Certificate</button></td>
+            <td><span class="no-action"></span></td>
           </tr>
 
-          <tr id="event7">
+          <tr id="event7" onclick="getData('anniversary', 123123)">
             <th scope="row"><input type="checkbox" name="eventName#" value="" onclick="checkedRow('event7', event)"></th>
             <td>Anniversary</td>
             <td>1st Anniversary Anniversary</td>
@@ -148,9 +148,9 @@
             <td><span class="no-action"></span></td>
           </tr>
 
-          <tr id="event8">
+          <tr id="event8" onclick="getData('other', 123123)">
             <th scope="row"><input type="checkbox" name="eventName#" value="" onclick="checkedRow('event8', event)"></th>
-            <td>Marriage</td>
+            <td>Other</td>
             <td>Mr. and Mrs. Wed</td>
             <td>MMMM dd, YYYY</td>
             <td><button class="btn btn-certificate" type="button" name="button">Certificate</button></td>
@@ -183,11 +183,11 @@
               <option value="none">Select an event</option>
               <option value="baptismal">Baptismal</option>
               <option value="marriage">Marriage</option>
-              <option value="youthActivities">Youth Activities</option>
-              <option value="anniversaries">Anniversaries</option>
+              <option value="youthActivity">Youth Activities</option>
+              <option value="anniversary">Anniversaries</option>
               <option value="prayerMeeting">Prayer Meeting</option>
               <option value="practice">Practice</option>
-              <option value="others">Others</option>
+              <option value="other">Others</option>
             </select>
           </div>
 

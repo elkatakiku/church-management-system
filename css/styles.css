@@ -185,7 +185,7 @@ p {
   font-size: var(--normal-text);
   height: 2.5rem;
   margin: 10px 0 15px;
-  padding: 0 5%;
+  padding: 0 25px;
   width: 100%;
 }
 
@@ -197,6 +197,13 @@ p {
 ::placeholder {
   font-family: 'Montserrat', sans-serif;
   font-weight: 200;
+}
+
+.textarea {
+  border: none;
+  height: auto;
+  padding: 16px 25px;
+  resize: none;
 }
 
 /* Search */
@@ -397,6 +404,7 @@ span.btn-neutral, a.btn-neutral {
   display: grid;
   grid-auto-flow: column;
   grid-gap: 15px;
+  grid-auto-columns: minmax(0, 1fr);
 }
 
 .side-to-side {
@@ -860,13 +868,27 @@ span.btn-neutral, a.btn-neutral {
   text-align: center;
 }
 
+/* Details Page */
+.details-page {
+  background-color: white;
+  margin: auto;
+  padding: 30px;
+  width: 85%;
+  max-width: 1020px;
+}
 
+.certificate {
+  background-color: white;
+  box-shadow: 0 5px 5px -5px rgba(130, 91, 62, 0.3);
+  padding-top: 30px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
 
-
-
-
-
-
+.section-header .side-to-side {
+  margin-top: 0 !important;
+}
 
 
 /******************************************* User *******************************************/

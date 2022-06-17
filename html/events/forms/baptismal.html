@@ -53,7 +53,7 @@
         <hr>
       </header>
 
-      <form class="form-container" action="" method="post" id="baptismalForm">
+      <form class="form-container" action="" method="post" id="baptismalScheduleForm">
 
         <!-- 1st Slide -->
         <div class="">
@@ -113,8 +113,6 @@
             </div>
           </div>
 
-          <hr>
-
           <h2 class="heading2">Father</h2>
           <div class="row">
             <div class="">
@@ -146,6 +144,8 @@
           </div>
         </div>
 
+        <hr>
+
         <!-- 3rd Slide -->
         <div class="sponsor">
           <h4 class="heading2">Sponsors</h4>
@@ -165,10 +165,8 @@
             </div>
           </div>
 
-          <hr>
 
           <div>
-
             <h4 class="heading3">Other Sponsors</h4>
             <div class="row">
               <div class="">
@@ -216,13 +214,15 @@
               </div>
             </div>
           </div>
-
+        </div>
       </form>
     </div>
 
     <div class="side-to-side">
       <button class="btn btn-outline btn-secondary " onclick="changePage('../index.html')">Back</button>
-      <button class="btn" type="submit" onclick="" form="baptismalForm">Submit</button>
+      <!-- Use the button with form attribute for backend -->
+      <!-- <button class="btn" type="submit" onclick="" form="baptismalScheduleForm">Submit</button> -->
+      <button class="btn" onclick="changePage('../index.html')">Submit</button>
     </div>
 
 

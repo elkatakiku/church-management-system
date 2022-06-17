@@ -4,10 +4,30 @@ function togglePopup(elementId) {
   document.getElementById(elementId).classList.toggle("hidden");
 }
 
+// Dismisses popups
+function dismissPopups() {
+  console.log("Getting popups");
+  var popups = document.getElementsByClassName("popup");
+  console.log("Got popups");
+  console.log(popups);
+  for (var i = 0; i < popups.length; i++) {
+    console.log("Getting popup container");
+    console.log(popups[i].parentElement);
+    var popupContainer = popups[i].parentElement;
+    if (!popupContainer.classList.contains("hidden")) {
+      document.getElementById('overlay').classList.add("hidden");
+      popupContainer.classList.add("hidden");
+    }
+  }
+}
+
+
 // Change Directory
 function changePage(fileDir) {
   window.location.href = fileDir;
 }
+
+
 
 // Schedule Event
 function scheduleEvent(eventChoice) {
@@ -18,24 +38,30 @@ function scheduleEvent(eventChoice) {
     case "marriage":
       changePage("forms/marriage.html");
       break;
-    case "youthActivities":
-      changePage();
+    case "youthActivity":
+      changePage("forms/youth.html");
       break;
-    case "anniversaries":
-      changePage();
+    case "anniversary":
+      changePage("forms/anniversary.html");
       break;
     case "prayerMeeting":
-      changePage();
+      changePage("forms/prayer.html");
       break;
     case "practice":
-      changePage();
+      changePage("forms/practice.html");
       break;
-    case "others":
-      changePage();
+    case "other":
+      changePage("forms/other.html");
       break;
     default:
   }
 }
+
+// Generate QR Code
+function generateQR() {
+
+}
+
 
 // Table Functionality
 var numberOfRows;
@@ -76,12 +102,8 @@ function checkedRow(rowId, event) {
 }
 
 function selectRow(element, cancel) {
-  var row = element.parentElement.closest('tr');
-  getToday((row === null ? element : element.parentElement.parentElement), cancel);
-  showTableOptions();
-}
+  var tableRow = element.parentElement.closest('tr') === null ? element : element.parentElement.parentElement;
 
-function getToday(tableRow, cancel) {
   var tableCell = tableRow.firstElementChild;
 
   if (tableCell.firstElementChild.checked && cancel != true) {
@@ -92,6 +114,8 @@ function getToday(tableRow, cancel) {
     tableRow.classList.remove("row-selected");
   }
   changeToday(tableCell, tableCell.firstElementChild.checked)
+
+  showTableOptions();
 }
 
 function changeToday(tableCell, isChecked) {
@@ -117,6 +141,54 @@ function showTableOptions() {
   } else if (checkedBoxCounter === 0) {
     options.classList.add("hidden");
   }
+}
+
+function getData(type, id) {
+  // Use get method in php to access data in database
+  // Change event type that matches event type in database
+  switch (type) {
+    case "baptismal":
+      changePage("details/baptismal.html");
+      break;
+    case "marriage":
+      changePage("details/marriage.html");
+      break;
+    case "youthActivity":
+      changePage("details/youth.html");
+      break;
+    case "anniversary":
+      changePage("details/anniversary.html");
+      break;
+    case "prayerMeeting":
+      changePage("details/prayer.html");
+      break;
+    case "practice":
+      changePage("details/practice.html");
+      break;
+    case "other":
+      changePage("details/other.html");
+      break;
+    case "activity":
+      changePage("activity-details.html");
+      break;
+    default:
+  }
+}
+
+function getCertificate(eventType, id, event) {
+  // Use get method in php to access data in database
+  // Change event type that matches event type in database
+  switch (eventType) {
+    case "baptismal":
+      // changePage("certificate/baptismal.html");
+      break;
+    case "marriage":
+      // changePage("certificate/marriage.html");
+      break;
+    default:
+  }
+
+  event.stopPropagation();
 }
 
 // Sliding div
@@ -155,23 +227,30 @@ function showTableOptions() {
 //   dots[slideIndex - 1].className += " active";
 // }
 
-
-document.addEventListener("keydown", ({key}) => {
+document.addEventListener("keydown", ({
+  key
+}) => {
   // Close popups when escape esc pressed
-    if (key === "Escape") {
-      console.log("escape pressed");
-      console.log("Getting popups");
-      var popups = document.getElementsByClassName("popup");
-      console.log("Got popups");
-      console.log(popups);
-      for (var i = 0; i < popups.length; i++) {
-        console.log("Getting popup container");
-        console.log(popups[i].parentElement);
-        var popupContainer = popups[i].parentElement;
-        if (!popupContainer.classList.contains("hidden")) {
-          document.getElementById('overlay').classList.add("hidden");
-          popupContainer.classList.add("hidden");
-        }
-      }
-    }
+  if (key === "Escape") {
+    console.log("escape pressed");
+    dismissPopups();
+  }
 })
+
+// Event listener for overlay
+document.getElementById('overlay').addEventListener('click', function(e) {
+  console.log("Overlay clicked");
+  dismissPopups();
+})
+
+// Stick header to top
+window.onscroll = function() {
+  console.log(window.pageYOffset);
+  if (window.pageYOffset > 100) {
+    console.log("Offset 100 greater than 100");
+    document.getElementById("certificateHeader").classList.add("certificate");
+  } else {
+    console.log("At top");
+    document.getElementById("certificateHeader").classList.remove("certificate");
+  }
+}
