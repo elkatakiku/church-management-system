@@ -16,9 +16,55 @@
     rel="stylesheet">
 
   <style media="screen">
-    span,
+    /* span,
     div {
       border: 2px black solid;
+    } */
+
+    /* children will be positioned relativly to this element */
+
+
+    /* child layout definitions */
+    .center {
+      /* center needs to be 20 pixels from the left,
+    so it doesn't overlap with the .left element */
+      /* left: 20px; */
+
+      /* needs a width of 1 pixel, this causes
+    scaleX(60) is equal to 60 pixels */
+      /* width: 1px; */
+      /* transform: scaleX(60); */
+
+      /* we need to scale the texture from the left side
+    for it to align correctly, default is center */
+      transform-origin: left;
+
+      animation: center-animate 1s ease alternate;
+    }
+
+
+    @keyframes center-animate {
+      0% {
+        transform: scaleX(0);
+      }
+
+      100% {
+        transform: scaleX(1);
+      }
+    }
+
+    .expand {
+      animation: expand-animation 2s ease;
+    }
+
+    @keyframes expand-animation {
+      from {
+        width: 0;
+      }
+
+      to {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -69,7 +115,37 @@
     </header>
 
     <!-- Insert Codes Here -->
-    <div class="sliding-container">
+
+    <!-- <div class="square"> -->
+      <!-- <div class="left"></div> -->
+      <button class="btn btn-submit center" type="button" name="button">Try animation</button>
+
+      <div class="row-flex">
+        <div class="col-3" style="background-color: red;">
+          col 3
+        </div>
+        <div class="col-4" style="background-color: red;">
+          col
+        </div>
+        <div class="col-5" style="background-color: red;">
+          col 5
+        </div>
+        <div class="col-2" style="background-color: red;">
+          col 2
+        </div>
+        <div class="col-8" style="background-color: red;">
+          col 8
+        </div>
+      </div>
+      <!-- <div class="right"></div> -->
+    <!-- </div> -->
+
+
+
+
+
+
+    <!-- <div class="sliding-container">
       <div class="sliding" id="">
         Slide 1
       </div>
@@ -81,7 +157,7 @@
       <div class="sliding" id="slide">
         Slide 3
       </div>
-    </div>
+    </div> -->
 
     <!-- ************************ -->
 

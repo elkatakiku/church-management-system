@@ -49,13 +49,33 @@
   <main class="content content-grid">
     <header class="section-header">
       <h2 class="section-heading">Activities</h2>
-      <button class="btn btn-schedule" type="button" name="button" onclick="changePage('activity-form.html')">
-        <i class="fa-solid fa-plus icon"></i>
-        Schedule Activity
-      </button>
+      <div class="side-to-side table-action-buttons">
+        <div class="row-flex">
+          <button class="btn btn-schedule expand" type="button" name="button" onclick="changePage('activity-form.html')">
+            <i class="fa-solid fa-plus icon"></i>
+            Schedule Activity
+          </button>
+
+          <div class="row-flex hidden" id="tableSelectOptions">
+            <button class="btn btn-submit" type="submit" form="table-form">
+              <i class="fa-solid fa-trash-can icon"></i>
+              Delete
+            </button>
+            <button class="btn btn-neutral" onclick="selectAllCheckbox('selectAll', true);">
+              <i class="fa-solid fa-xmark icon"></i>
+              Cancel
+            </button>
+          </div>
+        </div>
+
+        <form class="search-field" action="index.html" method="post">
+          <input class="input search" type="search" name="" value="" placeholder="Search here...">
+          <button class="btn btn-search" type="submit" name="search-btn"><i class="fa-solid fa-magnifying-glass icon"></i></button>
+        </form>
+      </div>
     </header>
 
-    <div class="side-to-side table-action-buttons">
+    <!-- <div class="side-to-side table-action-buttons">
       <div class="table-select-action-buttons">
         <div class="table-select-action-buttons hidden" id="tableSelectOptions">
           <button class="btn btn-submit" type="submit" form="table-form">
@@ -67,13 +87,10 @@
             Cancel
           </button>
         </div>
-      </div>
+      </div> -->
 
-      <form class="search-field" action="index.html" method="post">
-        <input class="input search" type="search" name="" value="" placeholder="Search here...">
-        <button class="btn btn-search" type="submit" name="search-btn"><i class="fa-solid fa-magnifying-glass icon"></i></button>
-      </form>
-    </div>
+
+    <!-- </div> -->
 
     <!-- Insert Codes Here -->
     <!-- Uncomment form when its time to pass the project -->
@@ -140,7 +157,7 @@
             <td>02:00 AM</td>
           </tr>
 
-          <tr onclick="getData('activity', 123123)" id="activity7">
+          <tr onclick="getData('activity', 123123)" id="activity7" class="done">
             <th scope="row"><input type="checkbox" name="activityName#" value="" onclick="checkedRow('activity7', event)"></th>
             <td>Activity Name</td>
             <td>Done</td>
@@ -148,7 +165,7 @@
             <td>01:00 AM</td>
           </tr>
 
-          <tr onclick="getData('activity', 123123)" id="activity8">
+          <tr onclick="getData('activity', 123123)" id="activity8" class="done">
             <th scope="row"><input type="checkbox" name="activityName#" value="" onclick="checkedRow('activity8', event)"></th>
             <td>Activity Name</td>
             <td>Done</td>

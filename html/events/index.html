@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
     rel="stylesheet">
 </head>
 
@@ -23,8 +23,8 @@
   <section>
     <nav class="navbar">
       <div class="navbar-brand">
-        <img class="navbar-brand-logo" src="https://cdn-icons-png.flaticon.com/512/739/739249.png" alt="Web application logo">
-        <h1 class="navbar-brand-text">CHURCH</h1>
+        <img class="navbar-brand-logo" src="../../images/logo.png" alt="Web application logo">
+        <h1 class="navbar-brand-text">Church</h1>
       </div>
 
       <ul class="navbar-nav">
@@ -49,24 +49,60 @@
   <main class="content content-grid">
     <header class="section-header">
       <h2 class="section-heading">Events</h2>
-      <button class="btn btn-schedule" type="button" name="button" onclick="togglePopup('scheduleEvent')">
+      <button class="btn btn-schedule expand" type="button" name="button" onclick="togglePopup('scheduleEvent')">
         <i class="fa-solid fa-plus icon"></i>
         Schedule Event
       </button>
     </header>
 
-    <div class="side-to-side table-action-buttons">
-      <div class="table-select-action-buttons">
-        <div class="table-select-action-buttons hidden" id="tableSelectOptions">
-          <button class="btn btn-submit" type="submit" form="table-form">
-            <i class="fa-solid fa-trash-can icon"></i>
-            Delete
-          </button>
-          <button class="btn btn-neutral" onclick="selectAllCheckbox('selectAll', true);">
-            <i class="fa-solid fa-xmark icon"></i>
-            Cancel
-          </button>
-        </div>
+    <div class="side-to-side">
+      <div class="event-overview">
+        <span class="event-overview-box">
+          <h4 class="secondary-texts">Wedding</h4>
+          <p class="event-counter"><strong>###</strong></p>
+        </span>
+
+        <hr class="event-divider">
+
+        <span class="event-overview-box">
+          <h4 class="secondary-texts">Baptismal</h4>
+          <p class="event-counter"><strong>###</strong></p>
+        </span>
+
+        <hr class="event-divider">
+
+        <span class="event-overview-box">
+          <h4 class="secondary-texts">Youth Activities</h4>
+          <p class="event-counter"><strong>###</strong></p>
+        </span>
+
+        <hr class="event-divider">
+
+        <span class="event-overview-box">
+          <h4 class="secondary-texts">Anniversary</h4>
+          <p class="event-counter"><strong>###</strong></p>
+        </span>
+
+        <hr class="event-divider">
+
+        <span class="event-overview-box">
+          <h4 class="secondary-texts">Practice</h4>
+          <p class="event-counter"><strong>###</strong></p>
+        </span>
+
+        <hr class="event-divider">
+
+        <span class="event-overview-box">
+          <h4 class="secondary-texts">Other Events</h4>
+          <p class="event-counter"><strong>###</strong></p>
+        </span>
+
+        <hr class="event-divider">
+
+        <span class="event-overview-box">
+          <h4 class="secondary-texts">Prayer Meeting</h4>
+          <p class="event-counter"><strong>###</strong></p>
+        </span>
       </div>
 
       <form class="search-field" action="index.html" method="post">
@@ -140,7 +176,7 @@
             <td><span class="no-action"></span></td>
           </tr>
 
-          <tr id="event7" onclick="getData('anniversary', 123123)">
+          <tr id="event7" onclick="getData('anniversary', 123123)" class="done">
             <th scope="row"><input type="checkbox" name="eventName#" value="" onclick="checkedRow('event7', event)"></th>
             <td>Anniversary</td>
             <td>1st Anniversary Anniversary</td>
@@ -148,18 +184,54 @@
             <td><span class="no-action"></span></td>
           </tr>
 
-          <tr id="event8" onclick="getData('other', 123123)">
+          <tr id="event8" onclick="getData('other', 123123)" class="done">
             <th scope="row"><input type="checkbox" name="eventName#" value="" onclick="checkedRow('event8', event)"></th>
             <td>Other</td>
             <td>Mr. and Mrs. Wed</td>
             <td>MMMM dd, YYYY</td>
-            <td><button class="btn btn-certificate" type="button" name="button">Certificate</button></td>
+            <td><button class="btn btn-certificate disabled" type="button" name="button" disabled>Certificate</button></td>
           </tr>
         </tbody>
       </table>
     </form>
+
+    <div class="container hidden" id="tableSelectOptions">
+      <div class="row-flex">
+        <button class="btn btn-submit" onclick="togglePopup('deleteRow')">
+          <i class="fa-solid fa-trash-can icon"></i>
+          Delete
+        </button>
+        <button class="btn btn-neutral" onclick="selectAllCheckbox('selectAll', true);">
+          <i class="fa-solid fa-xmark icon"></i>
+          Cancel
+        </button>
+      </div>
+    </div>
     <!-- ************************ -->
   </main>
+
+  <!-- Delete Row -->
+  <section class="container-center hidden" id="deleteRow">
+    <div class="popup">
+      <div class="popup-header">
+        <h2 class="popup-heading">Confirm Deletion?</h2>
+        <i class="fa-solid fa-xmark popup-btn-close" onclick="togglePopup('deleteRow')"></i>
+      </div>
+
+      <hr>
+
+      <div class="popup-body">
+        <p class="popup-description">Do you want to permanently delete this event?</p>
+        <form class="" method="post">
+          <div class="row">
+            <input class="btn btn-submit" type="button" value="Yes" onclick="togglePopup('deleteRow')">
+            <input class="btn btn-neutral" type="button" value="No" onclick="togglePopup('deleteRow')">
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </section>
 
   <!-- Overlay -->
   <div class="overlay hidden" id="overlay"></div>
@@ -177,40 +249,40 @@
       <div class="popup-body">
         <!-- Uncomment form when passing the project -->
         <!-- <form class="" action="index.html" method="post"> -->
-          <label for="events">Type of Event</label>
-          <div class="select-wrapper">
-            <select class="input select" name="eventChoice" id="events">
-              <option value="none">Select an event</option>
-              <option value="baptismal">Baptismal</option>
-              <option value="marriage">Marriage</option>
-              <option value="youthActivity">Youth Activities</option>
-              <option value="anniversary">Anniversaries</option>
-              <option value="prayerMeeting">Prayer Meeting</option>
-              <option value="practice">Practice</option>
-              <option value="other">Others</option>
-            </select>
-          </div>
+        <label for="events">Type of Event</label>
+        <div class="select-wrapper">
+          <select class="input select" name="eventChoice" id="events">
+            <option value="none">Select an event</option>
+            <option value="baptismal">Baptismal</option>
+            <option value="marriage">Marriage</option>
+            <option value="youthActivity">Youth Activities</option>
+            <option value="anniversary">Anniversaries</option>
+            <option value="prayerMeeting">Prayer Meeting</option>
+            <option value="practice">Practice</option>
+            <option value="other">Others</option>
+          </select>
+        </div>
 
-          <!-- <label for="">Please Specify</label>
+        <!-- <label for="">Please Specify</label>
           <input class="input" type="text" name="" value="" placeholder="Enter the event"> -->
 
-          <div class="side-to-side">
-            <span class="half-of-whole">
-              <label for="">Date</label>
-              <input class="input" type="date" name="" value="">
-            </span>
+        <div class="side-to-side">
+          <span class="half-of-whole">
+            <label for="">Date</label>
+            <input class="input" type="date" name="" value="">
+          </span>
 
-            <span class="half-of-whole">
-              <label for="">Time</label>
-              <input class="input" type="time" name="" value="">
-            </span>
-          </div>
+          <span class="half-of-whole">
+            <label for="">Time</label>
+            <input class="input" type="time" name="" value="">
+          </span>
+        </div>
 
-          <div class="popup-action-btns">
-            <!-- Remove onclick if to be passed -->
-            <input class="btn btn-submit" type="submit" name="" value="Next" onclick="scheduleEvent('events')">
-            <p class="btn-secondary" onclick="togglePopup('scheduleEvent')">Cancel</p>
-          </div>
+        <div class="popup-action-btns">
+          <!-- Remove onclick if to be passed -->
+          <input class="btn btn-submit" type="submit" name="" value="Next" onclick="scheduleEvent('events')">
+          <p class="btn-secondary" onclick="togglePopup('scheduleEvent')">Cancel</p>
+        </div>
         <!-- </form> -->
       </div>
     </div>
