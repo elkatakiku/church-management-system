@@ -48,15 +48,11 @@
 
   <main class="content content-fill">
     <div class="details-page form-page">
-
-      <div>
         <header class="section-header" id="certificateHeader">
           <div class="side-to-side">
             <h2 class="section-heading">Wedding | Mr. & Mrs. Name</h2>
-            <button class="btn" type="button" name="button">Certificate</button>
+            <button class="btn" type="button" name="button">Create Certificate</button>
           </div>
-
-          <hr>
         </header>
 
         <form class="form-container" action="" method="post" id="marriageDetails">
@@ -101,140 +97,127 @@
 
           <hr>
 
-          <span class="col-9">
-            <label for="">Address</label>
-            <input class="input" type="text">
-          </span>
-
-
-
           <h3 class="heading2">Groom</h3>
 
-          <div class="row">
-
-            <div class="">
+          <div class="row-flex">
+            <span class="col-9">
               <label for="">Name</label>
               <input class="input" type="text" placeholder="Surname, Firstname M.I">
+            </span>
 
-              <label for="">Birthplace</label>
+            <span class="col-3">
+              <label for="">Telephone No.</label>
+              <input class="input" type="text">
+            </span>
+
+            <span class="col-9">
+              <label for="">Address</label>
+              <input class="input" type="text">
+            </span>
+
+            <span class="col-3">
+              <label for="">Occupation</label>
+              <input class="input" type="text">
+            </span>
+
+            <span class="col-9">
+              <label for="">Place of Birth</label>
+              <input class="input" type="text">
+            </span>
+
+            <span class="col-3">
+              <label for="">Date of Birth</label>
+              <input class="input" type="date">
+            </span>
+
+            <span class="col-4">
+              <label for="">Religion</label>
               <input class="input" type="text" name="" value="" placeholder="">
+            </span>
 
+            <span class="col-4">
+              <label for="">Citizenship</label>
+              <input class="input" type="text" name="" value="" placeholder="">
+            </span>
 
-
-              <label for="">Father's Name</label>
-              <input class="input" type="text" placeholder="Surname, Firstname M.I">
-
-              <label for="">Mother's Maiden Name</label>
-              <input class="input" type="text" placeholder="Surname, Firstname M.I">
-            </div>
-
-            <div class="">
-              <div class="row">
-                <div class="">
-                  <label for="">Date of Birth</label>
-                  <input class="input" type="date">
-
-                  <label for="">Citizenship</label>
-                  <input class="input" type="text" name="" value="" placeholder="">
-
-                  <label for="">Religion</label>
-                  <input class="input" type="text" name="" value="" placeholder="">
-                </div>
-
-                <div class="">
-                  <label for="">Telephone No.</label>
-                  <input class="input" type="text">
-                  <label for="">Occupation</label>
-                  <input class="input" type="text">
-                  <label for="">Previously Married</label>
-                  <div class="select-wrapper">
-                    <select class="input select">
-                      <option value="none">...</option>
-                      <option value="no">No</option>
-                      <option value="yes">Yes</option>
-                    </select>
-                  </div>
-                </div>
+            <span class="col-4">
+              <label for="civilStatus">Civil Status</label>
+              <div class="select-wrapper">
+                <select class="input select" id="civilStatus">
+                  <option disabled selected>Select Status</option>
+                  <option>Single</option>
+                  <option>Married</option>
+                  <option>Divorced</option>
+                  <option>Widowed</option>
+                </select>
               </div>
-
-              <label for="">Telephone no.</label>
-              <input class="input" type="text" placeholder="">
-              <label for="">Telephone no.</label>
-              <input class="input" type="text" placeholder="">
-            </div>
-
+            </span>
           </div>
-
-          <hr>
 
           <h3 class="heading2">Bride</h3>
 
-          <div class="row">
-
-            <div class="">
+          <div class="row-flex">
+            <span class="col-9">
               <label for="">Name</label>
               <input class="input" type="text" placeholder="Surname, Firstname M.I">
+            </span>
 
-              <label for="">Birthplace</label>
-              <input class="input" type="text" name="" value="" placeholder="">
+            <span class="col-3">
+              <label for="">Telephone No.</label>
+              <input class="input" type="text">
+            </span>
 
+            <span class="col-9">
               <label for="">Address</label>
-              <input class="input" type="text" placeholder="House no. Street, City/ Municipality, Province, Country">
+              <input class="input" type="text">
+            </span>
 
-              <label for="">Father's Name</label>
-              <input class="input" type="text" placeholder="Surname, Firstname M.I">
+            <span class="col-3">
+              <label for="">Occupation</label>
+              <input class="input" type="text">
+            </span>
 
-              <label for="">Mother's Maiden Name</label>
-              <input class="input" type="text" placeholder="Surname, Firstname M.I">
-            </div>
+            <span class="col-9">
+              <label for="">Place of Birth</label>
+              <input class="input" type="text">
+            </span>
 
-            <div class="">
-              <div class="row">
-                <div class="">
-                  <label for="">Date of Birth</label>
-                  <input class="input" type="date">
+            <span class="col-3">
+              <label for="">Date of Birth</label>
+              <input class="input" type="date">
+            </span>
 
-                  <label for="">Citizenship</label>
-                  <input class="input" type="text" name="" value="" placeholder="">
+            <span class="col-4">
+              <label for="">Religion</label>
+              <input class="input" type="text" name="" value="" placeholder="">
+            </span>
 
-                  <label for="">Religion</label>
-                  <input class="input" type="text" name="" value="" placeholder="">
-                </div>
+            <span class="col-4">
+              <label for="">Citizenship</label>
+              <input class="input" type="text" name="" value="" placeholder="">
+            </span>
 
-                <div class="">
-                  <label for="">Telephone No.</label>
-                  <input class="input" type="text">
-                  <label for="">Occupation</label>
-                  <input class="input" type="text">
-                  <label for="">Previously Married</label>
-                  <div class="select-wrapper">
-                    <select class="input select">
-                      <option value="none">...</option>
-                      <option value="no">No</option>
-                      <option value="yes">Yes</option>
-                    </select>
-                  </div>
-                </div>
+            <span class="col-4">
+              <label for="civilStatus">Civil Status</label>
+              <div class="select-wrapper">
+                <select class="input select" id="civilStatus">
+                  <option disabled selected>Select Status</option>
+                  <option>Single</option>
+                  <option>Married</option>
+                  <option>Divorced</option>
+                  <option>Widowed</option>
+                </select>
               </div>
-
-              <label for="">Telephone no.</label>
-              <input class="input" type="text" placeholder="">
-              <label for="">Telephone no.</label>
-              <input class="input" type="text" placeholder="">
-            </div>
-
+            </span>
           </div>
-
         </form>
-      </div>
 
-      <div class="side-to-side">
-        <button class="btn btn-outline btn-secondary" onclick="changePage('../index.html')">Back</button>
-        <!-- <button class="btn" type="submit" onclick="" form="marriageDetails">Save</button> -->
-        <button class="btn" type="submit" onclick="changePage('marriage.html')">Save</button>
-      </div>
+        <div class="side-to-side">
+          <button class="btn btn-outline btn-secondary" onclick="changePage('../index.html')">Back</button>
+          <!-- <button class="btn" type="submit" onclick="" form="marriageDetails">Save</button> -->
+          <button class="btn" type="submit" onclick="changePage('marriage.html')">Save</button>
+        </div>
     </div>
-
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/4de3040dc0.js" crossorigin="anonymous"></script>
