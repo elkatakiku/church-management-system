@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>CHURCH</title>
+  <title>CCC - Log in or Sign up</title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/styles.css">
@@ -11,7 +11,9 @@
   <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
@@ -29,35 +31,35 @@
   <section class="container-center">
     <div class="login-container row">
       <div class="login-logo-container">
-          <img class="login-logo" src="images/logo.png" alt="Web application logo">
-          <h1 class="big-heading">Catholic</h1>
+        <img class="login-logo" src="images/logo.png" alt="Web application logo">
+        <h1 class="big-heading">Catholic</h1>
       </div>
 
       <div class="login-form">
-          <!-- Uncomment form when passing the project -->
-          <!-- <form class="" action="html/dashboard.html" method="post"> -->
-            <label for="usernameInput">Username</label>
-            <input class="input" type="text" id="usernameInput" name="username" placeholder="Insert your Username here">
-            <label for="passwordInput">Password</label>
-            <input class="input" type="password" id="passwordInput" name="password" placeholder="Insert your Password here">
-            <label for="captchaInput">Enter CAPTCHA</label>
-            <img src="" alt="captcha text" style="display: block; height: 3rem;">
-            <span class="captcha-input">
-              <i class="fa-solid fa-arrow-rotate-right icon"></i>
-              <input class="input" type="text" id="captchaInput" name="captcha" placeholder="Insert Captcha text">
-            </span>
-            <!-- Remove onclick if to be passed -->
-            <input class="input btn btn-submit" type="submit" name="login" value="Log In" onclick="changePage('html/dashboard.html')">
-            <div class="login-options">
-              <div class="">
-                <input type="checkbox" id="rememberInput" name="rememberMe" value="">
-                <label class="secondary-texts" for="rememberInput">Remember me</label>
-              </div>
-              <p class="clickable-text" onclick="togglePopup('forgotPassword')">Forgot Password?</p>
-            </div>
-          <!-- </form> -->
+        <!-- Uncomment form when passing the project -->
+        <!-- <form class="" action="html/dashboard.html" method="post"> -->
+        <label for="usernameInput">Username</label>
+        <input class="input" type="text" id="usernameInput" name="username" placeholder="Insert your Username here">
+        <label for="passwordInput">Password</label>
+        <input class="input" type="password" id="passwordInput" name="password" placeholder="Insert your Password here">
+        <label for="captchaInput">Enter CAPTCHA</label>
+        <img src="" alt="captcha text" style="display: block; height: 3rem;">
+        <span class="captcha-input">
+          <i class="fa-solid fa-arrow-rotate-right icon"></i>
+          <input class="input" type="text" id="captchaInput" name="captcha" placeholder="Insert Captcha text">
+        </span>
+        <!-- Remove onclick if to be passed -->
+        <input class="input btn btn-submit" type="submit" name="login" value="Log In" onclick="changePage('html/dashboard.html')">
+        <div class="login-options">
+          <div class="">
+            <input type="checkbox" id="rememberInput" name="rememberMe" value="">
+            <label class="secondary-texts" for="rememberInput">Remember me</label>
+          </div>
+          <p class="clickable-text" onclick="togglePopup('forgotPassword')">Forgot Password?</p>
+        </div>
+        <!-- </form> -->
 
-          <p class="sign-up-now">Don't have an account yet? <strong class="clickable-text" onclick="togglePopup('signup')">Sign Up</strong> now!</p>
+        <p class="sign-up-now">Don't have an account yet? <strong class="clickable-text" onclick="togglePopup('signup')">Sign Up</strong> now!</p>
         <!-- </div> -->
       </div>
     </div>
@@ -77,35 +79,35 @@
       <div class="popup-body">
         <!-- Uncomment form when passing the project -->
         <!-- <form class="" action="html/authentication/verify-email.html" method="post"> -->
-          <div class="side-to-side">
-            <div class="half-of-whole">
-              <label for="">Last Name</label>
-              <input class="input" type="text" name="" value="" placeholder="Insert your Last Name here">
-              <label for="">First Name</label>
-              <input class="input" type="text" name="" value="" placeholder="Insert your First Name here">
-              <label for="">Middle Name</label>
-              <input class="input" type="text" name="" value="" placeholder="Insert your Middle Name here">
-              <label for="">Contact Number</label>
-              <input class="input" type="text" name="" value="" placeholder="Insert your Contact Number here">
-            </div>
-
-            <div class="half-of-whole">
-              <label for="">Birthdate</label>
-              <input class="input" type="date" name="" value="">
-              <label for="">Email</label>
-              <input class="input" type="email" name="" value="" placeholder="Insert your Email here">
-              <label for="">Username</label>
-              <input class="input" type="text" name="" value="" placeholder="Insert your Username here">
-              <label for="">Password</label>
-              <input class="input" type="password" name="" value="" placeholder="Insert your Password here">
-            </div>
+        <div class="side-to-side">
+          <div class="half-of-whole">
+            <label for="">Last Name</label>
+            <input class="input" type="text" name="" value="" placeholder="Insert your Last Name here">
+            <label for="">First Name</label>
+            <input class="input" type="text" name="" value="" placeholder="Insert your First Name here">
+            <label for="">Middle Name</label>
+            <input class="input" type="text" name="" value="" placeholder="Insert your Middle Name here">
+            <label for="">Contact Number</label>
+            <input class="input" type="text" name="" value="" placeholder="Insert your Contact Number here">
           </div>
 
-          <div class="popup-action-btns">
-            <!-- Remove onclick if to be passed -->
-            <input class="btn btn-submit" type="submit" name="" value="Sign Up" onclick="changePage('html/authentication/verify-email.html')">
-            <p class="btn-secondary" onclick="togglePopup('signup')">Back to Log In</p>
+          <div class="half-of-whole">
+            <label for="">Birthdate</label>
+            <input class="input" type="date" name="" value="">
+            <label for="">Email</label>
+            <input class="input" type="email" name="" value="" placeholder="Insert your Email here">
+            <label for="">Username</label>
+            <input class="input" type="text" name="" value="" placeholder="Insert your Username here">
+            <label for="">Password</label>
+            <input class="input" type="password" name="" value="" placeholder="Insert your Password here">
           </div>
+        </div>
+
+        <div class="popup-action-btns">
+          <!-- Remove onclick if to be passed -->
+          <input class="btn btn-submit" type="submit" name="" value="Sign Up" onclick="changePage('html/authentication/verify-email.html')">
+          <p class="btn-secondary" onclick="togglePopup('signup')">Back to Log In</p>
+        </div>
         <!-- </form> -->
       </div>
     </div>
@@ -126,13 +128,13 @@
         <p class="popup-description">Enter your email address below and we'll send you further instructions on how to reset your password.</p>
         <!-- Uncomment form when passing the project -->
         <!-- <form class="" action="index.html" method="post"> -->
-          <input class="input" type="email" name="resetPassEmail" value="" placeholder="Insert your email address">
+        <input class="input" type="email" name="resetPassEmail" value="" placeholder="Insert your email address">
 
-          <div class="popup-action-btns">
-            <!-- Remove onclick if to be passed -->
-            <input class="btn btn-submit" type="submit" name="" value="Submit" onclick="changePage('index.html')">
-            <p class="btn-secondary" onclick="togglePopup('forgotPassword')">Back to Log In</p>
-          </div>
+        <div class="popup-action-btns">
+          <!-- Remove onclick if to be passed -->
+          <input class="btn btn-submit" type="submit" name="" value="Submit" onclick="changePage('index.html')">
+          <p class="btn-secondary" onclick="togglePopup('forgotPassword')">Back to Log In</p>
+        </div>
         <!-- </form> -->
 
       </div>

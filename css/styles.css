@@ -210,6 +210,7 @@ p {
 .search-field {
   display: block;
   position: relative;
+  margin-bottom: 10px;
 }
 
 .search {
@@ -656,7 +657,6 @@ span.btn-neutral, a.btn-neutral {
   box-sizing: border-box;
   color: white;
   display: grid;
-  font-family: 'Alegreya SC', serif;
   grid-auto-flow: column;
   grid-template-rows: 1fr 5fr 1fr;
   height: 100%;

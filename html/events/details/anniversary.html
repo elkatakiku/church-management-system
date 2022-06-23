@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>CHURCH</title>
+  <title>Anniversary | Event</title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="../../../css/styles.css">
@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
     rel="stylesheet">
 </head>
 
@@ -23,8 +23,8 @@
   <section>
     <nav class="navbar">
       <div class="navbar-brand">
-        <img class="navbar-brand-logo" src="https://cdn-icons-png.flaticon.com/512/739/739249.png" alt="Web application logo">
-        <h1 class="navbar-brand-text">CHURCH</h1>
+        <img class="navbar-brand-logo" src="../../../images/logo.png" alt="Web application logo">
+        <h1 class="navbar-brand-text">Church</h1>
       </div>
 
       <ul class="navbar-nav">
@@ -39,63 +39,69 @@
         </li>
       </ul>
 
-      <div class="grid-bottom-container">
+      <div class="bottom-navbar-container">
         <hr class="nav-divider">
         <a class="nav-link" href="../../../index.html">Logout</a>
       </div>
     </nav>
   </section>
 
-  <main class="content content-fill">
-    <div class="details-page form-page">
+  <main class="content details-page">
 
-      <div>
-        <header class="section-header">
-          <h2 class="section-heading">Anniversary 1</h2>
+    <div>
+      <header class="section-header">
+        <h2 class="section-heading">Anniversary | Name</h2>
 
-          <hr>
-        </header>
+        <hr>
+      </header>
 
-        <form class="form-container" action="" method="post" id="anniversaryDetails">
+      <form method="post" id="anniversaryDetails">
+        <div class="row-flex">
+          <span class="col-8">
+            <label label for="">Anniversary Title</label>
+            <input class="input" type="text" required>
+          </span>
 
-          <div class="row">
-            <div class="">
-              <label>Anniverdary Title</label>
-              <input class="input" type="text" placeholder="Enter Anniverdary Title" required>
+          <span class="col-4">
+            <label>Registry Number</label>
+            <input class="input" type="number" required>
+          </span>
 
-              <label>Description</label>
-              <textarea class="input textarea" name="name" rows="9"></textarea>
+          <span class="col-12">
+            <label label for="">Location</label>
+            <input class="input" type="text" required>
+          </span>
 
-              <label for="">Organizer</label>
-              <input class="input" type="text" name="" value="" placeholder="Surname, Name, M.I.">
+          <span class="col-8">
+            <label label for="">Organizer's Name</label>
+            <input class="input" type="text" required>
+          </span>
 
-              <label>Telephone No.</label>
-              <input class="input" type="number" placeholder="Enter contact number" required>
+          <span class="col-4">
+            <label>Contact Number</label>
+            <input class="input" type="number" required>
+          </span>
 
-              <label>Location</label>
-              <input class="input" type="text" placeholder="Enter location" required>
+          <span class="col-9">
+            <label>Description</label>
+            <textarea class="input textarea" name="name" rows="10"></textarea>
+          </span>
 
-              <span class="row">
-                <span>
-                  <label>Date</label>
-                  <input class="input" type="date" required>
-                </span>
+          <span class="col-3">
+            <span>
+              <label>Time</label>
+              <input class="input" type="Time" required>
+            </span>
 
-                <span>
-                  <label>Time</label>
-                  <input class="input" type="Time" required>
-                </span>
-              </span>
-            </div>
-          </div>
-        </form>
-      </div>
+            <span>
+              <label>Date</label>
+              <input class="input" type="date" required>
+            </span>
+          </span>
 
-      <div class="side-to-side">
-        <button class="btn btn-outline btn-secondary" onclick="changePage('../index.html')">Cancel</button>
-        <!-- <button class="btn" type="submit" onclick="" form="anniversaryDetails">Save</button> -->
-        <button class="btn" type="submit" onclick="changePage('anniversary.html')">Save</button>
-      </div>
+        </div>
+
+      </form>
     </div>
 
 
