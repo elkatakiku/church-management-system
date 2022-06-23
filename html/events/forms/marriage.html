@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
     rel="stylesheet">
 </head>
 
@@ -23,8 +23,8 @@
   <section>
     <nav class="navbar">
       <div class="navbar-brand">
-        <img class="navbar-brand-logo" src="https://cdn-icons-png.flaticon.com/512/739/739249.png" alt="Web application logo">
-        <h1 class="navbar-brand-text">CHURCH</h1>
+        <img class="navbar-brand-logo" src="../../../images/logo.png" alt="Web application logo">
+        <h1 class="navbar-brand-text">Church</h1>
       </div>
 
       <ul class="navbar-nav">
@@ -39,7 +39,7 @@
         </li>
       </ul>
 
-      <div class="grid-bottom-container">
+      <div class="bottom-navbar-container">
         <hr class="nav-divider">
         <a class="nav-link" href="../../../index.html">Logout</a>
       </div>
@@ -53,173 +53,161 @@
         <hr>
       </header>
 
-      <form class="form-container" action="" method="post" id="marriageScheduleForm">
+      <form class="slider" method="post" id="marriageScheduleForm">
 
-        <h3 class="heading2">Groom</h3>
+        <!-- 1st Slide -->
+        <div class="col-12">
 
-        <div class="row">
-          <div class="">
-            <label>Name</label>
-            <input class="input" type="text" placeholder="Surname, Name M.I" required>
+          <h3 class="heading2">Groom</h3>
 
-            <label>Telephone No.</label>
-            <input class="input" type="number" placeholder="Enter mobile number" required>
+          <div class="row-flex">
+            <span class="col-9">
+              <label>Name</label>
+              <input class="input" type="text" placeholder="Surname, Name M.I" required>
+            </span>
 
-            <label>Address</label>
-            <input class="input" type="text" placeholder="House no. Street, City/Municipality, Province, Country" required>
-          </div>
+            <span class="col-3">
+              <label>Telephone No.</label>
+              <input class="input" type="number" required>
+            </span>
 
-          <div class="">
-            <label>Date of Birth</label>
-            <input class="input" type="date" placeholder="Enter birth date" required>
+            <span class="col-9">
+              <label>Address</label>
+              <input class="input" type="text" placeholder="House no. Street, City/Municipality, Province, Country" required>
+            </span>
 
-            <label>Place of Birth</label>
-            <input class="input" type="text" placeholder="Enter Place of Birth" required>
+            <span class="col-3">
+              <label>Occupation</label>
+              <input class="input" type="text"  required>
+            </span>
 
-            <label>Religion</label>
-            <input class="input" type="text" placeholder="Enter Religion" required>
-          </div>
+            <span class="col-9">
+              <label>Place of Birth</label>
+              <input class="input" type="text" required>
+            </span>
 
-          <div class="">
-            <label>Citizenship</label>
-            <input class="input" type="text" placeholder="Enter citizenship" required>
+            <span class="col-3">
+              <label>Date of Birth</label>
+              <input class="input" type="date" required>
+            </span>
 
-            <label>Occupation</label>
-            <input class="input" type="text" placeholder="Enter Occupation" required>
+            <span class="col-4">
+              <label>Religion</label>
+              <input class="input" type="text" required>
+            </span>
 
-            <div class="">
-              <label>Civil Status</label>
-              <div class="select-wrapper">
-                <select class="input select" required>
-                  <option disabled selected>Select Status</option>
-                  <option>Single</option>
-                  <option>Married</option>
-                  <option>Divorced</option>
-                  <option>Widowed</option>
-                </select>
+            <span class="col-4">
+              <label>Citizenship</label>
+              <input class="input" type="text" required>
+            </span>
+
+            <span class="col-4">
+              <div class="">
+                <label for="groomCivilStatus">Civil Status</label>
+                <div class="select-wrapper">
+                  <select class="input select" id="groomCivilStatus" required>
+                    <option selected disabled value="">...</option>
+                    <option value="single">Single</option>
+                    <option value="married">Married</option>
+                    <option value="divorced">Divorced</option>
+                    <option value="widowed">Widowed</option>
+                  </select>
+                </div>
               </div>
-            </div>
+            </span>
           </div>
+
         </div>
 
-        <h4 class="heading3">Parents</h4>
-        <div class="row">
-          <div class="">
-            <label>Father's Maiden Name</label>
-            <input class="input" type="text" placeholder="Enter Father's Maiden Name" required>
+        <!-- 2nd Slide -->
+        <div class="col-12">
+          <h3 class="heading2">Bride</h3>
+          <div class="row-flex">
+            <span class="col-9">
+              <label>Name</label>
+              <input class="input" type="text" placeholder="Surname, Name M.I" required>
+            </span>
 
-            <label>Mother's Maiden Name</label>
-            <input class="input" type="text" placeholder="Enter Mother's Maiden Name" required>
-          </div>
+            <span class="col-3">
+              <label>Telephone No.</label>
+              <input class="input" type="number" required>
+            </span>
 
-          <div class="">
-            <label>Telephone No.</label>
-            <input class="input" type="number" placeholder="Enter Father's Mobile Number" required>
+            <span class="col-9">
+              <label>Address</label>
+              <input class="input" type="text" placeholder="House no. Street, City/Municipality, Province, Country" required>
+            </span>
 
-            <label>Telephone No.</label>
-            <input class="input" type="number" placeholder="Enter Mother's Mobile Number" required>
-          </div>
-        </div>
+            <span class="col-3">
+              <label>Occupation</label>
+              <input class="input" type="text" required>
+            </span>
 
-        <hr>
+            <span class="col-9">
+              <label>Place of Birth</label>
+              <input class="input" type="text" required>
+            </span>
 
-        <h3 class="heading2">Bride</h3>
+            <span class="col-3">
+              <label>Date of Birth</label>
+              <input class="input" type="date" required>
+            </span>
 
-        <div class="row">
-          <div class="">
-            <label>Name</label>
-            <input class="input" type="text" placeholder="Surname, Name M.I" required>
+            <span class="col-4">
+              <label>Religion</label>
+              <input class="input" type="text" required>
+            </span>
 
-            <label>Telephone No.</label>
-            <input class="input" type="number" placeholder="Enter mobile number" required>
+            <span class="col-4">
+              <label>Citizenship</label>
+              <input class="input" type="text" required>
+            </span>
 
-            <label>Address</label>
-            <input class="input" type="text" placeholder="House no. Street, City/Municipality, Province, Country" required>
-          </div>
-
-          <div class="">
-            <label>Date of Birth</label>
-            <input class="input" type="date" placeholder="Enter birth date" required>
-
-            <label>Place of Birth</label>
-            <input class="input" type="text" placeholder="Enter Place of Birth" required>
-
-            <label>Religion</label>
-            <input class="input" type="text" placeholder="Enter Religion" required>
-          </div>
-
-          <div class="">
-            <label>Citizenship</label>
-            <input class="input" type="text" placeholder="Enter citizenship" required>
-
-            <label>Occupation</label>
-            <input class="input" type="text" placeholder="Enter Occupation" required>
-
-            <div class="">
-              <label>Civil Status</label>
-              <div class="select-wrapper">
-                <select class="input select" required>
-                  <option disabled selected>Select Status</option>
-                  <option>Single</option>
-                  <option>Married</option>
-                  <option>Divorced</option>
-                  <option>Widowed</option>
-                </select>
+            <span class="col-4">
+              <div class="">
+                <label for="brideCivilStatus">Civil Status</label>
+                <div class="select-wrapper">
+                  <select class="input select" id="brideCivilStatus" required>
+                    <option selected disabled value="">...</option>
+                    <option value="single">Single</option>
+                    <option value="married">Married</option>
+                    <option value="divorced">Divorced</option>
+                    <option value="widowed">Widowed</option>
+                  </select>
+                </div>
               </div>
-            </div>
+            </span>
           </div>
         </div>
 
-        <h4 class="heading3">Parents</h4>
+        <!-- 3rd Slide -->
+        <div class="col-12">
 
-        <div class="row">
+          <label for="">Church</label>
+          <input class="input" type="text" placeholder="Church Name" required>
 
-          <div class="">
-            <label>Father's Maiden Name</label>
-            <input class="input" type="text" placeholder="Enter Father's Maiden Name" required>
+          <label for="">Church Address</label>
+          <input class="input" type="text" placeholder="Church's Address" required>
 
-            <label>Mother's Maiden Name</label>
-            <input class="input" type="text" placeholder="Enter Mother's Maiden Name" required>
-          </div>
+          <div class="row-flex">
+            <span class="col-8">
+              <label for="">Name of Organizer</label>
+              <input class="input" type="text" placeholder="Organizer's  Name" required>
+            </span>
 
-          <div class="">
-            <label>Telephone No.</label>
-            <input class="input" type="number" placeholder="Enter Father's Mobile Number" required>
-
-            <label>Telephone No.</label>
-            <input class="input" type="number" placeholder="Enter Mother's Mobile Number" required>
-          </div>
-        </div>
-
-        <hr>
-        <div>
-          <h2 class="heading2">Event Settings</h2>
-          <div class="row">
-            <div class="">
-              <label for="">Church Name</label>
-              <input class="input" type="text" name="" value="" placeholder="Surname, Name, M.I.">
-              <label for="">Organizer</label>
-              <input class="input" type="text" name="" value="" placeholder="Surname, Name, M.I.">
-            </div>
-
-            <div class="">
-              <label for="">Location</label>
-              <input class="input" type="text" name="" value="" placeholder="Surname, Name, M.I.">
+            <span class="col-4">
               <label for="">Contact No.</label>
-              <input class="input" type="text" name="" value="" placeholder="Surname, Name, M.I.">
-            </div>
+              <input class="input" type="text" required>
+            </span>
           </div>
         </div>
-
 
       </form>
     </div>
 
     <div class="side-to-side">
-      <button class="btn btn-outline btn-secondary" onclick="changePage('../index.html')">Back</button>
-      <!-- Use the button with form attribute for backend -->
-      <!-- <button class="btn" type="submit" onclick="" form="marriageScheduleForm">Submit</button> -->
-      <button class="btn" onclick="changePage('../index.html')">Submit</button>
+      <button class="btn btn-outline btn-secondary invisible" id="slidePrev">Back</button>
+      <button class="btn" id="slideNext">Next</button>
     </div>
 
 
@@ -228,6 +216,26 @@
 
     <!-- Functionality -->
     <script type="text/javascript" src="../../../js/index.js"></script>
+    <script type="text/javascript">
+      var slideCounter = 1;
+
+      document.getElementById('slideNext').addEventListener('click', function(e) {
+        slideCounter = nextSlide('marriageScheduleForm', slideCounter);
+        if (slideCounter == document.getElementById('marriageScheduleForm').childElementCount) {
+          document.getElementById(e.target.id).textContent = "Submit";
+        } else if (slideCounter > 1) {
+          document.getElementById('slidePrev').classList.remove('invisible');
+        }
+      })
+
+      document.getElementById('slidePrev').addEventListener('click', function(e) {
+        slideCounter = previousSlide('marriageScheduleForm', slideCounter);
+        document.getElementById('slideNext').textContent = "Next";
+        if (slideCounter == 1) {
+          document.getElementById(e.target.id).classList.add('invisible');
+        }
+      })
+    </script>
 </body>
 
 </html>

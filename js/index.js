@@ -211,6 +211,7 @@ function nextSlide(slideId, slideCounter, infinite = false) {
       return slideCounter;
     } else {
       console.log("post");
+      changePage("../index.html")
     }
   }
 
@@ -219,9 +220,14 @@ function nextSlide(slideId, slideCounter, infinite = false) {
 
 function isInputValid(divId, counter) {
   for (const el of document.getElementById(divId).children[counter - 1].querySelectorAll("[required]")) {
+    console.log("Checking if valid");
+    console.log(el);
     if (!el.reportValidity()) {
+      console.log("is not valid");
       return false;
     }
+
+    console.log("Value: " + el.value);
   }
   return true;
 }
