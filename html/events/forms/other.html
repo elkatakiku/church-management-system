@@ -24,7 +24,7 @@
     <nav class="navbar">
       <div class="navbar-brand">
         <img class="navbar-brand-logo" src="../../../images/logo.png" alt="Web application logo">
-        <h1 class="navbar-brand-text">Church</h1>
+        <h1 class="navbar-brand-text">Catholic Church Complex</h1>
       </div>
 
       <ul class="navbar-nav">
@@ -47,24 +47,25 @@
   </section>
 
   <main class="content form-page">
+
     <div>
       <header class="section-header">
         <h2 class="section-heading">Schedule an Event</h2>
         <hr>
       </header>
 
-      <form class="form-container" method="post" id="otherScheduleForm">
+      <form method="post" id="otherScheduleForm">
 
         <label label for="">Event Name</label>
-        <input class="input" type="text" name="" value="" placeholder="Insert event name">
+        <input class="input" type="text" placeholder="Insert event name" required>
 
         <label label for="">Location</label>
-        <input class="input" type="text" name="" value="" placeholder="Insert location here">
+        <input class="input" type="text" placeholder="Insert location here" required>
 
         <div class="row-flex">
           <span class="col-9">
             <label label for="">Organizer's Name</label>
-            <input class="input" type="text" name="" value="" placeholder="Insert organizer's name here">
+            <input class="input" type="text" placeholder="Insert organizer's name here" required>
           </span>
 
           <span class="col-3">
@@ -74,7 +75,7 @@
         </div>
 
         <label>Description</label>
-        <textarea class="input textarea" name="name" rows="8"></textarea>
+        <textarea class="input textarea" rows="8" required></textarea>
 
       </form>
     </div>
@@ -84,12 +85,14 @@
       <a class="btn-secondary col-5" href="../index.html">Cancel</a>
     </div>
 
+  </main>
 
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/4de3040dc0.js" crossorigin="anonymous"></script>
 
-    <!-- Functionality -->
-    <script type="text/javascript" src="../../../js/index.js"></script>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/4de3040dc0.js" crossorigin="anonymous"></script>
+
+  <!-- Functionality -->
+  <script type="text/javascript" src="../../../js/index.js"></script>
 </body>
 
 </html>

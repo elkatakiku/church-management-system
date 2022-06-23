@@ -24,7 +24,7 @@
     <nav class="navbar">
       <div class="navbar-brand">
         <img class="navbar-brand-logo" src="../../../images/logo.png" alt="Web application logo">
-        <h1 class="navbar-brand-text">Church</h1>
+        <h1 class="navbar-brand-text">Catholic Church Complex</h1>
       </div>
 
       <ul class="navbar-nav">
@@ -54,28 +54,28 @@
         <hr>
       </header>
 
-      <form class="form-container" action="" method="post" id="practiceScheduleForm">
+      <form method="post" id="practiceScheduleForm">
 
         <label label for="">Practice Title</label>
-        <input class="input" type="text">
+        <input class="input" type="text" required>
 
         <div class="row-flex">
           <span class="col-9">
             <label label for="">Host Name</label>
-            <input class="input" type="text">
+            <input class="input" type="text" required>
           </span>
 
           <span class="col-3">
             <label label for="">Contact Number</label>
-            <input class="input" type="number">
+            <input class="input" type="number" required>
           </span>
         </div>
 
         <label label for="">Location</label>
-        <input class="input" type="text">
+        <input class="input" type="text" required>
 
         <label label for="">Practice Purpose and Needs</label>
-        <textarea class="input textarea" rows="8"></textarea>
+        <textarea class="input textarea" rows="8" required></textarea>
 
       </form>
     </div>
@@ -85,12 +85,14 @@
       <a class="btn-secondary col-5" href="../index.html">Cancel</a>
     </div>
 
+  </main>
 
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/4de3040dc0.js" crossorigin="anonymous"></script>
 
-    <!-- Functionality -->
-    <script type="text/javascript" src="../../../js/index.js"></script>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/4de3040dc0.js" crossorigin="anonymous"></script>
+
+  <!-- Functionality -->
+  <script type="text/javascript" src="../../../js/index.js"></script>
 </body>
 
 </html>

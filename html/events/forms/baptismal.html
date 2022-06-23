@@ -24,7 +24,7 @@
     <nav class="navbar">
       <div class="navbar-brand">
         <img class="navbar-brand-logo" src="../../../images/logo.png" alt="Web application logo">
-        <h1 class="navbar-brand-text">Church</h1>
+        <h1 class="navbar-brand-text">Catholic Church Complex</h1>
       </div>
 
       <ul class="navbar-nav">
@@ -47,6 +47,7 @@
   </section>
 
   <main class="content form-page">
+
     <div>
       <header class="section-header">
         <h2 class="section-heading">Schedule a Baptismal</h2>
@@ -62,23 +63,23 @@
           <div class="row-flex">
 
             <span class="col-9">
-              <label for="name">Name</label>
-              <input class="input" type="text" id="name" placeholder="Surname, Name, M.I." required />
+              <label for="childName">Name</label>
+              <input class="input" type="text" id="childName" placeholder="Surname, Name, M.I." required />
             </span>
 
             <span class="col-3">
-              <label for="">Age</label>
-              <input class="input" type="number" required />
+              <label for="childAge">Age</label>
+              <input class="input" type="number" id="childAge" required />
             </span>
 
             <span class="col-9">
-              <label for="bplace">Birthplace</label>
-              <input class="input" type="text" id="bplace" required />
+              <label for="childBirthplace">Birthplace</label>
+              <input class="input" type="text" id="childBirthplace" required />
             </span>
 
             <span class="col-3">
-              <label for="">Birthdate</label>
-              <input class="input" type="date" required />
+              <label for="childBirthdate">Birthdate</label>
+              <input class="input" type="date" id="childBirthdate" required />
             </span>
 
           </div>
@@ -88,13 +89,13 @@
 
           <div class="row-flex center-horizontal col-8">
             <span class="col-6">
-              <label for="religion">Religion</label>
-              <input class="input" type="text" id="religion" required />
+              <label>Religion</label>
+              <input class="input" type="text" required />
             </span>
 
             <span class="col-6">
-              <label for="cit">Citizenship</label>
-              <input class="input" type="text" id="cit" required />
+              <label>Citizenship</label>
+              <input class="input" type="text"required />
             </span>
           </div>
 
@@ -103,8 +104,8 @@
           <div class="row-flex">
 
             <span class="col-9">
-              <label for="name">Name</label>
-              <input class="input" type="text" id="name" placeholder="Surname, Name, M.I." required />
+              <label>Name</label>
+              <input class="input" type="text" placeholder="Surname, Name, M.I." required />
             </span>
 
             <span class="col-3">
@@ -127,7 +128,7 @@
           <div class="row-flex">
             <span class="col-6">
               <label for="">Name</label>
-              <input class="input" type="text" name="" value="" placeholder="Surname, Name, M.I." required />
+              <input class="input" type="text" placeholder="Surname, Name, M.I." required />
             </span>
 
             <span class="col-3">
@@ -137,27 +138,27 @@
 
             <span class="col-3">
               <label for="">Occupation</label>
-              <input class="input" type="text" name="" required />
+              <input class="input" type="text" required />
             </span>
 
             <span class="col-6">
               <label for="">Birthplace</label>
-              <input class="input" type="text" name="" value="" placeholder="" required />
+              <input class="input" type="text" required />
             </span>
 
             <span class="col-3">
               <label for="">Birthdate</label>
-              <input class="input" type="date" name="" value="" required />
+              <input class="input" type="date" required />
             </span>
 
             <span class="col-3">
               <label for="">Religion</label>
-              <input class="input" type="text" name="" value="" required />
+              <input class="input" type="text" required />
             </span>
 
             <span class="col-6">
               <label for="">Address</label>
-              <input class="input" type="text" name="" value="" placeholder="House no. Street, City/Municipality, Province, Country" required />
+              <input class="input" type="text" placeholder="House no. Street, City/Municipality, Province, Country" required />
             </span>
 
             <div class="center-horizontal col-3">
@@ -171,48 +172,48 @@
           <div class="row-flex">
             <span class="col-6">
               <label for="">Name</label>
-              <input class="input" type="text" name="" value="" placeholder="Surname, Name, M.I." required />
+              <input class="input" type="text" placeholder="Surname, Name, M.I." required />
             </span>
 
             <span class="col-3">
               <label for="">Telephone No.</label>
-              <input class="input" type="tel">
+              <input class="input" type="tel" required>
             </span>
 
             <span class="col-3">
               <label for="">Occupation</label>
-              <input class="input" type="text" name="">
+              <input class="input" type="text" required>
             </span>
 
             <span class="col-6">
               <label for="">Birthplace</label>
-              <input class="input" type="text" name="" value="" placeholder="">
+              <input class="input" type="text" required>
             </span>
 
             <span class="col-3">
               <label for="">Birthdate</label>
-              <input class="input" type="date" name="" value="">
+              <input class="input" type="date" required>
             </span>
 
             <span class="col-3">
               <label for="">Religion</label>
-              <input class="input" type="text" name="" value="">
+              <input class="input" type="text" required>
             </span>
 
             <span class="col-6">
               <label for="">Address</label>
-              <input class="input" type="text" name="" value="" placeholder="House no. Street, City/Municipality, Province, Country">
+              <input class="input" type="text" placeholder="House no. Street, City/Municipality, Province, Country" required>
             </span>
 
             <div class="center-horizontal col-3">
               <label for="cit">Citizenship</label>
-              <input class="input" type="text" id="cit" />
+              <input class="input" type="text" id="cit" required/>
             </div>
           </div>
 
           <div class="center-horizontal col-6">
             <label for="">Date of Marriage (Optional)</label>
-            <input class="input" type="date" />
+            <input class="input" type="date"/>
           </div>
         </div>
 
@@ -225,13 +226,13 @@
             <div class="">
               <h5 class="heading4">Male Sponsor</h5>
               <label for="name">Name</label>
-              <input class="input" type="text" id="name" name="name" placeholder="Surname, Name, M.I." required />
+              <input class="input" type="text" id="name" placeholder="Surname, Name, M.I." required />
             </div>
 
             <div class="">
               <h5 class="heading4">Female Sponsor</h5>
               <label for="name">Name</label>
-              <input class="input" type="text" id="name" name="name" placeholder="Surname, Name, M.I." required />
+              <input class="input" type="text" id="name" placeholder="Surname, Name, M.I." required />
             </div>
           </div>
 
@@ -241,24 +242,24 @@
             <div class="row">
               <div class="">
                 <label for="">Name</label>
-                <input class="input" type="text" name="" value="" placeholder="Surname, Name, M.I." />
+                <input class="input" type="text" placeholder="Surname, Name, M.I." />
                 <label for="">Name</label>
-                <input class="input" type="text" name="" value="" placeholder="Surname, Name, M.I." />
+                <input class="input" type="text" placeholder="Surname, Name, M.I." />
                 <label for="">Name</label>
-                <input class="input" type="text" name="" value="" placeholder="Surname, Name, M.I." />
+                <input class="input" type="text" placeholder="Surname, Name, M.I." />
                 <label for="">Name</label>
-                <input class="input" type="text" name="" value="" placeholder="Surname, Name, M.I." />
+                <input class="input" type="text" placeholder="Surname, Name, M.I." />
               </div>
 
               <div class="">
                 <label for="">Name</label>
-                <input class="input" type="text" name="" value="" placeholder="Surname, Name, M.I." />
+                <input class="input" type="text" placeholder="Surname, Name, M.I." />
                 <label for="">Name</label>
-                <input class="input" type="text" name="" value="" placeholder="Surname, Name, M.I." />
+                <input class="input" type="text" placeholder="Surname, Name, M.I." />
                 <label for="">Name</label>
-                <input class="input" type="text" name="" value="" placeholder="Surname, Name, M.I." />
+                <input class="input" type="text" placeholder="Surname, Name, M.I." />
                 <label for="">Name</label>
-                <input class="input" type="text" name="" value="" placeholder="Surname, Name, M.I." />
+                <input class="input" type="text" placeholder="Surname, Name, M.I." />
               </div>
 
             </div>
@@ -272,31 +273,33 @@
       <button class="btn" id="slideNext">Next</button>
     </div>
 
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/4de3040dc0.js" crossorigin="anonymous"></script>
+  </main>
 
-    <!-- Functionality -->
-    <script type="text/javascript" src="../../../js/index.js"></script>
-    <script type="text/javascript">
-      var slideCounter = 1;
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/4de3040dc0.js" crossorigin="anonymous"></script>
 
-      document.getElementById('slideNext').addEventListener('click', function(e) {
-        slideCounter = nextSlide('baptismalScheduleForm', slideCounter);
-        if (slideCounter == document.getElementById('baptismalScheduleForm').childElementCount) {
-          document.getElementById(e.target.id).textContent = "Submit";
-        } else if (slideCounter > 1) {
-          document.getElementById('slidePrev').classList.remove('invisible');
-        }
-      })
+  <!-- Functionality -->
+  <script type="text/javascript" src="../../../js/index.js"></script>
+  <script type="text/javascript">
+    var slideCounter = 1;
 
-      document.getElementById('slidePrev').addEventListener('click', function(e) {
-        slideCounter = previousSlide('baptismalScheduleForm', slideCounter);
-        document.getElementById('slideNext').textContent = "Next";
-        if (slideCounter == 1) {
-          document.getElementById(e.target.id).classList.add('invisible');
-        }
-      })
-    </script>
+    document.getElementById('slideNext').addEventListener('click', function(e) {
+      slideCounter = nextSlide('baptismalScheduleForm', slideCounter);
+      if (slideCounter == document.getElementById('baptismalScheduleForm').childElementCount) {
+        document.getElementById(e.target.id).textContent = "Submit";
+      } else if (slideCounter > 1) {
+        document.getElementById('slidePrev').classList.remove('invisible');
+      }
+    })
+
+    document.getElementById('slidePrev').addEventListener('click', function(e) {
+      slideCounter = previousSlide('baptismalScheduleForm', slideCounter);
+      document.getElementById('slideNext').textContent = "Next";
+      if (slideCounter == 1) {
+        document.getElementById(e.target.id).classList.add('invisible');
+      }
+    })
+  </script>
 </body>
 
 </html>

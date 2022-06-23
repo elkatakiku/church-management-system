@@ -526,11 +526,6 @@ span.btn-neutral, a.btn-neutral {
   align-items: center;
 }
 
-.half-of-whole {
-  display: block;
-  width: 49%;
-}
-
 .content {
   box-sizing: border-box;
   margin-left: 200px;
@@ -683,7 +678,9 @@ span.btn-neutral, a.btn-neutral {
 .navbar-brand-text {
   font-family: 'Alegreya SC', serif;
   font-size: 1rem;
+  font-weight: 400;
   margin-top: 10px;
+  width: 75%;
 }
 
 .navbar-nav {
@@ -741,7 +738,7 @@ span.btn-neutral, a.btn-neutral {
 
 .contact {
   font-size: var(--extra-small-text);
-  font-weight: 500;
+  font-weight: 400;
 }
 
 /* Table */
@@ -755,7 +752,7 @@ span.btn-neutral, a.btn-neutral {
 
 .table-container {
   background-color: white;
-  box-shadow: 5px 5px 10px rgba(130, 91, 62, 0.3);
+  box-shadow: 5px 5px 8px rgba(130, 91, 62, 0.3);
   height: 100%;
   overflow: auto;
 }
@@ -766,7 +763,7 @@ span.btn-neutral, a.btn-neutral {
 
 .table-header {
   background-color: var(--brown);
-  box-shadow: 0px 5px 10px rgba(208, 180, 159, 0.2);
+  box-shadow: 0px 5px 5px rgba(208, 180, 159, 0.2);
   color: white;
   position: sticky;
   text-align: left;

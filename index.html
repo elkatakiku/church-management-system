@@ -36,28 +36,30 @@
       </div>
 
       <div class="login-form">
-        <!-- Uncomment form when passing the project -->
-        <!-- <form class="" action="html/dashboard.html" method="post"> -->
-        <label for="usernameInput">Username</label>
-        <input class="input" type="text" id="usernameInput" name="username" placeholder="Insert your Username here">
-        <label for="passwordInput">Password</label>
-        <input class="input" type="password" id="passwordInput" name="password" placeholder="Insert your Password here">
-        <label for="captchaInput">Enter CAPTCHA</label>
-        <img src="" alt="captcha text" style="display: block; height: 3rem;">
-        <span class="captcha-input">
-          <i class="fa-solid fa-arrow-rotate-right icon"></i>
-          <input class="input" type="text" id="captchaInput" name="captcha" placeholder="Insert Captcha text">
-        </span>
-        <!-- Remove onclick if to be passed -->
-        <input class="input btn btn-submit" type="submit" name="login" value="Log In" onclick="changePage('html/dashboard.html')">
-        <div class="login-options">
-          <div class="">
-            <input type="checkbox" id="rememberInput" name="rememberMe" value="">
-            <label class="secondary-texts" for="rememberInput">Remember me</label>
+        <form method="post">
+          <label for="usernameInput">Username</label>
+          <input class="input" type="text" id="usernameInput" name="username" placeholder="Insert your Username here">
+
+          <label for="passwordInput">Password</label>
+          <input class="input" type="password" id="passwordInput" name="password" placeholder="Insert your Password here">
+
+          <label for="captchaInput">Enter CAPTCHA</label>
+          <img src="" alt="captcha text" style="display: block; height: 3rem;">
+
+          <span class="captcha-input">
+            <i class="fa-solid fa-arrow-rotate-right icon"></i>
+            <input class="input" type="text" id="captchaInput" name="captcha" placeholder="Insert Captcha text">
+          </span>
+
+          <input class="input btn btn-submit" type="button" value="Log In" onclick="changePage('html/dashboard.html')">
+          <div class="login-options">
+            <div class="">
+              <input type="checkbox" id="rememberInput" name="rememberMe" value="">
+              <label class="secondary-texts" for="rememberInput">Remember me</label>
+            </div>
+            <p class="clickable-text" onclick="togglePopup('forgotPassword')">Forgot Password?</p>
           </div>
-          <p class="clickable-text" onclick="togglePopup('forgotPassword')">Forgot Password?</p>
-        </div>
-        <!-- </form> -->
+        </form>
 
         <p class="sign-up-now">Don't have an account yet? <strong class="clickable-text" onclick="togglePopup('signup')">Sign Up</strong> now!</p>
         <!-- </div> -->
@@ -77,38 +79,36 @@
       <hr>
 
       <div class="popup-body">
-        <!-- Uncomment form when passing the project -->
-        <!-- <form class="" action="html/authentication/verify-email.html" method="post"> -->
-        <div class="side-to-side">
-          <div class="half-of-whole">
-            <label for="">Last Name</label>
-            <input class="input" type="text" name="" value="" placeholder="Insert your Last Name here">
-            <label for="">First Name</label>
-            <input class="input" type="text" name="" value="" placeholder="Insert your First Name here">
-            <label for="">Middle Name</label>
-            <input class="input" type="text" name="" value="" placeholder="Insert your Middle Name here">
-            <label for="">Contact Number</label>
-            <input class="input" type="text" name="" value="" placeholder="Insert your Contact Number here">
+        <form method="post">
+          <div class="row">
+            <div>
+              <label for="">Last Name</label>
+              <input class="input" type="text" name="" value="" placeholder="Insert your Last Name here">
+              <label for="">First Name</label>
+              <input class="input" type="text" name="" value="" placeholder="Insert your First Name here">
+              <label for="">Middle Name</label>
+              <input class="input" type="text" name="" value="" placeholder="Insert your Middle Name here">
+              <label for="">Contact Number</label>
+              <input class="input" type="text" name="" value="" placeholder="Insert your Contact Number here">
+            </div>
+
+            <div>
+              <label for="">Birthdate</label>
+              <input class="input" type="date" name="" value="">
+              <label for="">Email</label>
+              <input class="input" type="email" name="" value="" placeholder="Insert your Email here">
+              <label for="">Username</label>
+              <input class="input" type="text" name="" value="" placeholder="Insert your Username here">
+              <label for="">Password</label>
+              <input class="input" type="password" name="" value="" placeholder="Insert your Password here">
+            </div>
           </div>
 
-          <div class="half-of-whole">
-            <label for="">Birthdate</label>
-            <input class="input" type="date" name="" value="">
-            <label for="">Email</label>
-            <input class="input" type="email" name="" value="" placeholder="Insert your Email here">
-            <label for="">Username</label>
-            <input class="input" type="text" name="" value="" placeholder="Insert your Username here">
-            <label for="">Password</label>
-            <input class="input" type="password" name="" value="" placeholder="Insert your Password here">
+          <div class="popup-action-btns">
+            <input class="btn btn-submit" type="button" name="" value="Sign Up" onclick="changePage('html/authentication/verify-email.html')">
+            <p class="btn-secondary" onclick="togglePopup('signup')">Back to Log In</p>
           </div>
-        </div>
-
-        <div class="popup-action-btns">
-          <!-- Remove onclick if to be passed -->
-          <input class="btn btn-submit" type="submit" name="" value="Sign Up" onclick="changePage('html/authentication/verify-email.html')">
-          <p class="btn-secondary" onclick="togglePopup('signup')">Back to Log In</p>
-        </div>
-        <!-- </form> -->
+        </form>
       </div>
     </div>
   </section>
@@ -126,16 +126,14 @@
 
       <div class="popup-body">
         <p class="popup-description">Enter your email address below and we'll send you further instructions on how to reset your password.</p>
-        <!-- Uncomment form when passing the project -->
-        <!-- <form class="" action="index.html" method="post"> -->
-        <input class="input" type="email" name="resetPassEmail" value="" placeholder="Insert your email address">
+        <form method="post">
+          <input class="input" type="email" name="resetPassEmail" value="" placeholder="Insert your email address">
 
-        <div class="popup-action-btns">
-          <!-- Remove onclick if to be passed -->
-          <input class="btn btn-submit" type="submit" name="" value="Submit" onclick="changePage('index.html')">
-          <p class="btn-secondary" onclick="togglePopup('forgotPassword')">Back to Log In</p>
-        </div>
-        <!-- </form> -->
+          <div class="popup-action-btns">
+            <input class="btn btn-submit" type="button" value="Submit" onclick="changePage('index.html')">
+            <p class="btn-secondary" onclick="togglePopup('forgotPassword')">Back to Log In</p>
+          </div>
+        </form>
 
       </div>
     </div>

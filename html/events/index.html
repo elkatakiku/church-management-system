@@ -24,7 +24,7 @@
     <nav class="navbar">
       <div class="navbar-brand">
         <img class="navbar-brand-logo" src="../../images/logo.png" alt="Web application logo">
-        <h1 class="navbar-brand-text">Church</h1>
+        <h1 class="navbar-brand-text">Catholic Church Complex</h1>
       </div>
 
       <ul class="navbar-nav">
@@ -105,13 +105,13 @@
         </span>
       </div>
 
-      <form class="search-field" action="index.html" method="post">
+      <form class="search-field" method="post">
         <input class="input search" type="search" name="" value="" placeholder="Search here...">
-        <button class="btn btn-search" type="submit" name="search-btn"><i class="fa-solid fa-magnifying-glass icon"></i></button>
+        <button class="btn btn-search" type="button" name="search-btn"><i class="fa-solid fa-magnifying-glass icon"></i></button>
       </form>
     </div>
 
-    <form class="table-container" action="index.html" method="post" id="table-form">
+    <form class="table-container" method="post" id="table-form">
       <table class="table">
         <thead class="table-header">
           <tr>
@@ -224,7 +224,7 @@
 
       <div class="popup-body">
         <p class="popup-description">Do you want to permanently delete this event?</p>
-        <form class="" method="post">
+        <form method="post">
           <div class="row">
             <input class="btn btn-submit" type="button" value="Yes" onclick="togglePopup('deleteRow')">
             <input class="btn btn-neutral" type="button" value="No" onclick="togglePopup('deleteRow')">
