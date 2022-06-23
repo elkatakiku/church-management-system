@@ -771,10 +771,6 @@ span.btn-neutral, a.btn-neutral {
   vertical-align: middle;
 }
 
-.table td {
-  padding: 10px 20px;
-}
-
 .table-body {
   background-color: white;
   overflow: auto;
@@ -868,6 +864,8 @@ span.btn-neutral, a.btn-neutral {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-right: 20px;
+  margin-left: 220px;
   min-height: 100%;
 }
 
@@ -1021,6 +1019,10 @@ span.btn-neutral, a.btn-neutral {
 .event-divider {
   transform: rotate(90deg);
   width: 30px;
+}
+
+#eventsTable .table td {
+  padding: 10px 20px;
 }
 
 /* Schedule Event */
@@ -1443,6 +1445,7 @@ span.btn-neutral, a.btn-neutral {
   width: 200px;
 }
 
+
 /******************************************* Functionality *******************************************/
 .active {
   border-radius: 100px;
@@ -1450,14 +1453,14 @@ span.btn-neutral, a.btn-neutral {
   font-weight: 500;
 }
 
-.disabled {
-  background-color: var(--tan);
-  cursor: auto;
-}
-
 .btn.disabled:hover {
   color: white !important;
   background-color: var(--tan) !important;
+}
+
+.disabled {
+  background-color: var(--tan);
+  cursor: auto;
 }
 
 .done {
@@ -1475,6 +1478,10 @@ span.btn-neutral, a.btn-neutral {
 .today {
   color: var(--orange);
   font-weight: 700;
+}
+
+.unclickable {
+  cursor: default !important;
 }
 
 /******************************************* Animations *******************************************/

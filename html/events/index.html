@@ -114,7 +114,7 @@
       </form>
     </div>
 
-    <form class="table-container" method="post" id="table-form">
+    <form class="table-container" method="post" id="eventsTable">
       <table class="table">
         <thead class="table-header">
           <tr>
@@ -185,12 +185,20 @@
             <td><span class="no-action"></span></td>
           </tr>
 
-          <tr id="event8" onclick="getData('other', 123123)" class="done">
+          <tr id="event8" onclick="getData('marriage', 123123)" class="done">
             <th scope="row"><input type="checkbox" name="eventName#" value="" onclick="checkedRow('event8', event)"></th>
-            <td>Other</td>
+            <td>Weading</td>
             <td>Mr. and Mrs. Wed</td>
             <td>MMMM dd, YYYY</td>
             <td><button class="btn btn-certificate disabled" type="button" name="button" disabled>Certificate</button></td>
+          </tr>
+
+          <tr id="event9" onclick="getData('other', 123123)" class="done">
+            <th scope="row"><input type="checkbox" name="eventName#" value="" onclick="checkedRow('event9', event)"></th>
+            <td>Other</td>
+            <td>Other Event</td>
+            <td>MMMM dd, YYYY</td>
+            <td><span class="no-action"></span></td>
           </tr>
         </tbody>
       </table>
