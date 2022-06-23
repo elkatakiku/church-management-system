@@ -16,27 +16,11 @@
     rel="stylesheet">
 
   <style media="screen">
-    /* span,
-    div {
-      border: 2px black solid;
-    } */
+    #baptismalScheduleForm>* {
+      transition: all 0.5s ease;
+    }
 
-    /* children will be positioned relativly to this element */
-
-
-    /* child layout definitions */
     .center {
-      /* center needs to be 20 pixels from the left,
-    so it doesn't overlap with the .left element */
-      /* left: 20px; */
-
-      /* needs a width of 1 pixel, this causes
-    scaleX(60) is equal to 60 pixels */
-      /* width: 1px; */
-      /* transform: scaleX(60); */
-
-      /* we need to scale the texture from the left side
-    for it to align correctly, default is center */
       transform-origin: left;
 
       animation: center-animate 1s ease alternate;
@@ -53,17 +37,76 @@
       }
     }
 
-    .expand {
-      animation: expand-animation 2s ease;
+    html,
+    body {
+      height: 100%;
+      overflow: hidden;
     }
 
-    @keyframes expand-animation {
+    #content1 {
+      position: relative;
+      height: 100%;
+    }
+
+    .page {
+      height: 100%;
+      width: 100%;
+    }
+
+    #page1 {
+      background: #d94e4e;
+      left: -100%;
+      -webkit-transform: translate3d(-100%, 0, 0);
+      -webkit-animation: left-to-right 5s linear forwards;
+      animation: left-to-right 5s linear forwards;
+    }
+
+    #page2 {
+      background: #60b044;
+      -webkit-transform: translate3d(0, -100%, 0);
+      -webkit-animation: right-to-left 5s linear forwards;
+      animation: right-to-left 5s linear forwards;
+    }
+
+    @-webkit-keyframes left-to-right {
       from {
-        width: 0;
+        -webkit-transform: translateX(-100%);
       }
 
       to {
-        width: 100%;
+        -webkit-transform: translateX(0);
+      }
+    }
+
+    @-webkit-keyframes right-to-left {
+
+      /* page2's y needs to be -100% so that its top matches with page1 */
+      from {
+        -webkit-transform: translate3d(0, -100%, 0);
+      }
+
+      to {
+        -webkit-transform: translate3d(100%, -100%, 0);
+      }
+    }
+
+    @keyframes left-to-right {
+      from {
+        transform: translate3d(-100%, 0, 0);
+      }
+
+      to {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    @keyframes right-to-left {
+      from {
+        transform: translate3d(0, -100%, 0);
+      }
+
+      to {
+        transform: translate3d(100%, -100%, 0);
       }
     }
   </style>
@@ -117,33 +160,32 @@
     <!-- Insert Codes Here -->
 
     <!-- <div class="square"> -->
-      <!-- <div class="left"></div> -->
-      <button class="btn btn-submit center" type="button" name="button">Try animation</button>
-
-      <div class="row-flex">
-        <div class="col-3" style="background-color: red;">
-          col 3
-        </div>
-        <div class="col-4" style="background-color: red;">
-          col
-        </div>
-        <div class="col-5" style="background-color: red;">
-          col 5
-        </div>
-        <div class="col-2" style="background-color: red;">
-          col 2
-        </div>
-        <div class="col-8" style="background-color: red;">
-          col 8
-        </div>
+    <!-- <div class="left"></div> -->
+    <button class="btn btn-submit center" type="button" name="button">Try animation</button>
+    <!--
+    <div class="row-flex">
+      <div class="col-3" style="background-color: red;">
+        col 3
       </div>
-      <!-- <div class="right"></div> -->
+      <div class="col-4" style="background-color: red;">
+        col
+      </div>
+      <div class="col-5" style="background-color: red;">
+        col 5
+      </div>
+      <div class="col-2" style="background-color: red;">
+        col 2
+      </div>
+      <div class="col-8" style="background-color: red;">
+        col 8
+      </div>
+    </div> -->
+    <!-- <div class="right"></div> -->
     <!-- </div> -->
 
-
-
-
-
+    <div class="certificate">
+      asdasdsad
+    </div>
 
     <!-- <div class="sliding-container">
       <div class="sliding" id="">
@@ -161,8 +203,25 @@
 
     <!-- ************************ -->
 
+    <div class="">
+
+      <div class="" id="slidee">
+        Try animation
+      </div>
+    </div>
+
     <span>foo</span>
     <div>bar</div>
+
+
+    <div id="content1">
+      <div id="page1" class="page">
+        <!-- Content Area 1 -->
+      </div>
+      <div id="page2" class="page">
+        <!-- Content Area 1 -->
+      </div>
+    </div>
 
   </main>
 
@@ -170,16 +229,94 @@
   <script src="https://kit.fontawesome.com/4de3040dc0.js" crossorigin="anonymous"></script>
 
   <!-- Functionality -->
-  <script type="text/javascript" src="js/index.js"></script>
+
   <script type="text/javascript">
-    document.getElementById('slide').addEventListener('click', function(e) {
+    // var counter = 1;
+    //
+    // document.getElementById('previous').addEventListener('click', function(e) {
+    //   console.log("Previous Clicked");
+    //   console.log("Counter");
+    //   console.log(counter);
+    //   if (counter > 1) {
+    //     counter--;
+    //
+    //     console.log("Changing");
+    //     var margin = (counter * 100) - 100;
+    //     console.log(margin);
+    //     document.getElementById('baptismalScheduleForm').firstElementChild.style.marginLeft = "-" + margin + "%";
+    //
+    //   }
+    // })
+    //
+    // document.getElementById('animate').addEventListener('click', function(e) {
+    //   console.log("Next Clicked");
+    //   console.log("Counter");
+    //   console.log(counter);
+    //   console.log(document.getElementById('baptismalScheduleForm').childElementCount);
+    //   console.log(counter < document.getElementById('baptismalScheduleForm').childElementCount);
+    //   if (counter < document.getElementById('baptismalScheduleForm').childElementCount) {
+    //     console.log("Changing");
+    //
+    //     var form = document.getElementById('baptismalScheduleForm');
+    //
+    //     var div = form.firstElementChild;
+    //     var margin = counter * 100;
+    //
+    //     console.log(margin);
+    //
+    //     div.style.marginLeft = "-" + margin + "%";
+    //
+    //     counter++;
+    //   }
+    // })
 
-      // this.classList.toggle(slideactive);
 
-      // (this.style.height == '50px' || this.style.height == '') ?
-      // this.style.height = '150px': this.style.height = '50px';
 
-    }, false);
+    //
+    //
+    // for (var i = 0; i < form.childElementCount; i++) {
+    //   console.log("Current div");
+    //   console.log(div);
+    //   if (!div.classList.contains('hidden') && !isLast) {
+    //     div.classList.toggle('hidden');
+    //     div = div.nextElementSibling;
+    //     div.classList.toggle('hidden');
+    //     if (div.nextElementSibling == null) {
+    //       isLast = true;
+    //       console.log("Last div");
+    //     }
+    //
+    //     break;
+    //   }
+    //
+    //   console.log("Next div");
+    //   console.log(div.nextElementSibling);
+    //
+    //   div = div.nextElementSibling;
+    // }
+
+    // // if (true) {
+    // //
+    // // }
+    // console.log("Animation of slidee");
+    // console.log(document.getElementById('slidee').style.animation);
+    // if (document.getElementById('slidee').style.animation) {
+    //   console.log("Removing property");
+    //   document.getElementById('slidee').style.animation = "";
+    //   console.log(document.getElementById('slidee').style.animation);
+    // }
+    //
+    // document.getElementById('slidee').style.animation = "center-animate 1s ease";
+    // console.log(document.getElementById('slidee').style.animation);
+    // document.getElementById('slidee').style.animation = "";
+    // document.getElementById('slide').addEventListener('click', function(e) {
+    //
+    //   // this.classList.toggle(slideactive);
+    //
+    //   // (this.style.height == '50px' || this.style.height == '') ?
+    //   // this.style.height = '150px': this.style.height = '50px';
+    //
+    // }, false);
 
     if (document.addEventListener) {
       document.addEventListener("click", function(e) {
@@ -200,7 +337,19 @@
         console.log(targetElement);
       });
     }
+
+    var counter = 1;
+    var counter2 = 1;
+
+    document.getElementById('slideNext').addEventListener('click', function(e) {
+      counter = nextSlide('baptismalScheduleForm', counter, true);
+    })
+
+    document.getElementById('slidePrev').addEventListener('click', function(e) {
+      counter = previousSlide('baptismalScheduleForm', counter, true);
+    })
   </script>
+  <script type="text/javascript" src="js/index.js"></script>
 </body>
 
 </html>

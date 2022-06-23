@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
     rel="stylesheet">
 </head>
 
@@ -23,8 +23,8 @@
   <section>
     <nav class="navbar">
       <div class="navbar-brand">
-        <img class="navbar-brand-logo" src="https://cdn-icons-png.flaticon.com/512/739/739249.png" alt="Web application logo">
-        <h1 class="navbar-brand-text">CHURCH</h1>
+        <img class="navbar-brand-logo" src="../../../images/logo.png" alt="Web application logo">
+        <h1 class="navbar-brand-text">Church</h1>
       </div>
 
       <ul class="navbar-nav">
@@ -39,59 +39,73 @@
         </li>
       </ul>
 
-      <div class="grid-bottom-container">
+      <div class="bottom-navbar-container">
         <hr class="nav-divider">
         <a class="nav-link" href="../../../index.html">Logout</a>
       </div>
     </nav>
   </section>
 
-  <main class="content content-fill">
-    <div class="details-page form-page">
+  <main class="content details-page">
+    <div>
+      <header class="section-header">
+        <h2 class="section-heading">Prayer Meeting | Title</h2>
+        <hr>
+      </header>
 
-      <div>
-        <header class="section-header">
-          <h2 class="section-heading">Prayer Meeting</h2>
+      <form method="post" id="prayerDetails">
 
-          <hr>
-        </header>
+        <div class="row-flex">
+          <span class="col-9">
+            <label label for="">Location</label>
+            <input class="input" type="text">
+          </span>
 
-        <form class="form-container" action="" method="post" id="prayerDetails">
+          <span class="col-3">
+            <label label for="">Registry Number</label>
+            <input class="input" type="number">
+          </span>
 
-          <label label for="">Location</label>
-          <input class="input" type="text" name="" value="" placeholder="Insert location here">
-          <label label for="">Host</label>
-          <input class="input" type="text" name="" value="" placeholder="Insert host here">
-          <label label for="">Stream Link</label>
-          <input class="input" type="text" name="" value="" placeholder="Insert stream link here">
+          <span class="col-9">
+            <label label for="">Host Name</label>
+            <input class="input" type="text">
+          </span>
 
-          <div class="row">
-            <span>
-              <label>Date</label>
-              <input class="input" type="date" required>
-            </span>
+          <span class="col-3">
+            <label label for="">Contact Number</label>
+            <input class="input" type="number">
+          </span>
 
-            <span>
-              <label>Time</label>
-              <input class="input" type="Time" required>
-            </span>
-          </div>
-        </form>
-      </div>
+          <span class="col-6">
+            <label label for="">Stream Link</label>
+            <input class="input" type="text">
+          </span>
 
-      <div class="side-to-side">
-        <button class="btn btn-outline btn-secondary" onclick="changePage('../index.html')">Cancel</button>
-        <!-- <button class="btn" type="submit" onclick="" form="prayerDetails">Save</button> -->
-        <button class="btn" type="submit" onclick="changePage('../index.html')">Save</button>
-      </div>
+          <span class="col-3">
+            <label label for="">Time</label>
+            <input class="input" type="time">
+          </span>
+
+          <span class="col-3">
+            <label label for="">Date</label>
+            <input class="input" type="date">
+          </span>
+        </div>
+
+        <label label for="">Title</label>
+        <textarea class="input textarea" rows="3"></textarea>
+
+        <label label for="">Prayer Purpose and Needs</label>
+        <textarea class="input textarea" rows="3"></textarea>
+      </form>
     </div>
+  </main>
 
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/4de3040dc0.js" crossorigin="anonymous"></script>
 
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/4de3040dc0.js" crossorigin="anonymous"></script>
-
-    <!-- Functionality -->
-    <script type="text/javascript" src="../../../js/index.js"></script>
+  <!-- Functionality -->
+  <script type="text/javascript" src="../../../js/index.js"></script>
 </body>
 
 </html>

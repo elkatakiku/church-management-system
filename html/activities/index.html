@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
     rel="stylesheet">
 </head>
 
@@ -23,8 +23,8 @@
   <section>
     <nav class="navbar">
       <div class="navbar-brand">
-        <img class="navbar-brand-logo" src="https://cdn-icons-png.flaticon.com/512/739/739249.png" alt="Web application logo">
-        <h1 class="navbar-brand-text">CHURCH</h1>
+        <img class="navbar-brand-logo" src="../../images/logo.png" alt="Web application logo">
+        <h1 class="navbar-brand-text">Church</h1>
       </div>
 
       <ul class="navbar-nav">
@@ -46,18 +46,20 @@
     </nav>
   </section>
 
-  <main class="content content-grid">
+  <main class="content content-flex">
     <header class="section-header">
       <h2 class="section-heading">Activities</h2>
-      <div class="side-to-side table-action-buttons">
-        <div class="row-flex">
-          <button class="btn btn-schedule expand" type="button" name="button" onclick="changePage('activity-form.html')">
-            <i class="fa-solid fa-plus icon"></i>
-            Schedule Activity
-          </button>
+      <button class="btn btn-schedule expand" type="button" name="button" onclick="changePage('activity-form.html')">
+        <i class="fa-solid fa-plus icon"></i>
+        Schedule Activity
+      </button>
+    </header>
 
-          <div class="row-flex hidden" id="tableSelectOptions">
-            <button class="btn btn-submit" type="submit" form="table-form">
+    <div class="side-to-side table-select-action-buttons">
+      <div>
+        <div class="container hidden" id="tableSelectOptions">
+          <div class="row-flex">
+            <button class="btn btn-submit" onclick="togglePopup('deleteRow')">
               <i class="fa-solid fa-trash-can icon"></i>
               Delete
             </button>
@@ -67,33 +69,16 @@
             </button>
           </div>
         </div>
-
-        <form class="search-field" action="index.html" method="post">
-          <input class="input search" type="search" name="" value="" placeholder="Search here...">
-          <button class="btn btn-search" type="submit" name="search-btn"><i class="fa-solid fa-magnifying-glass icon"></i></button>
-        </form>
       </div>
-    </header>
 
-    <!-- <div class="side-to-side table-action-buttons">
-      <div class="table-select-action-buttons">
-        <div class="table-select-action-buttons hidden" id="tableSelectOptions">
-          <button class="btn btn-submit" type="submit" form="table-form">
-            <i class="fa-solid fa-trash-can icon"></i>
-            Delete
-          </button>
-          <button class="btn btn-neutral" onclick="selectAllCheckbox('selectAll', true);">
-            <i class="fa-solid fa-xmark icon"></i>
-            Cancel
-          </button>
-        </div>
-      </div> -->
+      <form class="search-field" action="index.html" method="post">
+        <input class="input search" type="search" name="" value="" placeholder="Search here...">
+        <button class="btn btn-search" type="submit" name="search-btn">
+          <i class="fa-solid fa-magnifying-glass icon"></i>
+        </button>
+      </form>
+    </div>
 
-
-    <!-- </div> -->
-
-    <!-- Insert Codes Here -->
-    <!-- Uncomment form when its time to pass the project -->
     <form class="table-container" action="index.html" method="post" id="table-form">
       <table class="table">
         <thead class="table-header">
@@ -175,7 +160,6 @@
         </tbody>
       </table>
     </form>
-    <!-- ************************ -->
   </main>
 
   <!-- Overlay -->
@@ -192,8 +176,6 @@
       <hr>
 
       <div class="popup-body">
-        <!-- Uncomment form when passing the project -->
-        <!-- <form class="" action="index.html" method="post"> -->
         <p class="popup-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Felis donec et odio pellentesque. Ut tortor pretium viverra suspendisse potenti nullam.
           In ante metus dictum at </p>
 
@@ -216,9 +198,29 @@
             <p>Location:</p>
           </div>
         </div>
-        <!-- Remove onclick if to be passed -->
         <span class="btn btn-neutral" onclick="togglePopup('activityDetails')">OK</span>
-        <!-- </form> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Delete Row -->
+  <section class="container-center hidden" id="deleteRow">
+    <div class="popup">
+      <div class="popup-header">
+        <h2 class="popup-heading">Confirm Deletion?</h2>
+        <i class="fa-solid fa-xmark popup-btn-close" onclick="togglePopup('deleteRow')"></i>
+      </div>
+
+      <hr>
+
+      <div class="popup-body">
+        <p class="popup-description">Do you want to permanently delete this event?</p>
+        <form class="" method="post">
+          <div class="row">
+            <input class="btn btn-submit" type="button" value="Yes" onclick="togglePopup('deleteRow')">
+            <input class="btn btn-neutral" type="button" value="No" onclick="togglePopup('deleteRow')">
+          </div>
+        </form>
       </div>
     </div>
   </section>

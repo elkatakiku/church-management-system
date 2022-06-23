@@ -46,7 +46,7 @@
     </nav>
   </section>
 
-  <main class="content content-grid">
+  <main class="content content-flex">
     <header class="section-header">
       <h2 class="section-heading">Events</h2>
       <button class="btn btn-schedule expand" type="button" name="button" onclick="togglePopup('scheduleEvent')">
@@ -111,8 +111,6 @@
       </form>
     </div>
 
-    <!-- Insert Codes Here -->
-    <!-- Uncomment form when its time to pass the project -->
     <form class="table-container" action="index.html" method="post" id="table-form">
       <table class="table">
         <thead class="table-header">
@@ -132,7 +130,7 @@
             <td>Marriage</td>
             <td>Mr. and Mrs. Wed</td>
             <td class="date">MMMM dd, YYYY</td>
-            <td><button class="btn btn-certificate" type="button" name="button" onclick="getCertificate('marriage', 123123, event)">Certificate</button></td>
+            <td><button class="btn btn-certificate" type="button" name="button" onclick="requestCertificate('requestCertificate', event)">Certificate</button></td>
           </tr>
 
           <tr id="event2" onclick="getData('baptismal', 123123)">
@@ -140,7 +138,7 @@
             <td>Baptismal</td>
             <td>Baby Baptism</td>
             <td class="date">MMMM dd, YYYY</td>
-            <td><button class="btn btn-certificate" type="button" name="button" onclick="getCertificate('baptismal', 123123, event)">Certificate</button></td>
+            <td><button class="btn btn-certificate" type="button" name="button" onclick="getCertificate('requestCertificate', 123123, event)">Certificate</button></td>
           </tr>
 
           <tr id="event3" onclick="getData('anniversary', 123123)">
@@ -195,20 +193,24 @@
       </table>
     </form>
 
-    <div class="container hidden" id="tableSelectOptions">
-      <div class="row-flex">
-        <button class="btn btn-submit" onclick="togglePopup('deleteRow')">
-          <i class="fa-solid fa-trash-can icon"></i>
-          Delete
-        </button>
-        <button class="btn btn-neutral" onclick="selectAllCheckbox('selectAll', true);">
-          <i class="fa-solid fa-xmark icon"></i>
-          Cancel
-        </button>
+    <div class="table-select-action-buttons hidden" id="tableSelectOptions">
+      <div class="container">
+        <div class="row-flex">
+          <button class="btn btn-submit" onclick="togglePopup('deleteRow')">
+            <i class="fa-solid fa-trash-can icon"></i>
+            Delete
+          </button>
+          <button class="btn btn-neutral" onclick="selectAllCheckbox('selectAll', true);">
+            <i class="fa-solid fa-xmark icon"></i>
+            Cancel
+          </button>
+        </div>
       </div>
     </div>
-    <!-- ************************ -->
   </main>
+
+  <!-- Overlay -->
+  <div class="overlay hidden" id="overlay"></div>
 
   <!-- Delete Row -->
   <section class="container-center hidden" id="deleteRow">
@@ -233,9 +235,6 @@
     </div>
   </section>
 
-  <!-- Overlay -->
-  <div class="overlay hidden" id="overlay"></div>
-
   <!-- Schedule Event -->
   <section class="container-center hidden" id="scheduleEvent">
     <div class="popup">
@@ -247,8 +246,6 @@
       <hr>
 
       <div class="popup-body">
-        <!-- Uncomment form when passing the project -->
-        <!-- <form class="" action="index.html" method="post"> -->
         <label for="events">Type of Event</label>
         <div class="select-wrapper">
           <select class="input select" name="eventChoice" id="events">
@@ -263,31 +260,110 @@
           </select>
         </div>
 
-        <!-- <label for="">Please Specify</label>
-          <input class="input" type="text" name="" value="" placeholder="Enter the event"> -->
-
-        <div class="side-to-side">
-          <span class="half-of-whole">
+        <div class="row">
+          <span class="">
             <label for="">Date</label>
             <input class="input" type="date" name="" value="">
           </span>
 
-          <span class="half-of-whole">
+          <span class="">
             <label for="">Time</label>
             <input class="input" type="time" name="" value="">
           </span>
         </div>
 
         <div class="popup-action-btns">
-          <!-- Remove onclick if to be passed -->
-          <input class="btn btn-submit" type="submit" name="" value="Next" onclick="scheduleEvent('events')">
+          <input class="btn btn-submit" type="button" value="Next" onclick="scheduleEvent('events')">
           <p class="btn-secondary" onclick="togglePopup('scheduleEvent')">Cancel</p>
         </div>
-        <!-- </form> -->
       </div>
     </div>
   </section>
 
+  <!-- Request -->
+  <section class="container-center hidden" id="requestCertificate">
+    <div class="popup">
+      <div class="popup-header">
+        <h2 class="popup-heading">Request</h2>
+        <i class="fa-solid fa-xmark popup-btn-close" onclick="togglePopup('requestCertificate')"></i>
+      </div>
+
+      <hr>
+
+      <div class="popup-body">
+        <p class="popup-description">A Request From</p>
+        <form method="post">
+          <input class="input" type="text" name="" value="Name" disabled>
+          <input class="input" type="text" name="" value="Contact" disabled>
+
+          <p class="popup-description">Client's QR Code</p>
+
+          <div class="center-horizontal">
+            <img class="col-5" src="https://media-public.canva.com/G_484/MAEoFUG_484/1/t.png" alt="Client's QR Code Image">
+          </div>
+
+          <input class="btn btn-neutral" type="button" value="Verify" onclick="togglePopup('requestCertificate'); togglePopup('verifyCode')">
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Verify -->
+  <section class="container-center hidden" id="verifyCode">
+    <div class="popup">
+      <div class="popup-header">
+        <h2 class="popup-heading">QR Code Verification</h2>
+        <i class="fa-solid fa-xmark popup-btn-close" onclick="togglePopup('verifyCode')"></i>
+      </div>
+
+      <hr>
+
+      <div class="popup-body">
+        <p class="popup-description">Match the code sent by the user.</p>
+        <form method="post">
+          <div class="row verify-code">
+            <div class="">
+              <p class="center-horizontal">Original QR Code</p>
+              <img class="center-horizontal col-12" src="https://media-public.canva.com/G_484/MAEoFUG_484/1/t.png" alt="Client's QR Code Image">
+            </div>
+
+            <div class="">
+              <p class="center-horizontal">QR Given By Client</p>
+              <img class="center-horizontal col-12" src="https://media-public.canva.com/G_484/MAEoFUG_484/1/t.png" alt="Client's QR Code Image">
+            </div>
+          </div>
+
+          <input class="btn btn-neutral" type="button" value="OK" onclick="togglePopup('verifyCode'); togglePopup('resultCode')">
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Result -->
+  <section class="container-center hidden" id="resultCode">
+    <div class="popup">
+      <div class="popup-header">
+        <h2 class="popup-heading">Results</h2>
+        <i class="fa-solid fa-xmark popup-btn-close" onclick="togglePopup('resultCode')"></i>
+      </div>
+
+      <hr>
+
+      <div class="popup-body">
+        <p class="popup-description">A Request From</p>
+        <form method="post">
+          <input class="input" type="text" name="" value="Name" disabled>
+          <input class="input" type="text" name="" value="Contact" disabled>
+
+          <h1 class="resultText">Result Text</h1>
+          <!-- <h1 class="resultText">Request Granted</h1> -->
+          <!-- <h1 class="resultText">Request Failed <br> Try Again</h1> -->
+
+          <input class="btn btn-neutral" type="button" value="Verify" onclick="togglePopup('resultCode')">
+        </form>
+      </div>
+    </div>
+  </section>
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/4de3040dc0.js" crossorigin="anonymous"></script>
 

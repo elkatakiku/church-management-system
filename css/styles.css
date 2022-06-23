@@ -108,16 +108,13 @@ input, select {
   --brown: #A47551;
   --carafe: #523A28;
   --orange: #FF914D;
-
   --extra-small-text: 0.75rem;
   --smaller-text: 0.81rem;
   --small-text: 0.93rem;
   --normal-text: 1rem;
   --slightly-big-text: 1.12rem;
   --big-text: 1.25rem;
-
   --bigger-text: 1.5rem;
-
   --heading: 2rem;
   --login-website-name: 2.87rem;
 }
@@ -181,14 +178,14 @@ p {
 /* Inputs */
 .input {
   background-color: #EBEBE9;
-  border-radius: 8px;
+  border-radius: 5px;
   box-sizing: border-box;
   display: block;
   font-family: 'Montserrat', sans-serif;
   font-size: var(--normal-text);
   height: 2.5rem;
   margin: 10px 0 15px;
-  padding: 0 25px;
+  padding: 0 20px;
   width: 100%;
 }
 
@@ -206,7 +203,7 @@ p {
   border: none;
   height: auto;
   padding: 16px 25px;
-  resize: none;
+  resize: vertical;
 }
 
 /* Search */
@@ -353,6 +350,7 @@ span.btn-neutral, a.btn-neutral {
 
 .btn-outline-light {
   color: white;
+  background-color: rgba(130, 91, 62, 0.1);
 }
 
 .btn-outline:hover {
@@ -363,7 +361,6 @@ span.btn-neutral, a.btn-neutral {
   color: var(--carafe);
   background-color: white;
 }
-
 
 /* Texts */
 .section-description {
@@ -415,7 +412,6 @@ span.btn-neutral, a.btn-neutral {
   margin-bottom: 8px;
 }
 
-
 /* Containers */
 .wrapper {
   margin: auto;
@@ -450,7 +446,6 @@ span.btn-neutral, a.btn-neutral {
 .row-flex {
   display: flex;
   flex-wrap: wrap;
-  /* gap: 15px; */
   margin-right: -15px;
   margin-left: -15px;
 }
@@ -464,73 +459,61 @@ span.btn-neutral, a.btn-neutral {
 }
 
 .col-1 {
-  -ms-flex: 0 0 8.333333%;
   flex: 0 0 8.333333%;
   max-width: 8.333333%;
 }
 
 .col-2 {
-  -ms-flex: 0 0 16.666667%;
   flex: 0 0 16.666667%;
   max-width: 16.666667%;
 }
 
 .col-3 {
-  -ms-flex: 0 0 25%;
   flex: 0 0 25%;
   max-width: 25%;
 }
 
 .col-4 {
-  -ms-flex: 0 0 33.333333%;
   flex: 0 0 33.333333%;
   max-width: 33.333333%;
 }
 
 .col-5 {
-  -ms-flex: 0 0 41.666667%;
   flex: 0 0 41.666667%;
   max-width: 41.666667%;
 }
 
 .col-6 {
-  -ms-flex: 0 0 50%;
   flex: 0 0 50%;
   max-width: 50%;
 }
 
 .col-7 {
-  -ms-flex: 0 0 58.333333%;
   flex: 0 0 58.333333%;
   max-width: 58.333333%;
 }
 
 .col-8 {
-  -ms-flex: 0 0 66.666667%;
   flex: 0 0 66.666667%;
   max-width: 66.666667%;
 }
 
 .col-9 {
-  -ms-flex: 0 0 75%;
   flex: 0 0 75%;
   max-width: 75%;
 }
 
 .col-10 {
-  -ms-flex: 0 0 83.333333%;
   flex: 0 0 83.333333%;
   max-width: 83.333333%;
 }
 
 .col-11 {
-  -ms-flex: 0 0 91.666667%;
   flex: 0 0 91.666667%;
   max-width: 91.666667%;
 }
 
 .col-12 {
-  -ms-flex: 0 0 100%;
   flex: 0 0 100%;
   max-width: 100%;
 }
@@ -551,12 +534,12 @@ span.btn-neutral, a.btn-neutral {
   box-sizing: border-box;
   margin-left: 200px;
   padding: 30px;
+  min-height: 100%;
 }
 
-.content-grid {
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-rows: repeat(5, auto);
+.content-flex {
+  display: flex;
+  flex-direction: column;
   height: 100%;
 }
 
@@ -570,6 +553,26 @@ span.btn-neutral, a.btn-neutral {
 
 .section-header#certificateHeader {
   margin-bottom: 30px;
+  transition: all 0.5s ease;
+}
+
+.slider {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  overflow: hidden;
+}
+
+.slider>div {
+  transition: all 0.5s ease;
+}
+
+.slider-animate>div {}
+
+.center-horizontal {
+  margin: auto;
+  text-align: center;
 }
 
 /* Popup */
@@ -646,7 +649,6 @@ span.btn-neutral, a.btn-neutral {
   width: 100%;
 }
 
-
 /* Navbar */
 .navbar {
   background-color: var(--brown);
@@ -654,12 +656,14 @@ span.btn-neutral, a.btn-neutral {
   box-sizing: border-box;
   color: white;
   display: grid;
+  font-family: 'Alegreya SC', serif;
   grid-auto-flow: column;
   grid-template-rows: 1fr 5fr 1fr;
   height: 100%;
   position: fixed;
   text-align: center;
   width: 200px;
+  z-index: 3;
 }
 
 .navbar-brand {
@@ -741,14 +745,19 @@ span.btn-neutral, a.btn-neutral {
 }
 
 /* Table */
-.table-select-action-buttons .btn .icon {
+.table-select-action-buttons {
+  margin: 10px 0;
+}
+
+.table-select-action-buttons .btn-submit .icon, .table-select-action-buttons .btn-neutral .icon {
   margin-right: 5px;
 }
 
 .table-container {
   background-color: white;
-  overflow: auto;
   box-shadow: 5px 5px 10px rgba(130, 91, 62, 0.3);
+  height: 100%;
+  overflow: auto;
 }
 
 .table {
@@ -822,16 +831,22 @@ span.btn-neutral, a.btn-neutral {
 .table-container::-webkit-scrollbar {
   width: 8px;
 }
+
 .table-container::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
+
 .table-container::-webkit-scrollbar-thumb {
   background-color: var(--lighter-brown);
   outline: 1px solid var(--tan);
 }
 
-#tableSelectOptions {
-  margin-top: 10px;
+#tableSelectOptions .row-flex {
+  gap: 15px;
+}
+
+.table-select-action-buttons#tableSelectOptions {
+  margin: 10px 0 0;
 }
 
 #tableSelectOptions .btn {
@@ -855,7 +870,7 @@ span.btn-neutral, a.btn-neutral {
   background-color: var(--carafe);
 }
 
-/* User Form */
+/* Forms */
 .form-page {
   display: flex;
   flex-direction: column;
@@ -867,10 +882,24 @@ span.btn-neutral, a.btn-neutral {
   margin-top: 20px;
 }
 
-.form-page > .side-to-side:last-of-type .btn {
+.form-page>.side-to-side:last-of-type .btn {
   width: 150px;
 }
 
+.form-actions {
+  align-items: center;
+  gap: 30px;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+  width: 30%;
+}
+
+.form-actions * {
+  margin: 0;
+}
+
+/******************************************* By Pages *******************************************/
 /* Login */
 .login-container {
   box-shadow: 10px 10px 10px rgba(130, 91, 62, 0.3);
@@ -1007,31 +1036,53 @@ span.btn-neutral, a.btn-neutral {
   margin: 1.5rem auto 0;
 }
 
-/* Activity Detail */
+/* Certificate */
+.verify-code {
+  color: #FF1616;
+}
+
+.resultText {
+  font-size: var(--bigger-text);
+  margin: 50px auto;
+  text-align: center;
+}
+
+/* Activity Details */
 .activity-details {
   padding: 0 25px;
 }
 
 /* Baptismal */
+#baptismalScheduleForm {
+  flex-wrap: nowrap;
+}
+
 .form-page .side-to-side .btn-secondary {
   font-weight: 400;
   margin: 0;
 }
 
 .sponsor .heading4 {
+  font-weight: 700;
   text-align: center;
+}
+
+.sponsor-form {
+  margin: 0 25px;
 }
 
 /* Details Page */
 .details-page {
   background-color: white;
-  margin: auto;
-  padding: 30px;
-  width: 85%;
-  max-width: 1020px;
+  box-shadow: 2px 0 10px rgba(130, 91, 62, 0.1);
+  margin-right: 60px;
+  margin-left: 260px;
+  /* max-width: 1020px; */
+  padding: 30px
 }
 
 .certificate {
+  animation: certificate-appear 0.5s ease;
   background-color: white;
   box-shadow: 0 5px 5px -5px rgba(130, 91, 62, 0.3);
   padding: 30px 0;
@@ -1044,14 +1095,13 @@ span.btn-neutral, a.btn-neutral {
   margin-top: 0 !important;
 }
 
-#marriageDetails .input {
-  height: 2rem;
-  border-radius: 5px;
+/* Prayer Meeting */
+.stream-link {
+  margin: auto;
+  width: 50%;
 }
 
-
 /******************************************* User *******************************************/
-
 /* Home */
 .wrapper .heading2 {
   font-size: 2rem;
@@ -1065,7 +1115,7 @@ span.btn-neutral, a.btn-neutral {
   position: relative;
 }
 
-.home-heading  {
+.home-heading {
   color: white;
   left: 10%;
   position: absolute;
@@ -1075,6 +1125,7 @@ span.btn-neutral, a.btn-neutral {
 }
 
 .image-overlay {
+  display: block;
   background-color: rgba(0, 0, 0, 0.5);
   height: 100%;
   position: absolute;
@@ -1082,9 +1133,12 @@ span.btn-neutral, a.btn-neutral {
   width: 100%;
 }
 
-.header-slides-images {
-  position: relative;
-  margin: auto;
+#headerSlide {
+  margin: 0;
+}
+
+#headerSlide .col-12 {
+  padding: 0;
 }
 
 .header-image {
@@ -1116,15 +1170,15 @@ span.btn-neutral, a.btn-neutral {
 }
 
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin-top: 10px;
-  background-color: var(--brown);
+  height: 10px;
+  width: 10px;
+  margin: 10px 3px 0;
+  background-color: var(--lighter-brown);
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
@@ -1134,9 +1188,30 @@ span.btn-neutral, a.btn-neutral {
   background-color: var(--tan);
 }
 
+.view-list {
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.view-list .clickable-text:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  right: -10px;
+  top: 0;
+  transition: all 0.5s;
+}
+
+.view-list:hover {
+  padding-right: 10px;
+}
+
+.view-list:hover .clickable-text:after {
+  opacity: 1;
+  right: 0;
+}
 
 /* Home Event */
-
 .carousel {
   display: block;
   text-align: left;
@@ -1397,16 +1472,14 @@ span.btn-neutral, a.btn-neutral {
   display: none;
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 .today {
   color: var(--orange);
   font-weight: 700;
 }
-
-
-
-
-
-
 
 /* Test */
 .sliding-container {
@@ -1428,41 +1501,9 @@ span.btn-neutral, a.btn-neutral {
 /* .sliding:hover {
   transform: translate(100%);
 } */
-
 .slideactive {
   transform: translate(100%);
 }
-
-
-
-
-
-
-
-
-/* XTINA */
-
-/***************WEDDING FORM AND ANNIVERSARY*****************/
-@media (max-width: 750px) {
-    .content form{
-        overflow-y: scroll;
-    }
-    .content form::-webkit-scrollbar{
-       display: none;
-    }
-    form .fields .input-field{
-        width: calc(100% / 2 - 15px);
-    }
-}
-
-@media (max-width: 550px) {
-    form .fields .input-field{
-        width: 100%;
-    }
-}
-
-
-
 
 /* Animations */
 .expand {
@@ -1477,5 +1518,15 @@ span.btn-neutral, a.btn-neutral {
 
   100% {
     transform: scaleX(1);
+  }
+}
+
+@keyframes certificate-appear {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 }

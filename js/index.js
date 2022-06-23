@@ -1,7 +1,30 @@
 // Popup
-function togglePopup(elementId) {
+function togglePopup(elementId, asd) {
   document.getElementById('overlay').classList.toggle("hidden");
   document.getElementById(elementId).classList.toggle("hidden");
+}
+
+function requestCertificate(elementId, event) {
+  togglePopup(elementId);
+  event.stopPropagation();
+}
+
+function getCertificate(eventType, id, event) {
+  // Use get method in php to access data in database
+  // Change event type that matches event type in database
+  // switch (eventType) {
+    // case "baptismal":
+      // changePage("certificate/baptismal.html");
+    //   break;
+    // case "marriage":
+    togglePopup(eventType);
+      // document.getElementById('overlay').classList.toggle("hidden");
+      // document.getElementById(eventType).classList.toggle("hidden");
+      // break;
+    // default:
+  // }
+
+  event.stopPropagation();
 }
 
 // Dismisses popups
@@ -55,11 +78,6 @@ function scheduleEvent(eventChoice) {
       break;
     default:
   }
-}
-
-// Generate QR Code
-function generateQR() {
-
 }
 
 
@@ -175,20 +193,50 @@ function getData(type, id) {
   }
 }
 
-function getCertificate(eventType, id, event) {
-  // Use get method in php to access data in database
-  // Change event type that matches event type in database
-  switch (eventType) {
-    case "baptismal":
-      // changePage("certificate/baptismal.html");
-      break;
-    case "marriage":
-      // changePage("certificate/marriage.html");
-      break;
-    default:
+
+
+// Sliding Divs
+function nextSlide(slideId, slideCounter, infinite = false) {
+  if (slideCounter < document.getElementById(slideId).childElementCount) {
+    if (!isInputValid(slideId, slideCounter)) {
+      return slideCounter;
+    }
+    document.getElementById(slideId).firstElementChild.style.marginLeft = "-" + (slideCounter * 100) + "%";
+    ++slideCounter;
+  } else if (infinite && (slideCounter >= document.getElementById(slideId).childElementCount)) {
+    document.getElementById(slideId).firstElementChild.style.marginLeft = "0";
+    slideCounter = 1;
+  } else if (!infinite && (slideCounter = document.getElementById(slideId).childElementCount)) {
+    if (!isInputValid(slideId, slideCounter)) {
+      return slideCounter;
+    } else {
+      console.log("post");
+    }
   }
 
-  event.stopPropagation();
+  return slideCounter;
+}
+
+function isInputValid(divId, counter) {
+  for (const el of document.getElementById(divId).children[counter - 1].querySelectorAll("[required]")) {
+    if (!el.reportValidity()) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function previousSlide(slideId, slideCounter, infinite = false) {
+  if (slideCounter > 1) {
+    --slideCounter;
+    document.getElementById(slideId).firstElementChild.style.marginLeft = "-" + ((slideCounter * 100) - 100) + "%";
+    return slideCounter;
+  } else if (infinite && (slideCounter <= 1)) {
+    document.getElementById(slideId).firstElementChild.style.marginLeft = "-" + ((document.getElementById(slideId).childElementCount - 1) * 100) + "%";
+    return document.getElementById(slideId).childElementCount;
+  }
+
+  return slideCounter;
 }
 
 // Sliding div
@@ -239,18 +287,19 @@ document.addEventListener("keydown", ({
 
 // Event listener for overlay
 document.getElementById('overlay').addEventListener('click', function(e) {
-  console.log("Overlay clicked");
   dismissPopups();
 })
 
 // Stick header to top
 window.onscroll = function() {
-  console.log(window.pageYOffset);
   if (window.pageYOffset > 100) {
     console.log("Offset 100 greater than 100");
-    document.getElementById("certificateHeader").classList.add("certificate");
+    if (document.getElementById("certificateHeader")) {
+      document.getElementById("certificateHeader").classList.add("certificate");
+    }
   } else {
-    console.log("At top");
-    document.getElementById("certificateHeader").classList.remove("certificate");
+    if (document.getElementById("certificateHeader")) {
+      document.getElementById("certificateHeader").classList.remove("certificate");
+    }
   }
 }

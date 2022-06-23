@@ -53,27 +53,26 @@
 
     <header class="home-header">
       <div class="sliding-image-container">
-
-        <div class="header-slides-images">
-          <div class="image-overlay"></div>
-
-          <div class="header-slides">
+        <div class="slider" id="headerSlide">
+          <div class="col-12">
             <img class="header-image" src="https://media-public.canva.com/MADQ4xTu4OA/1/screen.jpg">
           </div>
 
-          <div class="header-slides">
+          <div class="col-12">
             <img class="header-image"
               src="https://media-private.canva.com/MSrkQ/MAFDpgMSrkQ/1/s.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJWF6QO3UH4PAAJ6Q%2F20220614%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220614T180755Z&X-Amz-Expires=63806&X-Amz-Signature=71549c4d957c1afb47098a07f9b99dd39f0605ece2732d5ee955d8b191e03601&X-Amz-SignedHeaders=host&response-expires=Wed%2C%2015%20Jun%202022%2011%3A51%3A21%20GMT">
           </div>
 
-          <div class="header-slides">
+          <div class="col-12">
             <img class="header-image"
               src="https://media-private.canva.com/1KslI/MAFDpr1KslI/1/s.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJWF6QO3UH4PAAJ6Q%2F20220615%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220615T064116Z&X-Amz-Expires=16328&X-Amz-Signature=0381c056b3824250fd661d1926bcf1d53ea14e5c4980b49b29358d61948bf208&X-Amz-SignedHeaders=host&response-expires=Wed%2C%2015%20Jun%202022%2011%3A13%3A24%20GMT">
           </div>
-
-          <a class="prev" onclick="plusSlides(-1)">❮</a>
-          <a class="next" onclick="plusSlides(1)">❯</a>
         </div>
+
+        <div class="image-overlay"></div>
+
+        <a class="prev" onclick="plusSlides(-1)" id="slidePrev">❮</a>
+        <a class="next" onclick="plusSlides(1)" id="slideNext">❯</a>
 
         <div class="home-heading ">
 
@@ -87,7 +86,7 @@
       </div>
 
       <div>
-        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot active" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
       </div>
@@ -105,7 +104,9 @@
       <section>
         <div class="side-to-side">
           <h2 class="heading2">Events</h2>
-          <a class="clickable-text underlined-text" href="#">View Scheduled Event</a>
+          <span class="view-list">
+            <a class="clickable-text underlined-text" href="#">View Scheduled Event</a>
+          </span>
         </div>
 
         <p class="section-description">lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla malesuada pellentesque elit eget gravida cum. Ultrices eros in cursus turpis
@@ -214,7 +215,9 @@
       <section>
         <div class="side-to-side">
           <h2 class="heading2">Activities</h2>
-          <a class="clickable-text underlined-text" href="#">View Scheduled Activities</a>
+          <span class="view-list">
+            <a class="clickable-text underlined-text" href="#">View Scheduled Activities</a>
+          </span>
         </div class="activity-name-container">
         <p class="section-description">lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla malesuada pellentesque elit eget gravida cum</p>
 
@@ -289,42 +292,65 @@
 
   <!-- Functionality -->
   <script>
-    function togglePopup(elementId) {
-      document.getElementById('overlay').classList.toggle("hidden");
-      document.getElementById(elementId).classList.toggle("hidden");
-    }
+    var slideCounter = 1;
 
-    let slideIndex = 1;
-    showSlides(slideIndex);
+    document.getElementById('slideNext').addEventListener('click', function(e) {
+      slideCounter = nextSlide('headerSlide', slideCounter, true);
+      changeDotActive();
+    })
 
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
+    document.getElementById('slidePrev').addEventListener('click', function(e) {
+      slideCounter = previousSlide('headerSlide', slideCounter, true);
+      changeDotActive();
+    })
 
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-      let i;
-      let slides = document.getElementsByClassName("header-slides");
+    function changeDotActive() {
       let dots = document.getElementsByClassName("dot");
-      if (n > slides.length) {
-        slideIndex = 1
-      }
-      if (n < 1) {
-        slideIndex = slides.length
-      }
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
       for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
       }
-      slides[slideIndex - 1].style.display = "block";
-      dots[slideIndex - 1].className += " active";
+
+      document.getElementsByClassName("dot")[slideCounter - 1].classList.add('active');
     }
+
+    function currentSlide(n) {
+      changeSlide(slideCounter = n);
+    }
+
+    setInterval(function() {
+      document.getElementById('slideNext').click();
+    }, 5000);
+
+    // let slideIndex = 1;
+    // showSlides(slideIndex);
+    //
+    // function plusSlides(n) {
+    //   showSlides(slideIndex += n);
+    // }
+    //
+
+    //
+    // function showSlides(n) {
+    //   let i;
+    //   let slides = document.getElementsByClassName("header-slides");
+    //   let dots = document.getElementsByClassName("dot");
+    //   if (n > slides.length) {
+    //     slideIndex = 1
+    //   }
+    //   if (n < 1) {
+    //     slideIndex = slides.length
+    //   }
+    //   for (i = 0; i < slides.length; i++) {
+    //     slides[i].style.display = "none";
+    //   }
+    //   for (i = 0; i < dots.length; i++) {
+    //     dots[i].className = dots[i].className.replace(" active", "");
+    //   }
+    //   slides[slideIndex - 1].style.display = "block";
+    //   dots[slideIndex - 1].className += " active";
+    // }
   </script>
+  <script type="text/javascript" src="js/index.js"></script>
 </body>
 
 </html>
