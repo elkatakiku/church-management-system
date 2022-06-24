@@ -165,9 +165,9 @@ p {
 .overlay {
   background-color: rgba(164, 117, 81, 0.7);
   height: 100%;
-  position: absolute;
+  position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 4;
 }
 
 /* Icons */
@@ -363,6 +363,69 @@ span.btn-neutral, a.btn-neutral {
   color: var(--carafe);
   background-color: white;
 }
+
+/* Dropdown */
+.dropbtn {
+  background-color: var(--brown);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 15px;
+  padding: 10px 35px 10px 15px;
+  position: relative;
+}
+
+.dropbtn:after {
+  color: var(--tan);
+  content: "🢓";
+  font-size: 2rem;
+  position: absolute;
+  right: 17px;
+  top: 15%;
+}
+
+.dropbtn > span {
+  pointer-events: none;
+}
+
+.dropbtn > span:after {
+  content: "";
+  border-right: 1px solid white;
+  margin: 0 15px;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: var(--lighter-brown);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  background-color: #f1f1f1;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  min-width: 160px;
+  overflow: auto;
+  position: absolute;
+  transform: translateY(-100%);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
 
 /*************************************************** Texts ***************************************************/
 .section-description {
@@ -563,7 +626,8 @@ span.btn-neutral, a.btn-neutral {
 .slider-animate>div {}
 
 .center-horizontal {
-  margin: auto;
+  margin-left: auto !important;
+  margin-right: auto !important;
   text-align: center;
 }
 
@@ -576,8 +640,8 @@ span.btn-neutral, a.btn-neutral {
   margin: auto;
   min-width: 28%;
   padding: 30px;
-  position: relative;
-  z-index: 2;
+  position: fixed;
+  z-index: 5;
   width: 28%;
 }
 
@@ -1043,6 +1107,120 @@ span.btn-neutral, a.btn-neutral {
   text-align: center;
 }
 
+.certificate-page {
+  background-color: white;
+  box-sizing: border-box;
+  margin-right: 60px;
+  margin-left: 260px;
+  padding: 30px 60px;
+  text-align: center;
+}
+
+.certificate-header {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.certificate-brand {
+  position: absolute;
+  left: 0;
+  top: 5%;
+  width: 15%;
+}
+
+.certificate-logo {
+  width: 40%;
+}
+
+.certificate-site-name {
+  font-family: 'Alegreya SC', serif;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+.certificate-heading {
+  color: var(--brown);
+  font-family: 'UnifrakturMaguntia', cursive;
+  font-size: 3.93rem;
+  letter-spacing: 3px;
+  padding: 20px 0;
+}
+
+.certificate-body p {
+  font-family: 'Grenze', serif;
+  font-size: var(--bigger-text);
+  font-weight: 500;
+}
+
+.certificate-body > p {
+  margin: 15px;
+}
+
+.certificate-page .row-flex {
+  align-items: baseline;
+  margin-top: 15px;
+  margin-right: -5px;
+  margin-left: -5px;
+}
+
+.certificate-page .col-1,
+.certificate-page .col-2,
+.certificate-page .col-3,
+.certificate-page .col-4,
+.certificate-page .col-5,
+.certificate-page .col-7,
+.certificate-page .col-6,
+.certificate-page .col-8,
+.certificate-page .col-9,
+.certificate-page .col-10,
+.certificate-page .col-11,
+.certificate-page .col-12 {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.certificate-data {
+  background-color: transparent;
+  border-bottom: 2px solid var(--brown);
+  box-sizing: border-box;
+  color: var(--carafe);
+  display: block;
+  font-family: 'Grenze', serif;
+  font-size: var(--bigger-text);
+  height: 2rem;
+  padding: 0 20px;
+  margin-bottom: 5px;
+  text-align: center;
+  width: 100%;
+}
+
+.certificate-data:focus {
+  box-shadow: 0 5px 5px -5px rgba(130, 91, 62, 0.5);
+  outline: none;
+}
+
+.certificate-page .sponsor {
+  margin-top: 25px;
+}
+
+.certificate-page .sponsor p {
+  text-align: left;
+}
+
+.certificate-page .sponsor .row {
+  grid-gap: 100px;
+}
+
+.certificate-actions {
+  align-items: center;
+  margin-top: 50px;
+}
+
+.certificate-actions .row-flex {
+  margin: 0;
+}
+
 /******************************************* Activity Details *******************************************/
 .activity-details {
   padding: 0 25px;
@@ -1446,7 +1624,6 @@ span.btn-neutral, a.btn-neutral {
   margin-top: 30px;
   width: 200px;
 }
-
 
 /******************************************* Functionality *******************************************/
 .active {
