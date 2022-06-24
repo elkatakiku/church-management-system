@@ -9,24 +9,6 @@ function requestCertificate(elementId, event) {
   event.stopPropagation();
 }
 
-function getCertificate(eventType, id, event) {
-  // Use get method in php to access data in database
-  // Change event type that matches event type in database
-  // switch (eventType) {
-  // case "baptismal":
-  // changePage("certificate/baptismal.html");
-  //   break;
-  // case "marriage":
-  togglePopup(eventType);
-  // document.getElementById('overlay').classList.toggle("hidden");
-  // document.getElementById(eventType).classList.toggle("hidden");
-  // break;
-  // default:
-  // }
-
-  event.stopPropagation();
-}
-
 
 // Dismisses popups
 function dismissPopups() {
@@ -244,42 +226,6 @@ function previousSlide(slideId, slideCounter, infinite = false) {
 
   return slideCounter;
 }
-
-// Sliding div
-// let slideIndex = 1;
-// showSlides(slideIndex);
-//
-// function plusSlides(n) {
-//   showSlides(slideIndex += n);
-// }
-//
-// function currentSlide(n) {
-//   showSlides(slideIndex = n);
-// }
-//
-// function showSlides(n) {
-//   let i;
-//   let slides = document.getElementsByClassName("header-slides");
-//   let dots = document.getElementsByClassName("dot");
-//   if (n > slides.length) {
-//     slideIndex = 1;
-//   }
-//
-//   if (n < 1) {
-//     slideIndex = slides.length
-//   }
-//
-//   for (i = 0; i < slides.length; i++) {
-//     slides[i].style.display = "none";
-//   }
-//
-//   for (i = 0; i < dots.length; i++) {
-//     dots[i].className = dots[i].className.replace(" active", "");
-//   }
-//
-//   slides[slideIndex - 1].style.display = "block";
-//   dots[slideIndex - 1].className += " active";
-// }
 
 document.addEventListener("keydown", ({
   key
